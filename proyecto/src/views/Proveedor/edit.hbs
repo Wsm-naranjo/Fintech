@@ -1,0 +1,26 @@
+<div class="col-md-4 mx-auto">
+
+    <div class="card">
+        <div class="card-body">
+            <form action="/proveedor/edit/{{proveedores.id}}" method="POST">
+                <div id="contenedor">
+            <label>Nombre</label>
+            <input type="text" name="nombre" id="codigo" value="{{proveedores.NombreProveedor}}">
+        </div>
+        <div id="contenedor">
+            <label>Direccion</label>
+            <input type="text" name="unidad" value="{{proveedores.Direccion}}">
+        </div>
+        <div id="contenedor">
+            <label>Numero</label>
+            <input type="text" name="unidad" value="{{proveedores.Numero}}">
+        </div>
+        <div id="contenedor">
+            <label>Estado</label>
+            <input type="text" name="unidad" value="{{proveedores.Estado}}">
+        </div>
+        <button type="submit" id="guardar">Guardar</button>
+            </form>
+        </div>
+    </div>
+</div>
