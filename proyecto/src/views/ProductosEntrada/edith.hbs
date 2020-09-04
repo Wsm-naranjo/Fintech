@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <form action="/ProductoEntrada/edit/{{ProductoEditado.id}}" method="POST">
+        <div id="contenedor">
+            <label>Nombre del Producto</label>
+            <input type="text" name="NombreProducto" id="cedula" value="{{ProductoEditado.NombreProducto}}">
+        </div>
+        <div id="contenedor">
+            <label>Tipo</label>
+            <input type="text" name="Tipo" id="nombre" value="{{ProductoEditado.Tipo}}">
+        </div>
+        <div id="contenedor">
+            <label>Cantidad</label>
+            <input type="number" name="Cantidad" value="{{ProductoEditado.Cantidad}}">
+        </div>
+        <div id="contenedor">
+            <label>Precio</label>
+            <input type="number" name="precio" value="{{ProductoEditado.precio}}">
+        </div>        
+        <button class="btn btn-success" type="submit" id="guardar">Guardar</button>
+    </form>
+</body>
+</html>

@@ -56,6 +56,8 @@ app.use(require('./routes/user.routes'));
 app.use('/productos', require('./routes/Productos.routes'));
 app.use('/clientes', require('./routes/Clientes.routes'));
 app.use('/proveedor', require('./routes/proveedor.router'));
+app.use('/ProductoEntrada', require('./routes/ProductosEntrada.routes'));
+
 
 
 // Public

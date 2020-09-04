@@ -45,10 +45,10 @@ Tipo varchar(50) NOT NULL,
 Cantidad 	int(20) NOT NULL,
 precio INT(4) NOT NULL,
 FechaCadusidad	date NOT NULL,
-Proveedor int(11) NOT NULL,
-FechaRegistro timestamp NOT NULL DEFAULT current_timestamp,
-CONSTRAINT fkkk_proveedor FOREIGN KEY(Proveedor) REFERENCES proveedor(id_provedor)
+user_id int(11) NOT NULL,
+FechaRegistro timestamp NOT NULL DEFAULT current_timestamp
 );
+ALTER TABLE productoentrada ADD CONSTRAINT fk_proveedores FOREIGN KEY(user_id) REFERENCES users(id);
 
 ALTER TABLE productoentrada MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 1;
 
@@ -57,8 +57,8 @@ id INT(11) PRIMARY KEY NOT NULL,
 Cedula INT(10) NOT NULL,
 Nombre VARCHAR(50) NOT NULL,
 Telefono INT(10) NOT NULL,
-user_id INT(11) NOT NULL,
-CONSTRAINT fkkkk_usuarios FOREIGN KEY(user_id) REFERENCES users(id)
+user_id INT(11) NOT NULL
 );
+ALTER TABLE cliente ADD CONSTRAINT fk_usuarios FOREIGN KEY(user_id) REFERENCES users(id);
 
 ALTER TABLE cliente MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
