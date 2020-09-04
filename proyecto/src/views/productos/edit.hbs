@@ -1,0 +1,26 @@
+<div class="col-md-4 mx-auto">
+
+    <div class="card">
+        <div class="card-body">
+            <form action="/productos/edit/{{link.id}}" method="POST">
+                <div id="contenedor">
+            <label>Nombre del Producto</label>
+            <input type="text" name="nombre" id="codigo" value="{{link.nombre}}">
+        </div>
+        <div id="contenedor">
+            <label>Cantidad</label>
+            <input type="number" name="cantidad" value="{{link.cantidad}}">
+        </div>
+        <div id="contenedor">
+            <label>Tipo de unidad</label>
+            <input type="text" name="unidad" value="{{link.unidad}}">
+        </div>
+        <div id="contenedor">
+            <label>Precio</label>
+            <input type="number" name="precio" value="{{link.precio}}">
+        </div>
+        <button  type="submit" id="guardar">Guardar</button>
+            </form>
+        </div>
+    </div>
+</div>

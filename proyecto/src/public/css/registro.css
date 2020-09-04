@@ -1,0 +1,64 @@
+#registros{
+    color: #ffffff;
+    position: absolute;
+    left: 300px;    
+    text-decoration: none ;
+}
+#registros:hover{
+    background-color: darkgrey;
+}
+#Usuario{
+    position: absolute;
+    top: 70px;
+    left: 410px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 45px;
+    color: #f5fffe;
+    
+}
+#Nombre{
+    position: absolute;
+    top: 140px;
+    left: 410px;
+}
+#correo{
+    position: absolute;
+    top: 170px;
+    left: 410px;
+    font-size: 40px;
+    color: #fffafa;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+#Correo{
+    position: absolute;
+    top: 230px;
+    left: 410px
+}
+#contraseña{
+    position: absolute;
+    top: 260px;
+    left: 410px ;
+    color: #fffefe;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+
+}
+#Contraseña{
+    position: absolute;
+    top: 320px;
+    left: 410px
+}
+#botonGuardar{
+    position: absolute;
+    top: 360px;
+    left: 470px;    
+    font-size: 30px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    font-family: monospace;
+}
+#guardar{
+    color: rgb(0, 0, 0);
+    text-decoration: none ;
+}

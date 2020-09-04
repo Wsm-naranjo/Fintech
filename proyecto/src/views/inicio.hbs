@@ -1,0 +1,42 @@
+<div class="container p-4">
+    <div class="row">
+        {{#each productos}}
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <table border="0.5">
+                        <tr>
+                            <td>Codigo</td><td style="text-align:right;">{{codigo}}</td>
+                        </tr>
+                        <tr>
+                            <td>Nombre</td><td style="text-align: right;">{{nombre}}</td>
+                        </tr>
+                        <tr>
+                            <td>Cantidad</td><td style="text-align: right;">{{cantidad}}</td>
+                        </tr>
+                        <tr>
+                            <td>Precio</td><td style="text-align: right;">{{precio}}</td>
+                        </tr>
+                        <tr>
+                            <td>Tiempo</td><td style="text-align: right;">{{timeago created_at}}</td>
+                        </tr>
+                    </table>
+                    <a href="/productos/edit/{{id}}">
+                        Editar Producto
+                    </a>
+                     <a class="btn btn-danger" href="/productos/delete/{{id}}">
+                        Eliminar Producto
+                    </a>
+                </div>
+            </div>
+        </div>
+        {{else}}
+        <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>No a registrado Productos.</p>
+                <a href="/productos/add">¡Introducir uno!</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
