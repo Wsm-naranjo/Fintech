@@ -7,20 +7,30 @@
 </head>
 
 <body>
-    <form action="/clientes/add" method="POST">
-        <div id="contenedor">
-            <label>Cedula</label>
-            <input type="text" name="cedula" id="cedula">
+    <div class="col-md-4 mx-auto">
+        <div class="card">
+            <div class="card-body">
+                <form action="/clientes/add" method="POST" id="lista">
+
+                    <div id="contenedor">
+                        <label>Cedula</label>
+                        <input type="text" name="cedula" id="cedula">
+                    </div>
+                    <div id="contenedor">
+                        <label>Nombre</label>
+                        <input type="text" name="nombre" id="nombre">
+                    </div>
+                    <div id="contenedor">
+                        <label>Telefono</label>
+                        <input type="number" name="telefono">
+                    </div>
+                    <button class="btn btn-success" type="submit" id="guardar">Guardar</button>
+                </form>
+            </div>
         </div>
-        <div id="contenedor">
-            <label>Nombre</label>
-            <input type="text" name="nombre" id="nombre">
-        </div>
-        <div id="contenedor">
-            <label>Telefono</label>
-            <input type="number" name="telefono">
-        </div>
-        <button class="btn btn-success" type="submit" id="guardar">Guardar</button>
-    </form>
+    </div>
+
+
 </body>
+
 </html>

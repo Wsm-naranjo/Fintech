@@ -4,32 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <LINK REL=StyleSheet HREF="css/add.css" TYPE="text/css" MEDIA=screen>  
 </head>
 
 <body>
-    <form action="/productos/add" method="POST" name="f1" id="f1">
-        <div id="contenedor">
-            <label>Codigo</label>
-            <input type="text" name="codigo" id="codigo">
+    <div class="col-md-4 mx-auto">
+        <div class="card">
+            <div class="card-body" id="car">
+                <form action="/productos/add" method="POST" name="f1">
+                    <div id="contenedor">
+                        <label>Codigo</label>
+                        <input type="text" name="codigo" id="codigo">
+                    </div>
+                    <div id="contenedor">
+                        <label>Nombre del Producto</label>
+                        <input type="text" name="nombre" id="nombre">
+                    </div>
+                    <div id="contenedor">
+                        <label>Cantidad</label>
+                        <input type="number" name="cantidad">
+                    </div>
+                    <div id="contenedor">
+                        <label>Tipo de unidad</label>
+                        <input type="text" name="unidad">
+                    </div>
+                    <div id="contenedor">
+                        <label>Precio</label>
+                        <input type="number" name="precio">
+                    </div>
+                    <button class="btn btn-success" type="submit" id="guardar">Guardar</button>
+                </form>
+            </div>
         </div>
-        <div id="contenedor">
-            <label>Nombre del Producto</label>
-            <input type="text" name="nombre" id="nombre">
-        </div>
-        <div id="contenedor">
-            <label>Cantidad</label>
-            <input type="number" name="cantidad">
-        </div>
-        <div id="contenedor">
-            <label>Tipo de unidad</label>
-            <input type="text" name="unidad">
-        </div>
-        <div id="contenedor">
-            <label>Precio</label>
-            <input type="number" name="precio">
-        </div>
-        <button class="btn btn-success" type="submit" id="guardar">Guardar</button>
-    </form>
+    </div>
 </body>
 <script>
     function inicio() {

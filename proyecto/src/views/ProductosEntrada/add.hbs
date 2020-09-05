@@ -4,31 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=stylesheet href="css/add.css" type="text/css" media=screen>
+
 </head>
 
 <body>
-    <form action="/ProductoEntrada/add" method="POST">
-        <div id="contenedor">
-            <label>Nombre del Producto</label>
-            <input type="text" name="NombreProducto" id="cedula">
+    <div class="col-md-4 mx-auto">
+        <div class="card">
+            <div class="card-body">
+                <form action="/ProductoEntrada/add" method="POST" id="lista">
+                    <div id="contenedor">
+                        <label>Nombre del Producto</label>
+                        <input type="text" name="NombreProducto" id="cedula">
+                    </div>
+                    <div id="contenedor">
+                        <label>Tipo</label>
+                        <input type="text" name="Tipo" id="nombre">
+                    </div>
+                    <div id="contenedor">
+                        <label>Cantidad</label>
+                        <input type="number" name="Cantidad">
+                    </div>
+                    <div id="contenedor">
+                        <label>Precio</label>
+                        <input type="number" name="precio">
+                    </div>
+                    <div id="contenedor">
+                        <label>Fecha Caducidad</label>
+                        <input type="date" name="FechaCadusidad">
+                    </div>
+                    <button class="btn btn-success" type="submit" id="guardar">Guardar</button>
+                </form>
+            </div>
         </div>
-        <div id="contenedor">
-            <label>Tipo</label>
-            <input type="text" name="Tipo" id="nombre">
-        </div>
-        <div id="contenedor">
-            <label>Cantidad</label>
-            <input type="number" name="Cantidad">
-        </div>
-        <div id="contenedor">
-            <label>Precio</label>
-            <input type="number" name="precio">
-        </div>
-        <div id="contenedor">
-            <label>Fecha Caducidad</label>
-            <input type="date" name="FechaCadusidad">
-        </div>
-        <button class="btn btn-success" type="submit" id="guardar">Guardar</button>
-    </form>
+    </div>
 </body>
+
 </html>

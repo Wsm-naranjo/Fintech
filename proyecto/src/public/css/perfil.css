@@ -8,9 +8,12 @@
     font-family: Lobster;       
 }
 #avatar{
-    height: 200px;
+   
+    padding:15px;
+    height: 190px;
     width: 200px;       
-    border-radius: 160px;
+    border-radius: 70%;
+
 }
 #detalle{
     position: absolute;
