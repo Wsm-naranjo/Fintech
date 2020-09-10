@@ -1,0 +1,12 @@
+const express = require ('express');
+const router = express.Router();
+const {isLoggedIn} = require('../lib/auth');
+const {editarEmpleado,renderEditarEmpleado,EliminarEmpleado,renderEmpleado,Agregarempleado,renderAgregarempleado}=require ('../controllers/empleado.controller');
+router.use(isLoggedIn);
+router.get('/registro',renderAgregarempleado);
+router.post('/registro',Agregarempleado);
+router.get('/Detalle',isLoggedIn,renderEmpleado);
+router.get('/delete/:id',EliminarEmpleado);
+router.get('/editar/:id',renderEditarEmpleado);
+router.post('/editar/:id',editarEmpleado);
+module.exports = router;

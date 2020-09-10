@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cargar Stock</title>
+</head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+  <br>
+  <!--cargar-->
+
+  <form class="w3-container" action="/stock/cargar" method="POST" name="f1" id="f1">
+<h1 style="font-size:30px">Cargar Stock </h1>
+    <input class="w3-input" type="text" name="cod_producto" id="codigo">
+    <label>Codigo</label>
+
+    <input class="w3-input" type="text" name="nombre_producto">
+    <label>Nombre Producto</label>
+
+    <input class="w3-input" type="text" name="p_adquision_producto">
+    <label>Precio Adquisicion</label>
+
+    <input class="w3-input" type="text" name="p_venta_producto">
+    <label>Precio Venta</label>
+
+    <input class="w3-input" type="text" name="cantidad">
+    <label>cantidad</label>
+
+    <select  id="" class="w3-input" name="cantidad_medida">
+      <option value="litro">litro</option>
+      <option value="libras">libras</option>
+      <option value="ARobas">ARobas</option>
+      <option value="quintales">quintales</option>
+      <option value="unidad">unidad</option>
+    </select>
+
+    <label>Tipo Unidad de Medida</label>
+
+    <button class="w3-button w3-block w3-blue" style="width:100%" type="submit">CARGAR</button>
+  </form>
+  <!---->
+
+  <div class="w3-container w3-purple">
+    <h5>LINKEAR VERION 2.0</h5>
+  </div>
+
+</body>
+<script>
+  function codigo() {
+    let abecedario = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'ñ', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+    let array = [];
+    for (let i = 0; i < 5; i++) {
+      let aletorio = abecedario[Math.floor(Math.random() * 26)];
+      let parejar = Math.floor(Math.random() * 26);
+      array.push(aletorio);
+      array.push(parejar);
+      document.f1.codigo.value = array.join('');
+    }
+  }
+   window.onload = codigo;
+</script>
+</html>

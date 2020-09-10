@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descargar Stock</title>
+</head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+
+<!--descargar-->
+<form action="/stock/editar/{{seleccionar.id}}" method="POST">
+<form class="w3-container">
+  
+<br>
+<br>
+    
+    <input class="w3-input" type="text" value="{{seleccionar.nombre_producto}}" name="nombre_producto">
+    <label>Nombre Producto</label>
+    
+
+    <input class="w3-input" type="text"  value="{{seleccionar.p_venta_producto}}" name="p_venta_producto" >
+    <label>Precio Venta</label>
+
+    <input class="w3-input" type="text" value="{{seleccionar.cantidad}}" name="cantidad">
+    <label>cantidad</label>
+
+    <input class="w3-input" type="text" value="{{seleccionar.cantidad_medida}}" name="cantidad_medida">
+    <label>Unidad de Medida</label>
+
+    <button class="w3-button w3-block w3-blue" style="width:100%" type="submit">Descargar</button>
+    </form>
+  </form>
+<!---->
+
+<br>
+<br>
+<br>
+<br>
+
+<div class="w3-container w3-purple">
+  <h5>LINKEAR VERION 2.0</h5>
+</div>
+
+
+</body>
+</html>

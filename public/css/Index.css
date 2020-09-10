@@ -1,0 +1,33 @@
+#nav{
+    background-color: rgb(72, 152, 155);
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: auto;    
+}
+#inicio{
+    color: #ffffff;
+    position: absolute;
+    left: 763px;
+    text-decoration: none ;
+}
+#inicio:hover{
+    background-color: darkgrey;
+}
+#perfil{
+    color: #ffffff;
+    position: relative;
+    left: 740px; 
+    text-decoration: none ;
+}
+#perfil:hover{
+    background-color: darkgrey;
+}
+#SalirSeccion{
+    color: #ffffff;
+    position: relative;
+    left: 742px;
+    text-decoration: none ;
+}
+#SalirSeccion:hover{
+    background-color: darkgrey;
+}

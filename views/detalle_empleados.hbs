@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<form action="/empleados/Detalle" method="GET"></form>
+<div class="w3-container">
+    <ul class="w3-ul w3-card-4">
+      {{#each empleados}}
+      <li class="w3-bar w3-green">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right"><a href="/empleados/delete/{{id}}">X</a></span>
+<span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right"><a href="/empleados/Editar/{{id}}">modificar</a></span>
+
+        <img src="/img/avatar_empleado.jfif" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+        <div class="w3-bar-item">
+          <span class="w3-large">Nombres del empleado: {{nombre_ue}},{{apellido_ue}}</span><br>
+          <span>direccion : {{direccion_ue}}</span><br>
+          <span>TElF : {{telf_ue}}</span><br>
+          <span>Cel : {{cel_ue}}</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  
+    {{else}}
+    <div class="col-md-4 mx-auto">
+      <div class="card card-body text-center">
+        <p>¡NO SEHAN REGISTRADO ENPLEADOS.!</p>
+        <a href="/empleados/registro">Agregar empleados</a>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>

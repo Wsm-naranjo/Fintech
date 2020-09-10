@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empleados</title>
+</head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body>
+   
+
+<!-- empleados -->
+<form action="/empleados/editar/{{edit.id}}" class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin" method="POST" > 
+    <h2 class="w3-center">Registra Empleado </h2>
+     
+    <div class="w3-row w3-section">
+      <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
+        <div class="w3-rest">
+          <input class="w3-input w3-border" value="{{edit.cedula_ue}}" type="text" placeholder="Cedula de identidad del emplado  " name="cedula_ue">
+        </div>
+    </div>
+    
+    <div class="w3-row w3-section">
+      <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
+        <div class="w3-rest">
+          <input class="w3-input w3-border"  type="text" placeholder="Nombres del empleado" value="{{edit.nombre_ue}}"  name="nombre_ue">
+        </div>
+    </div>
+    
+    <div class="w3-row w3-section">
+      <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
+        <div class="w3-rest">
+          <input class="w3-input w3-border"  type="text" placeholder="Apellidos Empleado" name="apellido_ue" value="{{edit.apellido_ue}}">
+        </div>
+    </div>
+    
+    <div class="w3-row w3-section">
+        <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-pencil"></i></div>
+          <div class="w3-rest">
+            <input class="w3-input w3-border"  type="text" placeholder="Direccion empleado" name="direccion_ue" value="{{edit.direccion_ue}}">
+          </div>
+    
+    <div class="w3-row w3-section">
+      <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-phone"></i></div>
+        <div class="w3-rest">
+          <input class="w3-input w3-border"  type="text" placeholder="Telefono Convencional del empleado" name="telf_ue" value="{{edit.telf_ue}}">
+        </div>
+
+        <div class="w3-row w3-section">
+            <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-phone"></i></div>
+              <div class="w3-rest">
+                <input class="w3-input w3-border"  type="text" placeholder="Telefono Celular Empleado" name="cel_ue" value="{{edit.cel_ue}}">
+              </div>
+
+              <div class="w3-row w3-section">
+                <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-pencil"></i></div>
+                  <div class="w3-rest">
+                    <input class="w3-input w3-border"  type="text" placeholder="Crea Contraseña del empleado" name="contraena_ue" value="{{edit.contraena_ue}}">
+                  </div>
+    </div>
+    
+    <button class="w3-button w3-block w3-section w3-blue w3-ripple w3-padding" type="submit">Guardar</button>
+    
+    </form>
+
+
+
+
+
+
+<!---->
+
+<div class="w3-container w3-purple">
+  <h5>LINKEAR VERION 2.0</h5>
+</div>
+
+
+</body>
+</html>

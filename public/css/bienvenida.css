@@ -1,0 +1,48 @@
+#Bienvenida{ 
+    position: absolute;
+    top: 20px;
+    left: 400px;
+    font-family: Lobster;
+    
+
+}
+#Mensaje{
+    position: absolute;
+    top: 60px;
+    left: 220px;
+    font-family: Lobster;
+}
+#Inicio{
+    width: 100%;
+}
+#botonIngresa{
+    position: absolute;
+    top: 470px;
+    left: 230px;
+    background-color: rgb(0, 174, 255);
+    font-size: 35px;
+    font-family: monospace;
+    border-radius: 20px;
+   
+     
+}
+#botonRegistro{
+    position: absolute;
+    top: 470px;
+    left: 580px;
+    background-color: rgb(0, 174, 255);
+    font-size: 35px;
+    font-family: monospace;
+    border-radius: 20px;    
+}    
+    
+#Registro{
+    color: white; 
+    text-decoration: none ;            
+
+}
+#Ingreso{
+    color: white;
+    text-decoration: none ;      
+
+}

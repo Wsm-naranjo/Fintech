@@ -1,0 +1,84 @@
+#nav{
+    background-color: rgb(72, 152, 155);
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;        
+}
+#ingresar{
+    color: #ffffff;
+    position: absolute;
+    left: 800px;
+    text-decoration: none ;
+}
+#ingresar:hover{
+    background-color: darkgrey;
+}
+#registro{
+    color: #ffffff;
+    position: absolute;
+    left: 900px;    
+    text-decoration: none ;
+}
+#registro:hover{
+    background-color: darkgrey;
+}
+#Usuario{
+    position: absolute;
+    top: 190px;
+    left: 410px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    color: #bbbaba;
+    
+}
+#Nombre{
+    position: absolute;
+    top: 220px;
+    left: 410px;
+}
+#correo{
+    position: absolute;
+    top: 240px;
+    left: 410px;
+    font-size: 25px;
+    color: #bbbaba;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+#Correo{
+    position: absolute;
+    top: 270px;
+    left: 410px
+}
+#contraseña{
+    position: absolute;
+    top: 290px;
+    left: 410px ;
+    color: #bbbaba;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+
+}
+#Contraseña{
+    position: absolute;
+    top: 320px;
+    left: 410px
+}
+#botonGuardar{
+    position: absolute;
+    top: 360px;
+    left: 485px;    
+    font-size: 22px;
+    border-radius: 10px;
+    background-color: rgb(83, 144, 172);
+    font-family: monospace;
+    border-radius: 9px; 
+}
+#img{
+    width: 100%;
+    filter: grayscale(60%)
+}
+#guardar{
+    color: white;
+    text-decoration: none ;
+}
