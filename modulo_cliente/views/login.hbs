@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/login.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <title>Login Cliente</title>
+</head>
+<style>
+  body {
+    background-image: url("/img/fondo.jpg");
+  }
+</style>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <img src="..//public/img/login_imagen.png">
+        <br>
+        <br>
+        <p id="frase">No es la más inteligente de las especies la que sobrevive ni la más fuerte, sino la que sabe
+          adaptarse al cambio.</p>
+      </div>
+      <div class="col">
+        <br><br><br><br><br>
+        <div id="container">
+          <!-- login-->
+          <table>
+            <form method="POST" action="/Login">
+              <div>
+                <br>
+                <h5 style="font-style: oblique; position: relative; left: 10px;" >Cedula</h5>
+                <input type="text" name="username"  style="width:400px; position: relative; left: 10px;">
+              </div>
+              <div>
+                <h5 style="font-style: oblique; position: relative; left: 10px;">Contraseña</h5> 
+                <input type="password" name="password"  style="width:400px; position: relative; left: 10px;">
+              </div>
+              <br>
+              
+              <button id="button" style="width: 150px;">Ingresar</button>
+              <br><br>
+              <button id="button2" style="width: 150px;"><a href="/registro">Registrate</a></button>
+            </form>
+          </table>
+          <!--login-->
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>

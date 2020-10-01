@@ -1,0 +1,59 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+   <h1 id="fintech" style="color: purple;"> FINTECH</h1>
+    <a class="navbar-brand">
+      <i class="fas fa-link" id="fintech1" style="color: aliceblue; "></i> 
+
+    </a>
+    
+    <p style="font-size: 23px; color:white" >Bienvenido <br> {{user.nombre}} </p>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        {{#if user}}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+          Empleados 
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            
+            <a class="dropdown-item" href="/empleados/Detalle">Todos los empleados</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/empleados/registro">Agrege Empleados </a>
+      
+          </div>
+        </li>
+<!-- -->
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+         Productos
+          </a>
+
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            
+            <a class="dropdown-item" href="/stock/detalle">Detalle Stock</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/stock/cargar">Agregar Producto</a>
+            <div class="dropdown-divider"></div>
+          
+      
+          </div>
+        </li>
+     
+     
+        <li class="nav-item">
+          <a class="nav-link" href="/logout" id="n">Cierre la Seccion</a>
+        </li>
+        {{else}}
+      
+        {{/if}}
+      </ul>
+    </div>
+  </div>
+</nav>

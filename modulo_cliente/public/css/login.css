@@ -1,0 +1,38 @@
+#container{
+    margin : 20px auto;
+    background-color:transparent;
+    height: 300px;
+    width : 450px;
+    box-shadow: 0px 5px 5px 0px;
+}
+#frase{
+    font-size: 25px;
+    font-style: oblique;
+}
+#button {
+    background-color: white; 
+    color: black; 
+    border-radius: 15%;
+    position: absolute;
+   top: 340px;
+   left: 100px;
+  }
+  
+#button:hover {
+    background-color: #008CBA;
+    color: white;
+  }
+  #button2 {
+    background-color: white; 
+    color: black; 
+    border-radius: 15%;
+    position: absolute;
+    top: 340px;
+    left: 300px;
+  }
+  
+#button2:hover {
+    background-color: greenyellow;
+    color: white;
+  }
+
