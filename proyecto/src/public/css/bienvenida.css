@@ -1,15 +1,17 @@
 #Bienvenida{ 
     position: absolute;
-    top: 140px;
-    left: 500px;
+    top: 190px;
+    left: 480px;
     font-family: Lobster;
     font-size: 80px;
+    color: aliceblue;
+    text-align: center;
 }
 #Mensaje{
     position: absolute;
-    top: 240px;
+    top: 290px;
     font-family: Lobster;
-    font-size: 60px;
+    font-size: 58px;
     text-align: center;
     color: aliceblue;
 }

@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <LINK REL=StyleSheet HREF="css/perfil.css" TYPE="text/css" MEDIA=screen>
+    <LINK REL=StyleSheet HREF="/css/perfil.css" TYPE="text/css" MEDIA=screen>
 </head>
 
 <body>
     <div id="datos">
-            <img src="img/usuario1.jpg" id="avatar">
+            <img src="/img/usuario1.jpg" id="avatar">
         <div id="datosUsuario">
          <p>{{user.username}}<br>
                  {{user.email}}
@@ -18,10 +18,10 @@
     </div>
      <label id="DatoNegocio">Datos del Negocio</label>
     <div id="formulario">
-        <form action="/perfil/add" method="POST">
+        <form action="/perfil/edit/{{tiendas.id}}" method="POST">
         <div>
         <label  id="Nombre">Nombre:</label>
-        <input type="text" name="nombreNegocio" id="nombreNegocio">
+        <input type="text" name="nombreNegocio" id="nombreNegocio" value="{{tiendas.nombreNegocio}}">
         </div>
         <div>
             <label  id="contactos">Contactos</label>
@@ -29,7 +29,7 @@
            <label id="celular">Celular:</label> <label id="telefono">Telefono:</label>
            </div>
            <div id="numero">
-        <input type="number" name="celular" min="0" id="celular">   <input type="number" name="telefono" min="0" id="telefono">
+        <input type="number" name="celular" min="0" id="celular" value="{{tiendas.celular}}">   <input type="number" name="telefono" min="0" id="telefono" value="{{tiendas.telefono}}">
         </div>
         </div>
         <div id="boton">

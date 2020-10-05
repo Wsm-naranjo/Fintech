@@ -4,31 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <LINK REL=StyleSheet HREF="/css/cliente.css" TYPE="text/css" MEDIA=screen>
 </head>
 
 <body>
     <form action="/proveedor/add" method="POST" name="f1" id="f1">
         <div id="contenedor">
             <label>NombreProveedor</label>
-            <input type="text" name="NombreProveedor" id="nombre">
+            <input type="text" name="NombreProveedor" id="NombreProveedor">
         </div>
         <div id="contenedor">
             <label>Fecha</label>
-            <input type="date" name="Fecha" id="fecha">
+            <input type="date" name="Fecha" id="Fecha">
         </div>
         <div id="contenedor">
             <label>Direccion</label>
-            <input type="text" name="Direccion">
+            <input type="text" name="Direccion" id="Direccion">
         </div>
         <div id="contenedor">
             <label>Numero</label>
-            <input type="number" name="Numero">
+            <input type="number" name="Numero" id="Numero">
         </div>
         <div id="contenedor">
             <label>Estado</label>
             <input type="text" name="Estado" id="codigo">
         </div>
-        <button  type="submit" id="guardar">Guardar</button>
+        <button class="btn btn-success" type="submit" id="guardar1">Guardar</button>
     </form>
 </body>
 <script>

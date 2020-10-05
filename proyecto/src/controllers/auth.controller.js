@@ -7,7 +7,7 @@ authCtrl.renderSignUp = (req, res) => {
 };
 
 authCtrl.signUp = passport.authenticate('local.signup', {
-    successRedirect: '/perfil',
+    successRedirect: '/perfil/list',
     failureRedirect: '/signup',
     failureFlash: true
 });
@@ -17,7 +17,7 @@ authCtrl.renderSignIn = (req, res, next) => {
 };
 
 authCtrl.signIn = passport.authenticate('local.signin', {
-    successRedirect: '/perfil',
+    successRedirect: '/perfil/list',
     failureRedirect: '/signin',
     failureFlash: true
 });

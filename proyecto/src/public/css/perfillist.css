@@ -27,7 +27,7 @@
 }
 #telefono{
     position: absolute;
-    left: 350px;
+    left: 550px;
     border-radius: 20px;
 }
 #numeros{
@@ -41,7 +41,7 @@
 #DatoNegocio{
     position: absolute;
     top: 130px;
-    left: 480px;
+    left: 540px;
     font-size: 29px;
 }
 #Nombre{
@@ -51,8 +51,9 @@
 }
 #nombreNegocio{
     position: absolute;
-    left: 250px;
-    top: 40px;
+    left: 280px;
+    top: 30px;
+    font-size: 50px;
     border-radius: 20px;
 }
 #guardar1{
@@ -67,7 +68,7 @@
 }
 #contactos{
     position: absolute;
-    left: 250px;
+    left: 300px;
     top: 120px;
 }
 #boton{

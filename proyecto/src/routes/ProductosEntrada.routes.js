@@ -15,4 +15,5 @@ router.get("/list",isLoggedIn,renderProductos)
 router.get("/delete/:id",EliminarProductos)
 router.get("/edit/:id",renderEditarEntrada)
 router.post("/edit/:id",EditarEntrada)
+
 module.exports=router

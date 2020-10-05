@@ -9,48 +9,79 @@ USE fintech;
     email VARCHAR(100) NOT NULL
   );
 
-  ALTER TABLE users MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 1;
+  ALTER TABLE users MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 0;
 
-CREATE TABLE producto (
-  id INT(11) NOT NULL PRIMARY KEY,
-  codigo VARCHAR(50) NOT NULL,
-  nombre VARCHAR(255) NOT NULL,
-  cantidad VARCHAR(50)NOT NULL,
-  unidad varchar(255)NOT NULL,
-  precio INT(4)NOT NULL,
+CREATE TABLE categoria(
+  id Int(11) NOT NULL PRIMARY KEY,
+  Nombre VARCHAR(255) NOT NULL,
+  Descripcion VARCHAR(255) NOT NULL,
   user_id INT(11)NOT NULL,
-  created_at timestamp NOT NULL DEFAULT current_timestamp,
-  CONSTRAINT fk_users FOREIGN KEY(user_id) REFERENCES users(id)
+  CONSTRAINT fk_categoria FOREIGN KEY(user_id) REFERENCES users(id)
 );
 
-ALTER TABLE producto MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 1;
+ALTER TABLE categoria MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 0;
+
+CREATE TABLE Tienda (
+  id INT(11) NOT NULL PRIMARY KEY,
+  nombreNegocio VARCHAR(50) NOT NULL,
+  celular INT (10) NOT NULL,
+  telefono INT(10) NOT NULL,
+  user_id INT(11)NOT NULL,
+  created_at timestamp NOT NULL DEFAULT current_timestamp
+);
+ALTER TABLE Tienda ADD CONSTRAINT fk_usuarioTienda FOREIGN KEY(user_id) REFERENCES users(id);
+ALTER TABLE Tienda MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 0;
+
+CREATE TABLE Tiendas (
+  id INT(11) NOT NULL PRIMARY KEY,
+  Tienda INT(11)NOT NULL,
+  comentarios VARCHAR(100) NOT NULL,
+  created_at timestamp NOT NULL DEFAULT current_timestamp,
+  CONSTRAINT fk_tienda FOREIGN KEY(tienda) REFERENCES Tienda(id)
+);
+
+ALTER TABLE Tiendas MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 0;
+
 
 CREATE TABLE proveedor(
 id INT(11) NOT NULL PRIMARY KEY,
 NombreProveedor	varchar(50) NOT NULL,
-Fecha	date NOT NULL,
 Direccion	varchar(100) NOT NULL,
 Numero	int(10)NOT NULL,
 Estado	tinyint(1) NOT NULL,
 user_id INT(11),
-CONSTRAINT fkk_user FOREIGN KEY(user_id) REFERENCES users(id)
+CONSTRAINT fk_usurio FOREIGN KEY(user_id) REFERENCES users(id)
 );
 
-ALTER TABLE proveedor MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 1;
+ALTER TABLE proveedor MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 0;
 
-CREATE TABLE productoentrada(
+CREATE TABLE productoEntrada(
 id INT(11) NOT NULL PRIMARY KEY,
+codigo VARCHAR(50) Not NULL,
 NombreProducto varchar(50) NOT NULL,
-Tipo varchar(50) NOT NULL,
 Cantidad 	int(20) NOT NULL,
 precio INT(4) NOT NULL,
-FechaCadusidad	date NOT NULL,
-Proveedores int(11) NOT NULL,
+FechaCadusidad VARCHAR(225) NOT NULL,
+proveedor int(11) NOT NULL,
 FechaRegistro timestamp NOT NULL DEFAULT current_timestamp
 );
+ALTER TABLE productoEntrada ADD CONSTRAINT fk_proveedores FOREIGN KEY(proveedor) REFERENCES proveedor(id);
 
-ALTER TABLE productoentrada ADD CONSTRAINT fk_proveedor FOREIGN KEY(Proveedor) REFERENCES proveedor(id)
-ALTER TABLE productoentrada MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 1;
+ALTER TABLE productoEntrada MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 0;
+
+CREATE TABLE producto (
+ id INT(11) NOT NULL PRIMARY KEY,
+codigo VARCHAR(50) Not NULL,
+NombreProducto varchar(50) NOT NULL,
+Cantidad 	int(20) NOT NULL,
+precio INT(4) NOT NULL,
+FechaCadusidad VARCHAR(225) NOT NULL,
+categoria int(11) NOT NULL,
+FechaRegistro timestamp NOT NULL DEFAULT current_timestamp,
+CONSTRAINT fk_user_id FOREIGN KEY(categoria) REFERENCES categoria(id)
+);
+
+ALTER TABLE producto MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 0;
 
 CREATE TABLE cliente(
 id INT(11) PRIMARY KEY NOT NULL,
@@ -59,6 +90,7 @@ Nombre VARCHAR(50) NOT NULL,
 Telefono INT(10) NOT NULL,
 user_id INT(11) NOT NULL
 );
+ALTER TABLE cliente ADD CONSTRAINT fk_usuarios FOREIGN KEY(user_id) REFERENCES users(id);
 
-ALTER TABLE cliente ADD CONSTRAINT fk_usuarios FOREIGN KEY(user_id) REFERENCES users(id)
-ALTER TABLE cliente MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+ALTER TABLE cliente MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
+
