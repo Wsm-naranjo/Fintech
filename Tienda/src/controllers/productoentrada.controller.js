@@ -7,28 +7,37 @@ ProductoEntradaCtrl.renderEntrada = (req, res) => {
 }
 
 ProductoEntradaCtrl.addEntrada = async (req, res) => {
-    const { NombreProducto, codigo, Nombre, Descripcion	, Cantidad, precio, FechaCadusidad } = req.body
+    const { NombreProducto, codigo, Nombre, Descripcion	, Cantidad, precio, FechaCadusidad, precioVenta } = req.body
     const NuevaEntrada = {
         codigo,
         NombreProducto,
         Cantidad,
         precio,
         FechaCadusidad,
-        user_id: req.user.id
+        proveedor: req.user.id
     }
     const NuevaCategoria ={
         Nombre,
         Descripcion,
         user_id: req.user.id
     }
+    const productoVenta={
+        codigo,
+        NombreProducto,
+        Cantidad,
+        precioVenta,
+        FechaCadusidad,
+        categoria: req.user.id
+    }
     await pool.query("INSERT INTO productoentrada set ?", [NuevaEntrada])
     await pool.query("INSERT INTO categoria set ?", [NuevaCategoria])
+    await pool.query("INSERT INTO producto set ?", [productoVenta])
     req.flash('success', "Se guardo correctamente")
     res.redirect("/ProductoEntrada/list")
 }
 
 ProductoEntradaCtrl.renderProductos = async (req, res) => {
-    const DatosProducto = await pool.query("SELECT * FROM productoentrada WHERE user_id = ?", [req.user.id])
+    const DatosProducto = await pool.query("SELECT * FROM productoentrada WHERE proveedor = ?", [req.user.id])
     res.render("ProductosEntrada/list", { DatosProducto })
 
 }
@@ -36,6 +45,7 @@ ProductoEntradaCtrl.renderProductos = async (req, res) => {
 ProductoEntradaCtrl.EliminarProductos = async (req, res) => {
     const { id } = req.params;
     await pool.query("DELETE FROM productoentrada WHERE ID = ?", [id])
+    await pool.query("DELETE FROM producto WHERE ID = ?", [id])
     req.flash('success', "Eliminacion correcta")
     res.redirect("/ProductoEntrada/list")
 

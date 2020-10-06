@@ -9,7 +9,7 @@ const {  renderProductos, editLink, renderEditLink } = require('../controllers/p
 router.use(isLoggedIn);
 
 // Routes
-router.get('/', isLoggedIn, renderProductos);
+router.get('/list', isLoggedIn, renderProductos);
 router.get('/edit/:id', renderEditLink);
 router.post('/edit/:id', editLink);
 
