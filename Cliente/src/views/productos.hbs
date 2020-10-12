@@ -1,0 +1,46 @@
+   <link rel="stylesheet" href="/css/productos.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+    body {
+        background-image: url("..//public/img/pag-principal.jpg");
+    }
+</style>
+
+<body>
+    <img src="/img/logo-inicial.png" id="logo-inicial"style="width: 250px; position: absolute; left: 470px;">
+
+    <div id="container">
+        <h5 style="font-size: 500%; position: absolute; top: -10px; color: white;" >Nombre de la Tienda</h5>
+        <button class="btn btn-outline-light" id="button">Viveres</button>
+        <button class="btn btn-outline-light" id="button">Bebidas</button>
+        <button class="btn btn-outline-light" id="button">Bebidas Alcolicas</button>
+        <button class="btn btn-outline-light" id="button">Dulces</button>
+        <button class="btn btn-outline-light" id="button">Otros</button>
+        <button class="btn btn-outline-info" id="perfil" ><img src="/img/icon-perfil.png" style="width: 35px;"></button>
+        <button class="btn btn-outline-success" id="carrito"><img src="/img/carrito.webp" style="width: 35px;"></button>
+    </div>
+    <br><br><br><br><br><br><br><br><br>
+
+
+    <!--card--->
+    <form action="/producto" method="POST">
+        <div class="w3-container">
+            <div class="w3-card-4" style="width:20%">
+                <header class="w3-container w3-light-grey">
+                    <h3>N. del Producto</h3>
+                </header>
+                <div class="w3-container w3-light-blue">
+                    <h3>Precio =</h3>
+                    <h3>Stock =</h3>
+                    <hr>
+                    <img src="/img/producto.png"  style="width:120px;">
+                    <br>
+                </div>
+                <button class="w3-button w3-block w3-green">   + Agregar    <img src="/img/carrito.webp" style="width: 28px;"></button>
+            </div>
+        </div>
+    </form>
+    <!--card-->
+</body>
