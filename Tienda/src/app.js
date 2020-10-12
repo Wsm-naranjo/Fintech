@@ -1,68 +1,72 @@
-const express = require('express');
+const express = require('express'); 
 const morgan = require('morgan');
 const path = require('path');
 const exphbs = require('express-handlebars');
 const session = require('express-session');
 const passport = require('passport');
 const flash = require('connect-flash');
-const MySQLStore = require('express-mysql-session')(session);
-const bodyParser = require('body-parser');
+const mysqlstore = require('express-mysql-session')(session);
+const bodyparser = require('body-parser'); 
 
-const { database } = require('./keys');
+const {database} = require('./keys');
 
-// Intializations
+
 const app = express();
-
 require('./lib/passport');
 
-// Settings
-app.set('port', process.env.PORT || 4000);
-app.set('views', path.join(__dirname, 'views'));
-app.engine('.hbs', exphbs({
-  defaultLayout: 'main',
-  layoutsDir: path.join(app.get('views'), 'layouts'),
-  partialsDir: path.join(app.get('views'), 'partials'),
-  extname: '.hbs',
-  helpers: require('./lib/handlebars')
-}))
+/// archivos compartidos
+app.set('port', process.env.PORT||4000);
+app.set('views', path.join(__dirname,'views'));
+app.engine('.hbs',exphbs({
+    defaultLayout:'main',
+    layoutsDir:path.join(app.get('views'),'layouts'),
+partialsDir:path.join(app.get('views'),'partials'),
+extname: '.hbs',
+helpres: require('./lib/handlebars')
+}));
 app.set('view engine', '.hbs');
+/// archivos compartidos
 
-// Middlewares
+
+//midlewars
 app.use(morgan('dev'));
-app.use(bodyParser.urlencoded({extended: false}));
-app.use(bodyParser.json());
-
+app.use(bodyparser.urlencoded({
+    extended:false
+}));
+app.use(bodyparser.json());
 app.use(session({
-  secret: 'faztmysqlnodemysql',
-  resave: false,
-  saveUninitialized: false,
-  store: new MySQLStore(database)
+    secret:'FINTECH',
+    resave:false,
+    saveUninitialized:false,
+    store: new mysqlstore(database)
 }));
 app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
+//midlewars
 
-// Global variables
-app.use((req, res, next) => {
-  app.locals.message = req.flash('message');
-  app.locals.success = req.flash('success');
-  app.locals.user = req.user;
-  next();
+//varible globales 
+app.use((req,res,next )=>{
+    app.locals.menssage = req.flash('menssage');
+    app.locals.success = req.flash('success');
+    app.locals.user = req.user;
+    next();
 });
+//varible globales 
 
-// Routes
-app.use(require('./routes/index.routes'));
-app.use(require('./routes/auth.routes'));
-app.use(require('./routes/user.routes'));
-app.use('/productos', require('./routes/Productos.routes'));
+//public
+app.use(express.static(path.join(__dirname ,'public')));
+//public
+
+
+//routers
+app.use(require('./routes/index.routes'))
+app.use(require('./routes/auth.routes'))
+app.use(require('./routes/user.routes'))
+app.use('/perfil', require('./routes/perfil.router'));
 app.use('/clientes', require('./routes/Clientes.routes'));
-app.use('/proveedor', require('./routes/proveedor.router'));
-app.use('/ProductoEntrada', require('./routes/ProductosEntrada.routes'));
-app.use('/perfil',require('./routes/perfil.router'));
+app.use('/ProductoEntrada', require('./routes/ProductosEntrada.routes'))
+app.use('/proveedor', require('./routes/proveedor.router'))
+app.use('/productos', require('./routes/Productos.routes'))
 
-
-
-// Public
-app.use(express.static(path.join(__dirname, 'public')));
-
-module.exports = app;
+module.exports = app; 

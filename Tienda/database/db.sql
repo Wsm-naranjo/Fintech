@@ -6,7 +6,10 @@ USE fintech;
     id INT(11) NOT NULL PRIMARY KEY,
     username VARCHAR(16) NOT NULL,
     password VARCHAR(60) NOT NULL,
-    email VARCHAR(100) NOT NULL
+    email VARCHAR(100) NOT NULL,
+    Nombre VARCHAR(50) NOT NULL,
+    Apellido VARCHAR(50) NOT NULL,
+    created_at timestamp NOT NULL DEFAULT current_timestamp
   );
 
   ALTER TABLE users MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 0;
@@ -16,6 +19,7 @@ CREATE TABLE categoria(
   Nombre VARCHAR(255) NOT NULL,
   Descripcion VARCHAR(255) NOT NULL,
   user_id INT(11)NOT NULL,
+  created_at timestamp NOT NULL DEFAULT current_timestamp,
   CONSTRAINT fk_categoria FOREIGN KEY(user_id) REFERENCES users(id)
 );
 
@@ -29,6 +33,7 @@ CREATE TABLE Tienda (
   user_id INT(11)NOT NULL,
   created_at timestamp NOT NULL DEFAULT current_timestamp
 );
+
 ALTER TABLE Tienda ADD CONSTRAINT fk_usuarioTienda FOREIGN KEY(user_id) REFERENCES users(id);
 ALTER TABLE Tienda MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 0;
 
@@ -50,6 +55,7 @@ Direccion	varchar(100) NOT NULL,
 Numero	int(10)NOT NULL,
 Estado	tinyint(1) NOT NULL,
 user_id INT(11),
+created_at timestamp NOT NULL DEFAULT current_timestamp,
 CONSTRAINT fk_usurio FOREIGN KEY(user_id) REFERENCES users(id)
 );
 
@@ -74,7 +80,7 @@ CREATE TABLE producto (
 codigo VARCHAR(50) Not NULL,
 NombreProducto varchar(50) NOT NULL,
 Cantidad 	int(20) NOT NULL,
-precio INT(4) NOT NULL,
+precioVenta INT(4) NOT NULL,
 FechaCadusidad VARCHAR(225) NOT NULL,
 categoria int(11) NOT NULL,
 FechaRegistro timestamp NOT NULL DEFAULT current_timestamp,
@@ -88,6 +94,7 @@ id INT(11) PRIMARY KEY NOT NULL,
 Cedula INT(10) NOT NULL,
 Nombre VARCHAR(50) NOT NULL,
 Telefono INT(10) NOT NULL,
+created_at timestamp NOT NULL DEFAULT current_timestamp,
 user_id INT(11) NOT NULL
 );
 ALTER TABLE cliente ADD CONSTRAINT fk_usuarios FOREIGN KEY(user_id) REFERENCES users(id);

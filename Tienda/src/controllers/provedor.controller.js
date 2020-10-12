@@ -7,7 +7,7 @@ proveedorCtrl.renderAddProveedor = (req, res) => {
 };
 
 proveedorCtrl.addProveedor = async (req, res) => {
-    const {NombreProveedor,Fecha,Direccion,Numero,Estado} = req.body;
+    const {NombreProveedor,Direccion,Numero,Estado} = req.body;
     const newLink = {
         NombreProveedor,
         Direccion,

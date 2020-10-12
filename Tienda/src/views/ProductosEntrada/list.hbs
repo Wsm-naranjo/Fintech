@@ -22,11 +22,7 @@
                         <tr>
                             <td>Precio:</td>
                             <td style="text-align: right;">{{precio}}</td>
-                        </tr>                        
-                        <tr>
-                            <td>Tiempo:</td>
-                            <td style="text-align: left;">{{timeago created_at}}</td>
-                        </tr>                        
+                        </tr>                                                
                     </table>
                     <a class="btn btn-success" href="/ProductoEntrada/edit/{{id}}">
                         Editar Producto<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil-square"
@@ -53,7 +49,7 @@
         <div class="col-md-4 mx-auto">
             <div class="card card-body text-center">
                 <p>¡No has registrado Productos.!</p>
-                <a href="/proveedor/add">¡Introducir uno!</a>
+                <a href="/ProductoEntrada/add">¡Introducir uno!</a>
             </div>
         </div>
         {{/each}}
