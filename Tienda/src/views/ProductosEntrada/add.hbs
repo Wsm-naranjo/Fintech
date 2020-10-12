@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <LINK REL=StyleSheet HREF="/css/cliente.css" TYPE="text/css" MEDIA=screen>
+</head>
+
+<body>
+    <form action="/ProductoEntrada/add" method="POST" name="f1" id="f1">
+        <div id="contenedor">
+            <label>Codigo</label>
+            <input type="text" name="codigo" id="codigo">
+        </div>
+        <div id="contenedor">
+            <label>Nombre del Producto</label>
+            <input type="text" name="NombreProducto" id="NombreProducto">
+        </div>
+        <div id="contenedor">
+            <label>Cantidad</label>
+            <input type="number" name="Cantidad" id="Cantidad">
+        </div>
+        <div id="contenedor">
+            <label>Categoria</label>
+            <select name="Nombre" id="categoria">
+                <option name="Nombre" value="Consumible">Consumible</option>
+                <option name="Nombre" value="No consumible">No consumible</option>
+                <option name="Nombre" value="Bebidas">Bebidas</option>
+            </select>
+        </div>
+        <div id="contenedor">
+            <label>Descripcion</label>
+            <input type="text" name="Descripcion" id="descripcion">
+        </div>
+        <div id="contenedor">
+            <label>Precio Original</label>
+            <input type="number" name="precio" id="precio">
+        </div>
+        <div id="contenedor">
+            <label>Precio Venta</label>
+            <input type="number" name="precioVenta" id="precio">
+        </div>
+        <div id="contenedor">
+            <label>Fecha Caducidad</label>
+            <input type="date" name="FechaCadusidad" id="FechaCadusidad">
+        </div>
+        <button class="btn btn-success" type="submit" id="guardar1">Guardar</button>
+    </form>
+</body>
+<script>
+    function inicio() {
+        let a = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+        let d = []
+        for (let b = 0; b < 5; b++) {
+            let m = a[Math.floor(Math.random() * 26)]
+            let n = Math.floor(Math.random() * 26)
+            d.push(m)
+            d.push(n)
+            document.f1.codigo.value = d.join('')
+        }
+    };
+    window.onload = inicio;
+</script>
+</html>

@@ -1,0 +1,45 @@
+#ingresar{
+    color: #000000;
+    position: absolute;
+    top: 5px;
+    left: 180px;
+    text-decoration: none ;
+}
+#Usuario{
+    position: absolute;
+    top: 180px;
+    left: 490px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    color: #ffffff;
+    text-align: center;
+    
+}
+#Nombre{
+    position: absolute;
+    top: 240px;
+    left: 490px
+    
+}
+#contraseña{
+    position: absolute;
+    top: 280px;
+    left: 490px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    color: #ffffff;
+}
+#Contraseña{
+    position: absolute;
+    top: 350px;
+    left: 490px
+}
+#botonIngresa{
+    position: absolute;
+    top: 400px;
+    left: 530px;
+    font-size: 30px;
+    font-family: monospace;
+    border-radius: 20px;   
+}
