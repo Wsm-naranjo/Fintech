@@ -37,7 +37,7 @@ CREATE TABLE Tienda (
 ALTER TABLE Tienda ADD CONSTRAINT fk_usuarioTienda FOREIGN KEY(user_id) REFERENCES users(id);
 ALTER TABLE Tienda MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 0;
 
-CREATE TABLE Tiendas (
+CREATE TABLE Comentarios (
   id INT(11) NOT NULL PRIMARY KEY,
   Tienda INT(11)NOT NULL,
   comentarios VARCHAR(100) NOT NULL,
@@ -45,7 +45,7 @@ CREATE TABLE Tiendas (
   CONSTRAINT fk_tienda FOREIGN KEY(tienda) REFERENCES Tienda(id)
 );
 
-ALTER TABLE Tiendas MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 0;
+ALTER TABLE Comentarios MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 0;
 
 
 CREATE TABLE proveedor(
@@ -83,10 +83,12 @@ Cantidad 	int(20) NOT NULL,
 precioVenta INT(4) NOT NULL,
 FechaCadusidad VARCHAR(225) NOT NULL,
 categoria int(11) NOT NULL,
+Tienda int(11) NOT NULL,
 FechaRegistro timestamp NOT NULL DEFAULT current_timestamp,
-CONSTRAINT fk_user_id FOREIGN KEY(categoria) REFERENCES categoria(id)
+CONSTRAINT fk_Producto_id FOREIGN KEY(categoria) REFERENCES categoria(id)
 );
 
+ALTER TABLE producto ADD CONSTRAINT fk_producto_tienda FOREIGN KEY(Tienda) REFERENCES Tienda(id);
 ALTER TABLE producto MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 0;
 
 CREATE TABLE cliente(

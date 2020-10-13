@@ -3,7 +3,7 @@ const ProductosCtrl = {};
 const pool = require('../database');
 
 ProductosCtrl.renderProductos = async (req, res) => {
-    const productos =  await pool.query("SELECT * FROM producto WHERE categoria = ?", [req.user.id] )
+    const productos =  await pool.query("SELECT * FROM producto INNER JOIN categoria on categoria.id=producto.categoria")
     res.render('inicio', { productos });
 }
 

@@ -3,7 +3,7 @@ const router = express.Router();
 
 const { isLoggedIn } = require('../lib/auth');
 
-const {  renderProductos, editLink, renderEditLink,categoria } = require('../controllers/productos.controller')
+const {  renderProductos, editLink, renderEditLink} = require('../controllers/productos.controller')
 
 // Authorization
 router.use(isLoggedIn);
