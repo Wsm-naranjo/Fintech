@@ -1,52 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="..//public/css/pag-principal.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <title>Pag Principal</title>
-</head>
 <style>
-    body {
-        background-image: url("..//public/img/pag-principal.jpg");
-    }
+  body {
+    background-image: url("/img/pag-principal.jpg");
+  }
 </style>
+<img src="/img/logo-inicial.png" id="logo-inicial" style="width: 250px; position: absolute; left: 470px;">
+<h2 style="font-style: oblique; position: absolute;top: 110px; left: 500px;">Listado de Tiendas</h2>
+<div id="container">
 
-<body>
-    <img src="..//public/img/logo-inicial.png" id="logo-inicial" style="width: 250px; position: absolute; left: 470px;">
-    <h2 style="font-style: oblique; position: absolute;top: 110px; left: 500px;">Listado de Tiendas</h2>
-    <div id="container">
-
-        <button class="btn btn-outline-danger" id="perfil"><img src="..//public/img/icon-perfil.png"
-                style="width: 35px;"></button>
-        <button class="btn btn-outline-success" id="carrito"><img src="..//public/img/carrito.webp"
-                style="width: 35px;"></button>
-    </div>
+  <button class="btn btn-outline-danger" id="perfil"><img src="/img/icon-perfil.png" style="width: 35px;"></button>
+  <button class="btn btn-outline-success" id="carrito"><img src="/img/carrito.webp" style="width: 35px;"></button>
+</div>
 <br><br><br><br><br><br><br><br><br>
 <!--card tienda-->
-<form action="/tienda"></form>
-<div class="w3-container">
+<form action="/tienda/lista">
+  <div class="w3-container">
     <div class="w3-card-4 w3-blue" style="width:30%">
-  
+      {{#each lista}}
       <div class="w3-container w3-center">
-        <h3 style="font-style: oblique;">Nombre Tienda</h3>
-        <img src="..//public/img/tienda.jpg" alt="Avatar" style="width:60%">
-        <h6>Direccion =</h6>
-        <h6>Clasificaicon=</h6>
-  
+        <h3 style="font-style: oblique;">Nombre Tienda  {{nombreNegocio}}</h3>
+        <img src="/img/tienda.jpg" alt="Avatar" style="width:60%">
+        <h6>Celular = {{celular}}</h6>
+        <h6>telefono= {{telefono}} </h6>
+
         <div class="w3-section">
           <button class="w3-button w3-green">Comprar Aqui </button>
         </div>
       </div>
-  
+      {{/each}}
     </div>
   </div>
-<!--card tienda-->
-
-</body>
-
-</html>
+  <!--card tienda-->
+</form>
