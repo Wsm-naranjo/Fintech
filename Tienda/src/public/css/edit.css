@@ -1,0 +1,53 @@
+#f1{
+    position: absolute;
+    top: 170px;
+    font-size: 25px;
+    left: 40px;
+}
+#guardar{
+    width: 430%;
+    font-size: 20px;
+    position: absolute;
+}
+#guardar1{
+    width: 230%;
+    font-size: 20px;
+    position: absolute;
+}
+#cedula{
+position: absolute;
+right: -310px;
+border-radius: 20px;
+}
+#nombre{
+    position: absolute;
+    right: -310px;
+    border-radius: 20px;  
+}
+#telefono{
+    position: absolute;
+    right: -310px;
+    border-radius: 20px; 
+}
+
+#codigo{
+    position: absolute;
+    right: -310px;
+    border-radius: 20px;  
+}
+#cantidad{
+    position: absolute;
+    right: -310px;
+    border-radius: 20px; 
+}
+#unidad{
+    position: absolute;
+    right: -310px;
+    border-radius: 20px; 
+}
+#precio{
+    position: absolute;
+    right: -310px;
+    border-radius: 20px; 
+}
+

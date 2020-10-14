@@ -1,0 +1,30 @@
+const authCtrl = {};
+
+const passport = require('passport');
+
+authCtrl.renderSignUp = (req, res) => {
+    res.render('registro');
+};
+
+authCtrl.signUp = passport.authenticate('local.signup', {
+    successRedirect: '/tienda',
+    failureRedirect: '/registro',
+    failureFlash: true
+});
+
+authCtrl.renderSignIn = (req, res, next) => {
+    res.render('login');
+};
+
+authCtrl.signIn = passport.authenticate('local.signin', {
+    successRedirect: '/tienda',
+    failureRedirect: '/login',
+    failureFlash: true
+});
+
+authCtrl.logout = (req, res, next) => {
+    req.logOut();
+    res.redirect('/');
+};
+
+module.exports = authCtrl;
