@@ -62,5 +62,5 @@ app.use(require('./routers/login.router'))
 app.use(require('./routers/auth.router'))
 app.use(require('./routers/user.router'))
 app.use('/tienda', require('./routers/principal.router'));
-
+app.use ('/producto',require('./routers/productos'));
 module.exports = app; 
