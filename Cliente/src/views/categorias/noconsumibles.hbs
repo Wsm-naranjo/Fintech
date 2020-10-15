@@ -21,16 +21,16 @@
 
     <div id="container">
         <h5 style="font-size: 500%; position: absolute; top: -10px; color: white;" >Nombre de la Tienda</h5>
-        <button class="btn btn-outline-light" id="button"><a href="/lista/noconsumibles"> Consumibles</a></button>
-        <button class="btn btn-outline-light" id="button"><a href="/lista/consumibles"> No consumibles</a> </button>
-        <button class="btn btn-outline-light" id="button"> <a href="/lista/bebidas"> Bebidas </a> </button>
+        <button class="btn btn-outline-light" id="button"><a href=""> Consumibles</a></button>
+        <button class="btn btn-outline-light" id="button"><a href=""> No consumibles</a> </button>
+        <button class="btn btn-outline-light" id="button"> <a href=""> Bebidas </a> </button>
 
     </div>
     <br><br><br><br><br><br><br><br><br>
 
 
     <!--card--->
-    <form action="/producto/lista" method="POST">
+    <form action="/lista/noconsumibles" method="POST">
     {{#each listaProductos}}
         <div class="w3-container">
             <div class="w3-card-4" style="width:20%">

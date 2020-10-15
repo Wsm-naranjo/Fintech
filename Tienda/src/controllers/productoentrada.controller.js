@@ -27,7 +27,8 @@ ProductoEntradaCtrl.addEntrada = async (req, res) => {
         Cantidad,
         precioVenta,
         FechaCadusidad,
-        categoria: req.user.id
+        categoria: req.user.id,
+        Tienda: req.user.id
     }
     await pool.query("INSERT INTO productoentrada set ?", [NuevaEntrada])
     await pool.query("INSERT INTO categoria set ?", [NuevaCategoria])
