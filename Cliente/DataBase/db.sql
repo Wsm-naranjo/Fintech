@@ -46,8 +46,6 @@ CREATE TABLE Comentarios (
 );
 ALTER TABLE Comentarios MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 0;
 
-
-
 CREATE TABLE proveedor(
 id INT(11) NOT NULL PRIMARY KEY,
 NombreProveedor	varchar(50) NOT NULL,

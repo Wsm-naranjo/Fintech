@@ -46,6 +46,10 @@ CREATE TABLE Comentarios (
 );
 ALTER TABLE Comentarios MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 0;
 
+<<<<<<< HEAD
+=======
+ALTER TABLE Comentarios MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 0;
+>>>>>>> Steven
 
 
 CREATE TABLE proveedor(

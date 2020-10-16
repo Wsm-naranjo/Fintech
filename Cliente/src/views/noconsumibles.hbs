@@ -17,27 +17,23 @@
 </style>
 
 <body>
-    <img src="/img/logo-inicial.png" id="logo-inicial"
-        style="width: 390px; position: absolute; left: 470px; top:-60px ">
-
+      <img src="/img/logo-inicial.png" id="logo-inicial" style="width: 390px; position: absolute; left: 470px; top:-60px ">
 
     <div id="container">
-
-
-        <button class="btn btn-outline-light" id="button"><a href="/tienda/lista"> Tiendas</a></button>
+          <button class="btn btn-outline-light" id="button"><a href="/producto/lista"> Productos </a> </button> 
         <button class="btn btn-outline-light" id="button"><a href="/productos/consumibles"> Consumibles</a></button>
-        <button class="btn btn-outline-light" id="button"><a href="/productos/noconsumibles"> No consumibles</a> </button>
         <button class="btn btn-outline-light" id="button"> <a href="/productos/bebidas"> Bebidas </a> </button>
 
     </div>
     <br><br><br><br><br>
 
-
     <!--card--->
-    <form action="/producto/lista" method="POST">
-
-        {{#each listaProductos}}
-        <div class="w3-container">
+    <form action="/productos/noconsumibles" method="POST">
+  {{#each productos}}
+ 
+    
+    
+       <div class="w3-container">
             <div class="w3-card-4 " style="width:270px;  border:white 5px double;">
                 <header class="w3-container w3-white">
                     <h3 style="text-align:center;"> {{NombreProducto}}</h3>
@@ -58,7 +54,4 @@
     <!--card-->
 </body>
 
-<<<<<<< HEAD
-=======
 </html>
->>>>>>> Steven

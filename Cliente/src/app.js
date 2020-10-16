@@ -63,7 +63,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(require('./routers/login.router'))
 app.use(require('./routers/auth.router'))
 app.use(require('./routers/user.router'))
-app.use('/tienda', require('./routers/Principal.router'));
-
-
+app.use('/tienda', require('./routers/principal.router'));
+app.use ('/producto',require('./routers/productos'));
+app.use('/productos',require('./routers/categorias/bebidas.router'));
+app.use('/productos',require('./routers/categorias/consumibles.router'));
+app.use('/productos',require('./routers/categorias/noConsumibles.router'));
 module.exports = app; 

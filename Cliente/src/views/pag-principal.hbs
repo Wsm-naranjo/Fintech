@@ -9,26 +9,26 @@
 </style>
 
 <body>
-    <img src="/img/logo-inicial.png" id="logo-inicial" style="width: 250px; position: absolute; left: 470px;">
-    <h2 style="font-style: oblique; position: absolute;top: 110px; left: 500px;">Listado de Tiendas</h2>
+    <img src="/img/logo-inicial.png" id="logo-inicial" style="width: 390px; position: absolute; left: 470px; top:-60px ">
+    <h1 style="font-style:italic;  position: absolute;top: 100px; left: 500px; color:white">Listado de Tiendas</h2>
     
 <br><br><br><br>
 <!--card tienda-->
 <form action="/tienda/lista">
 
  
-<div class="w3-container">
+<div class="w3-container" style="border:red;">
   {{#each lista}}
-    <div class="w3-card-4 w3-blue" style="width:30%">
+    <div class="w3-card-4 w3-transparent" style="width:270px; border: white 8px inset; ">
   
       <div class="w3-container w3-center">
-        <h3 style="font-style: oblique;">Nombre Tienda {{nombreNegocio}}</h3>
+        <h3 style="font-style: oblique; color:yellow">{{nombreNegocio}}</h3>
         <img src="/img/tienda.jpg" alt="Avatar" style="width:60%">
-        <h6>Celular={{celular}}</h6>
-        <h6>Telefono={{telefono}}</h6>
+        <h6 style="color: white;">Celular={{celular}}</h6>
+        <h6 style="color: white;">Telefono={{telefono}}</h6>
 
         <div class="w3-section">
-          <button class="w3-button w3-green">Comprar Aqui </button>
+          <a class="w3-button w3-green" href="/producto/lista"> <img src="/img/carrito.webp" style="width: 20px;">    Comprar Aqui      </a>
         </div>
       </div>
     </div>
