@@ -17,33 +17,27 @@
 </style>
 
 <body>
-    <img src="/img/logo-inicial.png" id="logo-inicial"
-        style="width: 390px; position: absolute; left: 470px; top:-60px ">
+    <img src="/img/logo-inicial.png" id="logo-inicial"style="width: 250px; position: absolute; left: 470px;">
 
     <div id="container">
-
-
-        <button class="btn btn-outline-light" id="button"><a href="/tienda/lista"> Tiendas</a></button>
+          <button class="btn btn-outline-light" id="button"><a href="/producto/lista"> Productos </a> </button> 
         <button class="btn btn-outline-light" id="button"><a href="/consumibles"> Consumibles</a></button>
-        <button class="btn btn-outline-light" id="button"><a href="/noconsumibles"> No consumibles</a> </button>
         <button class="btn btn-outline-light" id="button"> <a href="/bebidas"> Bebidas </a> </button>
 
     </div>
     <br><br><br><br><br>
 
-
     <!--card--->
-    <form action="/producto/lista" method="POST">
-
-        {{#each listaProductos}}
-        <div class="w3-container">
+    <form action="/noconsumibles" method="POST">
+  
+       <div class="w3-container">
             <div class="w3-card-4 " style="width:270px;  border:white 5px double;">
                 <header class="w3-container w3-white">
-                    <h3 style="text-align:center;"> {{NombreProducto}}</h3>
+                    <h3 style="text-align:center;"> No consumibles</h3>
                 </header>
                 <div class="w3-container w3-transparent">
-                    <h3 style="color: white;"> Precio = {{precioVenta}} $</h3>
-                    <h3 style="color: white;"> Stock consumibles= {{Cantidad}} unidades</h3>
+                    <h3 style="color: white;"> Precio =  $</h3>
+                    <h3 style="color: white;"> Stock consumibles=  unidades</h3>
                     <hr>
                     <img src="/img/producto.png" style="width:120px; ">
                     <br>
@@ -52,7 +46,6 @@
                 </button>
             </div>
         </div>
-        {{/each}}
     </form>
     <!--card-->
 </body>
