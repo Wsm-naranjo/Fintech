@@ -50,6 +50,8 @@ passport.use(
       const { Nombre, Apellido } = req.body;
 
       let newUser = {
+        Nombre,
+        Apellido,
         username,
         password
       };

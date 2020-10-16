@@ -5,6 +5,7 @@ const { isLoggedIn } = require('../lib/auth');
 
 const {  renderProductos, editLink, renderEditLink} = require('../controllers/productos.controller')
 
+
 // Authorization
 router.use(isLoggedIn);
 
