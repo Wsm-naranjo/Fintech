@@ -22,24 +22,25 @@
     <div id="container">
         
         <button class="btn btn-outline-light" id="button"><a href="/producto/lista"> Productos </a> </button> 
-        <button class="btn btn-outline-light" id="button"><a href="/noconsumibles"> No consumibles</a> </button>
-        <button class="btn btn-outline-light" id="button"> <a href="/bebidas"> Bebidas </a> </button>
+        <button class="btn btn-outline-light" id="button"><a href="/productos/noconsumibles"> No consumibles</a> </button>
+        <button class="btn btn-outline-light" id="button"> <a href="/productos/bebidas"> Bebidas </a> </button>
 
     </div>
     <br><br><br><br><br>
 
 
     <!--card--->
-    <form action="/consumibles" method="POST">
-    
+    <form action="/productos/consumibles" method="POST">
+    {{#each productos }}
+  
         <div class="w3-container">
             <div class="w3-card-4 " style="width:270px;  border:white 5px double;">
                 <header class="w3-container w3-white">
-                    <h3 style="text-align:center;"> consumibles</h3>
+                    <h3 style="text-align:center;">   {{NombreProducto}}</h3>
                 </header>
                 <div class="w3-container w3-transparent">
-                    <h3 style="color: white;"> Precio =  $</h3>
-                    <h3 style="color: white;"> Stock =  unidades</h3>
+                    <h3 style="color: white;"> Precio =  {{precioVenta}}$</h3>
+                    <h3 style="color: white;"> Stock = {{Cantidad}} unidades</h3>
                     <hr>
                     <img src="/img/producto.png" style="width:120px; ">
                     <br>
@@ -48,7 +49,7 @@
                 </button>
             </div>
         </div>
-       
+       {{/each}}
     </form>
     <!--card-->
 </body>

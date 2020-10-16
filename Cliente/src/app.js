@@ -63,7 +63,7 @@ app.use(require('./routers/auth.router'))
 app.use(require('./routers/user.router'))
 app.use('/tienda', require('./routers/principal.router'));
 app.use ('/producto',require('./routers/productos'));
-app.use(require('./routers/categorias/bebidas'));
-app.use(require('./routers/categorias/consumibles'));
-app.use(require('./routers/categorias/noConsumibles'));
+app.use('/productos',require('./routers/categorias/bebidas.router'));
+app.use('/productos',require('./routers/categorias/consumibles.router'));
+app.use('/productos',require('./routers/categorias/noConsumibles.router'));
 module.exports = app; 
