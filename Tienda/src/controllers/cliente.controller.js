@@ -11,8 +11,7 @@ clienteCtrl.addCliete = async (req, res) => {
     const newLink = {
         cedula,
         nombre,
-        telefono,
-        user_id: req.user.id
+        telefono
     };
     await pool.query('INSERT INTO cliente set ?', [newLink]);
     req.flash('success', 'Se Guardo Correctamente');

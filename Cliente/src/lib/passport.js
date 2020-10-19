@@ -50,15 +50,17 @@ passport.use(
       const { Nombre, Apellido } = req.body;
 
       let newUser = {
-        Nombre,
-        Apellido,
         username,
         password
       };
-
+      let newcliente={
+        Nombre,
+        Apellido
+      }
       newUser.password = await helpers.encryptPassword(password);
       // Saving in the Database
       const result = await pool.query("INSERT INTO users SET ? ", newUser);
+      await pool.query("INSERT INTO cliente SET ?", newcliente)
       newUser.id = result.insertId;
       return done(null, newUser);
     }
