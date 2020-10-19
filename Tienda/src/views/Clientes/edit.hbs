@@ -1,0 +1,22 @@
+<LINK REL=StyleSheet HREF="/css/edit.css" TYPE="text/css" MEDIA=screen>
+<div class="col-md-4 mx-auto">
+    <div class="card">
+        <div class="card-body">
+            <form action="/clientes/edit/{{producto.id}}" method="POST" id="f1">
+                <div id="contenedor">
+            <label>Cedula</label>
+            <input type="text" name="cedula" id="cedula" value="{{producto.Cedula}}">
+        </div>
+        <div id="contenedor">
+            <label>Nombre</label>
+            <input type="text" name="nombre" id="nombre" value="{{producto.Nombre}}">
+        </div>
+        <div id="contenedor">
+            <label>Telefono</label>
+            <input type="text" name="telefono"  id="telefono" value="{{producto.Telefono}}">
+        </div>
+        <button class="btn btn-success" type="submit" id="guardar">Guardar</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/productos.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>productos</title>
+</head>
+<style>
+    body {
+        background-image: url("/img/pag-principal.jpg");
+    }
+</style>
+
+<body>
+    <img src="/img/logo-inicial.png" id="logo-inicial"
+        style="width: 390px; position: absolute; left: 470px; top:-60px ">
+
+
+    <div id="container">
+
+
+        <button class="btn btn-outline-light" id="button"><a href="/tienda/lista"> Tiendas</a></button>
+        <button class="btn btn-outline-light" id="button"><a href="/productos/consumibles"> Consumibles</a></button>
+        <button class="btn btn-outline-light" id="button"><a href="/productos/noconsumibles"> No consumibles</a> </button>
+        <button class="btn btn-outline-light" id="button"> <a href="/productos/bebidas"> Bebidas </a> </button>
+
+    </div>
+    <br><br><br><br><br>
+
+
+    <!--card--->
+    <form action="/producto/lista" method="POST">
+
+        {{#each listaProductos}}
+        <div class="w3-container">
+            <div class="w3-card-4 " style="width:270px;  border:white 5px double;">
+                <header class="w3-container w3-white">
+                    <h3 style="text-align:center;"> {{NombreProducto}}</h3>
+                </header>
+                <div class="w3-container w3-transparent">
+                    <h3 style="color: white;"> Precio = {{precioVenta}} $</h3>
+                    <h3 style="color: white;"> Stock = {{Cantidad}} unidades</h3>
+                    <hr>
+                    <img src="/img/producto.png" style="width:120px; ">
+                    <br>
+                </div>
+                <button class="w3-button w3-block w3-green"> <img src="/img/carrito.webp" style="width: 28px;"> Agregar
+                </button>
+            </div>
+        </div>
+        {{/each}}
+    </form>
+    <!--card-->
+</body>
+
+<<<<<<< HEAD
+=======
+</html>
+>>>>>>> Steven

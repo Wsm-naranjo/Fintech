@@ -1,0 +1,29 @@
+<div class="col-md-4 mx-auto">
+   
+    <div class="card">
+        <div class="card-body">
+            <form action="/productos/edit/{{producto.id}}" method="POST" id="f1">
+              <label>Codigo</label>
+            <input type="text" name="codigo" id="codigo" value="{{producto.codigo}}" disabled>
+        </div>
+        <div id="contenedor">
+            <label>Nombre del Producto</label>
+            <input type="text" name="NombreProducto" id="NombreProducto" value="{{producto.NombreProducto}}" disabled>
+        </div>
+        <div id="contenedor">
+            <label>Cantidad</label>
+            <input type="number" name="Cantidad" id="Cantidad" value="{{producto.Cantidad}}" disabled>
+        </div>
+        <div id="contenedor">
+            <label>Precio</label>
+            <input type="number" name="precioVenta" id="precio" value="{{producto.precioVenta}}" >
+        </div>
+        <div id="contenedor">
+            <label>Fecha Caducidad</label>
+            <input type="date" name="FechaCadusidad" id="FechaCadusidad" value="{{producto.FechaCadusidad}}" disabled>
+        </div>
+        <button class="btn btn-success" type="submit" id="guard">Guardar</button>
+            </form>
+        </div>
+    </div>
+</div>

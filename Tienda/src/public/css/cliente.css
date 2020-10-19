@@ -1,0 +1,103 @@
+#f1{
+    position: absolute;
+    top: 170px;
+    font-size: 25px;
+    left: 450px;
+}
+#f2{
+    position: absolute;
+    top: 170px;
+    font-size: 25px;
+    left: 40px;
+}
+#guardar{
+    width: 430%;
+    font-size: 20px;
+    position: absolute;
+}
+#cedula{
+position: absolute;
+right: -310px;
+border-radius: 20px;
+}
+#nombre{
+    position: absolute;
+    right: -310px;
+    border-radius: 20px;  
+}
+#telefono{
+    position: absolute;
+    right: -310px;
+    border-radius: 20px; 
+}
+
+#NombreProveedor{
+    position: absolute;
+    right: -310px;
+    border-radius: 20px;  
+}
+#Fecha{
+    position: absolute;
+    right: -310px;
+    border-radius: 20px; 
+}
+#Direccion{
+    position: absolute;
+    right: -310px;
+    border-radius: 20px;  
+}
+#Numero{
+    position: absolute;
+    right: -310px;
+    border-radius: 20px; 
+}
+
+#codigo{
+    position: absolute;
+    right: -310px;
+    border-radius: 20px;  
+}
+#guardar1{
+    width: 235%;
+    font-size: 20px;
+    position: absolute;
+}
+
+#NombreProducto{
+    position: absolute;
+    right: -310px;
+    border-radius: 20px; 
+}
+#Tipo{
+    position: absolute;
+    right: -310px;
+    border-radius: 20px;  
+}
+#Cantidad{
+    position: absolute;
+    right: -310px;
+    border-radius: 20px; 
+}
+
+#precio{
+    position: absolute;
+    right: -310px;
+    border-radius: 20px;  
+}
+#FechaCadusidad{
+    position: absolute;
+    right: -270px;
+    border-radius: 20px;  
+}
+#categoria{
+    position: absolute;
+    right: -220px;
+    border-radius: 20px;
+    border-color: blue;
+}
+#descripcion{
+    position: absolute;
+    right: -310px;
+    border-radius: 20px;
+}
+
