@@ -46,7 +46,6 @@ app.use(passport.session());
 //varible globales 
 
 app.use((req, res, next) => {
-steven
     app.locals.menssage = req.flash('menssage');
     app.locals.success = req.flash('success');
     app.locals.user = req.user;
@@ -65,7 +64,4 @@ app.use(require('./routers/auth.router'))
 app.use(require('./routers/user.router'))
 app.use('/tienda', require('./routers/principal.router'));
 app.use ('/producto',require('./routers/productos'));
-app.use('/productos',require('./routers/categorias/bebidas.router'));
-app.use('/productos',require('./routers/categorias/consumibles.router'));
-app.use('/productos',require('./routers/categorias/noConsumibles.router'));
 module.exports = app; 

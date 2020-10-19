@@ -14,11 +14,12 @@ ProductosCtrl.renderEditLink = async (req, res) => {
 };
 
 ProductosCtrl.editLink = async (req, res) => {
+    const {id}=req.params
     const { precioVenta } = req.body;
     const newLink = {
         precioVenta
     };
-    await pool.query('UPDATE producto set ?', [newLink]);
+    await pool.query('UPDATE producto set ? WHERE id = ?', [newLink,id]);
     req.flash('success', 'Se Actualizo Correctamente');
     res.redirect('/productos/list');
 }
