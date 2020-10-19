@@ -27,7 +27,8 @@ ProductoEntradaCtrl.addEntrada = async (req, res) => {
         Cantidad,
         precioVenta,
         FechaCadusidad,
-        categoria: req.user.id
+        categoria: req.user.id,
+        Tienda: req.user.id
     }
     await pool.query("INSERT INTO productoentrada set ?", [NuevaEntrada])
     await pool.query("INSERT INTO categoria set ?", [NuevaCategoria])
@@ -64,7 +65,8 @@ ProductoEntradaCtrl.EditarEntrada = async (req, res) => {
         precio,
         FechaCadusidad
     }
-    await pool.query("UPDATE productoentrada set ?", [EntradaEditad, id])
+
+    await pool.query("UPDATE productoentrada set ? WHERE id = ?", [EntradaEditad, id])
     req.flash('success', "Se guardo correctamente")
     res.redirect("/ProductoEntrada/list")
 }
