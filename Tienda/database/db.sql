@@ -7,8 +7,6 @@ USE fintech;
     username VARCHAR(16) NOT NULL,
     password VARCHAR(60) NOT NULL,
     email VARCHAR(100) NOT NULL,
-    Nombre VARCHAR(50) NOT NULL,
-    Apellido VARCHAR(50) NOT NULL,
     created_at timestamp NOT NULL DEFAULT current_timestamp
   );
 
@@ -45,11 +43,7 @@ CREATE TABLE Comentarios (
   CONSTRAINT fk_tienda FOREIGN KEY(tienda) REFERENCES Tienda(id)
 );
 ALTER TABLE Comentarios MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 0;
-
-<<<<<<< HEAD
-=======
 ALTER TABLE Comentarios MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 0;
->>>>>>> Steven
 
 
 CREATE TABLE proveedor(
@@ -99,11 +93,9 @@ CREATE TABLE cliente(
 id INT(11) PRIMARY KEY NOT NULL,
 Cedula INT(10) NOT NULL,
 Nombre VARCHAR(50) NOT NULL,
+Apellido VARCHAR(50) NOT NULL,
 Telefono INT(10) NOT NULL,
-created_at timestamp NOT NULL DEFAULT current_timestamp,
-user_id INT(11) NOT NULL
+created_at timestamp NOT NULL DEFAULT current_timestamp
 );
-ALTER TABLE cliente ADD CONSTRAINT fk_usuarios FOREIGN KEY(user_id) REFERENCES users(id);
-
 ALTER TABLE cliente MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
 

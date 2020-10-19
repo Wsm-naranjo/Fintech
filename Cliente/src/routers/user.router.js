@@ -4,6 +4,6 @@ const router = express.Router();
 const { isLoggedIn } = require('../lib/auth');
 const { renderUserProfile } = require('../controllers/user.controller');
 
-router.get('/tienda', isLoggedIn, renderUserProfile);
+router.get('/tienda/lista', isLoggedIn, renderUserProfile);
 
 module.exports = router;
