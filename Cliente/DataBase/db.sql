@@ -90,7 +90,6 @@ CONSTRAINT fk_Producto_id FOREIGN KEY(categoria) REFERENCES categoria(id)
 );
 
 ALTER TABLE producto ADD CONSTRAINT fk_producto_tienda FOREIGN KEY(Tienda) REFERENCES Tienda(id);
->>>>>>> origin/Robin
 ALTER TABLE producto MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 0;
 
 CREATE TABLE cliente(
@@ -100,10 +99,21 @@ Nombre VARCHAR(50) NOT NULL,
 Telefono INT(10) NOT NULL,
 
 created_at timestamp NOT NULL DEFAULT current_timestamp,
->>>>>>> origin/Robin
+
 user_id INT(11) NOT NULL
 );
 ALTER TABLE cliente ADD CONSTRAINT fk_usuarios FOREIGN KEY(user_id) REFERENCES users(id);
 
 ALTER TABLE cliente MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
 
+CREATE TABLE lista (
+  id INT (11) PRIMARY KEY NOT NULL,
+  Nombre VARCHAR(50) NOT NULL,
+  Cantidad INT(6) NOT NULL,
+  Precio FLOAT (4,2),
+  Tienda INT(11) NOT NULL,
+  Cliente INT(11) NOT NULL,
+CONSTRAINT fk_tienda_id FOREIGN KEY (Tienda) REFERENCES Tienda(id)
+)
+ALTER TABLE lista ADD CONSTRAINT fk_Cliente_tienda FOREIGN KEY(Cliente) REFERENCES Cliente(id);
+ALTER TABLE lista MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
