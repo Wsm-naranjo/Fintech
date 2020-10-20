@@ -6,11 +6,8 @@ const session = require('express-session');
 const passport = require('passport');
 const flash = require('connect-flash');
 const mysqlstore = require('express-mysql-session')(session);
-
 const bodyparser = require('body-parser');  
 const {database} = require('./keys');
-
-
 
 const app = express();
 require('./lib/passport');
@@ -30,6 +27,7 @@ app.set('view engine', '.hbs');
 
 //midlewars
 app.use(morgan('dev'));
+
 app.use(bodyparser.urlencoded({extended:false}));
 app.use(bodyparser.json());
 app.use(session({
@@ -54,15 +52,17 @@ app.use((req, res, next) => {
 //varible globales 
 
 //public
+
 app.use(express.static(path.join(__dirname, 'public')));
 //public
-
 
 //routers
 app.use(require('./routers/login.router'))
 app.use(require('./routers/auth.router'))
 app.use(require('./routers/user.router'))
+
 app.use('/tienda', require('./routers/principal.router'));
 app.use ('/producto',require('./routers/productos'));
 app.use('/productos', require('./routers/Categoria.router'));
+
 module.exports = app; 

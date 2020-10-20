@@ -65,6 +65,7 @@ ProductoEntradaCtrl.EditarEntrada = async (req, res) => {
         precio,
         FechaCadusidad
     }
+
     await pool.query("UPDATE productoentrada set ? WHERE id = ?", [EntradaEditad, id])
     req.flash('success', "Se guardo correctamente")
     res.redirect("/ProductoEntrada/list")

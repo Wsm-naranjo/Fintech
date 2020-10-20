@@ -36,15 +36,22 @@ ALTER TABLE Tienda ADD CONSTRAINT fk_usuarioTienda FOREIGN KEY(user_id) REFERENC
 ALTER TABLE Tienda MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 0;
 
 CREATE TABLE Comentarios (
+
   id INT(11) NOT NULL PRIMARY KEY,
   Tienda INT(11)NOT NULL,
   comentarios VARCHAR(100) NOT NULL,
   created_at timestamp NOT NULL DEFAULT current_timestamp,
   CONSTRAINT fk_tienda FOREIGN KEY(tienda) REFERENCES Tienda(id)
 );
+<<<<<<< HEAD
 ALTER TABLE Comentarios MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 0;
 ALTER TABLE Comentarios MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 0;
+=======
 
+ALTER TABLE Tiendas MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 0;
+>>>>>>> origin/paola
+
+ALTER TABLE Comentarios MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 0;
 
 CREATE TABLE proveedor(
 id INT(11) NOT NULL PRIMARY KEY,
@@ -56,10 +63,9 @@ user_id INT(11),
 created_at timestamp NOT NULL DEFAULT current_timestamp,
 CONSTRAINT fk_usurio FOREIGN KEY(user_id) REFERENCES users(id)
 );
-
 ALTER TABLE proveedor MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 0;
-
 CREATE TABLE productoEntrada(
+
 id INT(11) NOT NULL PRIMARY KEY,
 codigo VARCHAR(50) Not NULL,
 NombreProducto varchar(50) NOT NULL,
@@ -98,4 +104,3 @@ Telefono INT(10) NOT NULL,
 created_at timestamp NOT NULL DEFAULT current_timestamp
 );
 ALTER TABLE cliente MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
-
