@@ -38,6 +38,7 @@ perfilCtrl.edit = async (req, res) => {
         celular,
         telefono
     }
+
     await pool.query('UPDATE Tienda set ? WHERE id = ?', [newTienda, id]);
     req.flash('success', "Se guardo correctamente")
     res.redirect("/perfil/list")

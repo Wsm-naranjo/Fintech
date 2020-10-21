@@ -7,7 +7,9 @@ authCtrl.renderSignUp = (req, res) => {
 };
 
 authCtrl.signUp = passport.authenticate('local.signup', {
+
     successRedirect: '/tienda/lista',
+
     failureRedirect: '/registro',
     failureFlash: true
 });
@@ -17,7 +19,9 @@ authCtrl.renderSignIn = (req, res, next) => {
 };
 
 authCtrl.signIn = passport.authenticate('local.signin', {
+
     successRedirect: '/tienda/lista',
+
     failureRedirect: '/login',
     failureFlash: true
 });

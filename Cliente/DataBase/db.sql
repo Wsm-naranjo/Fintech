@@ -31,17 +31,18 @@ CREATE TABLE Tienda (
   user_id INT(11)NOT NULL,
   created_at timestamp NOT NULL DEFAULT current_timestamp
 );
-
 ALTER TABLE Tienda ADD CONSTRAINT fk_usuarioTienda FOREIGN KEY(user_id) REFERENCES users(id);
 ALTER TABLE Tienda MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 0;
 
 CREATE TABLE Comentarios (
+
   id INT(11) NOT NULL PRIMARY KEY,
   Tienda INT(11)NOT NULL,
   comentarios VARCHAR(100) NOT NULL,
   created_at timestamp NOT NULL DEFAULT current_timestamp,
   CONSTRAINT fk_tienda FOREIGN KEY(tienda) REFERENCES Tienda(id)
 );
+
 ALTER TABLE Comentarios MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 0;
 ALTER TABLE Comentarios MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 0;
 
@@ -53,6 +54,7 @@ Direccion	varchar(100) NOT NULL,
 Numero	int(10)NOT NULL,
 Estado	tinyint(1) NOT NULL,
 user_id INT(11),
+
 created_at timestamp NOT NULL DEFAULT current_timestamp,
 CONSTRAINT fk_usurio FOREIGN KEY(user_id) REFERENCES users(id)
 );
@@ -78,6 +80,7 @@ CREATE TABLE producto (
 codigo VARCHAR(50) Not NULL,
 NombreProducto varchar(50) NOT NULL,
 Cantidad 	int(20) NOT NULL,
+
 precioVenta INT(4) NOT NULL,
 FechaCadusidad VARCHAR(225) NOT NULL,
 categoria int(11) NOT NULL,
@@ -97,5 +100,18 @@ Apellido VARCHAR(50) NOT NULL,
 Telefono INT(10) NOT NULL,
 created_at timestamp NOT NULL DEFAULT current_timestamp
 );
+
 ALTER TABLE cliente MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
 
+CREATE TABLE lista (
+  id INT (11) PRIMARY KEY NOT NULL,
+  Nombre VARCHAR(50) NOT NULL,
+  Cantidad INT(6) NOT NULL,
+  Precio FLOAT (4,2),
+  Tienda INT(11) NOT NULL,
+  Cliente INT(11) NOT NULL,
+  CONSTRAINT fk_tienda_id FOREIGN KEY (Tienda) REFERENCES Tienda(id)
+)
+
+ALTER TABLE lista ADD CONSTRAINT fk_Cliente_tienda FOREIGN KEY(Cliente) REFERENCES Cliente(id);
+ALTER TABLE lista MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
