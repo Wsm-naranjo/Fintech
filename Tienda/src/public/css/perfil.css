@@ -1,18 +1,41 @@
-
+body{
+    background-image: url('..//img/fondo_2.png');
+}
 #avatar{
     position: absolute;
-    left: 1100px;
-    top: 90px;
+    left: 1000px;
+    top: 60px;
     height: 200px;
     width: 200px;       
-    border-radius: 160px;
+    border-radius: 170px;
+
 }
 #datosUsuario{
     text-align: center;
     font-size: 25px;
     position: absolute;
-    left: 1030px;
+    left: 940px;
     top: 300px;
+}
+#txtcedula{
+    position: absolute;
+    top: -35px;
+    left: 20px;
+}
+#txtemail{
+    position: absolute;
+    top: 10px;
+    left: -40px;
+}
+#cedula{
+    position: absolute;
+    top: -35px;
+    left: 80px;
+}
+#email{
+    position: absolute;
+    top: 10px;
+    left: 35px;
 }
 #formulario{
     position: absolute;
@@ -39,24 +62,31 @@
     top: 220px;
 }
 #DatoNegocio{
+    font-family: sans-serif;
+    color: purple;
     position: absolute;
-    top: 130px;
-    left: 480px;
+    top: 80px;
+    left: 490px;
     font-size: 29px;
 }
 #Nombre{
+    font-size: 35px;
     position: absolute;
-    left: 10px;
-    top: 40px;
+    left: -200px;
+    top: -20px;
 }
+
 #nombreNegocio{
     position: absolute;
-    left: 250px;
-    top: 40px;
+    left: 90px;
+    top: -20px;
     border-radius: 20px;
 }
 #guardar1{
-    width:590%;
+    position: absolute;
+    top: -70px;
+    left: 680px;
+    width:200px;
     font-size: 29px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-style: oblique;
@@ -66,9 +96,12 @@
     border-radius: 20px;
 }
 #contactos{
+    font-family: sans-serif;
+    color: purple;
+    font-size: 29px;
     position: absolute;
     left: 250px;
-    top: 120px;
+    top: 70px;
 }
 #boton{
     position: absolute;
