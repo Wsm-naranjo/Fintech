@@ -9,43 +9,49 @@
 
 <body>
     <form action="/ProductoEntrada/add" method="POST" name="f1" id="f1">
-        <div id="contenedor">
-            <label>Codigo</label>
-            <input type="text" name="codigo" id="codigo">
+        <p id="pn">Producto Nuevo  </p>
+        <img src="/img/registrar.png" alt="registrar" id="imgregistrar">
+        <div id="formulario_1">
+            
+            <div id="contenedor">
+                <label>Codigo</label>
+                <input type="text" name="codigo" id="codigo">
+            </div>
+            <div id="contenedor">
+                <label>Nombre del Producto</label>
+                <input type="text" name="NombreProducto" id="NombreProducto">
+            </div>
+            <div id="contenedor">
+                <label>Cantidad</label>
+                <input type="number" name="Cantidad" id="Cantidad">
+            </div>
+            <div id="contenedor">
+                <label>Categoria</label>
+                <select name="Nombre" id="categoria">
+                    <option name="Nombre" value="Consumible">Consumible</option>
+                    <option name="Nombre" value="No consumible">No consumible</option>
+                    <option name="Nombre" value="Bebidas">Bebidas</option>
+                </select>
+            </div>
+            <div id="contenedor">
+                <label>Descripcion</label>
+                <input type="text" name="Descripcion" id="descripcion">
+            </div>
+            <div id="contenedor">
+                <label>Precio Original</label>
+                <input type="number" name="precio" id="precio">
+            </div>
+            <div id="contenedor">
+                <label>Precio Venta</label>
+                <input type="number" name="precioVenta" id="precio">
+            </div>
+            <div id="contenedor">
+                <label>Fecha Caducidad</label>
+                <input type="date" name="FechaCadusidad" id="FechaCadusidad">
+            </div>
+            <button class="btn btn-success" type="submit" id="guardar1"> <img src="/img/guardar.png" alt="Guardar"
+                    id="imgguardar"> Guardar </button>
         </div>
-        <div id="contenedor">
-            <label>Nombre del Producto</label>
-            <input type="text" name="NombreProducto" id="NombreProducto">
-        </div>
-        <div id="contenedor">
-            <label>Cantidad</label>
-            <input type="number" name="Cantidad" id="Cantidad">
-        </div>
-        <div id="contenedor">
-            <label>Categoria</label>
-            <select name="Nombre" id="categoria">
-                <option name="Nombre" value="Consumible">Consumible</option>
-                <option name="Nombre" value="No consumible">No consumible</option>
-                <option name="Nombre" value="Bebidas">Bebidas</option>
-            </select>
-        </div>
-        <div id="contenedor">
-            <label>Descripcion</label>
-            <input type="text" name="Descripcion" id="descripcion">
-        </div>
-        <div id="contenedor">
-            <label>Precio Original</label>
-            <input type="number" name="precio" id="precio">
-        </div>
-        <div id="contenedor">
-            <label>Precio Venta</label>
-            <input type="number" name="precioVenta" id="precio">
-        </div>
-        <div id="contenedor">
-            <label>Fecha Caducidad</label>
-            <input type="date" name="FechaCadusidad" id="FechaCadusidad">
-        </div>
-        <button class="btn btn-success" type="submit" id="guardar1">Guardar</button>
     </form>
 </body>
 <script>
@@ -62,4 +68,5 @@
     };
     window.onload = inicio;
 </script>
+
 </html>

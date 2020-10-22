@@ -4,34 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <LINK REL=StyleSheet HREF="/css/cliente.css" TYPE="text/css" MEDIA=screen>
+    <LINK REL=StyleSheet HREF="/css/provedorAdd.css" TYPE="text/css" MEDIA=screen>
 </head>
 
 <body>
+    <img src="/img/proveedor.png" alt="">
     <form action="/proveedor/add" method="POST" name="f1" id="f1">
-        <div id="contenedor">
-            <label>NombreProveedor</label>
-            <input type="text" name="NombreProveedor" id="NombreProveedor">
+       <p id="p">Nuevo Proveedor</p>
+    
+        <div id="contenedor_1">
+            <div id="contenedor">
+                <label id="lblnprovedor">Nombre Proveedor:</label>
+                <input type="text" name="NombreProveedor" id="NombreProveedor">
+            </div>
+            <div id="contenedor">
+                <label id="lbldireccion">Direccion :</label>
+                <input type="text" name="Direccion" id="Direccion">
+            </div>
+            <div id="contenedor">
+                <label id="lblnumero">Numero:</label>
+                <input type="number" name="Numero" id="Numero">
+            </div>
+            <div id="contenedor">
+                <label id="lblcodigo">Estado:</label>
+                <input type="text" name="Estado" id="codigo">
+            </div>
+            <button class="btn btn-success" type="submit" id="guardar1">Guardar <img id="imgcarrito" src="/img/carritoc.png"></button>
         </div>
-        <div id="contenedor">
-            <label>Direccion</label>
-            <input type="text" name="Direccion" id="Direccion">
-        </div>
-        <div id="contenedor">
-            <label>Numero</label>
-            <input type="number" name="Numero" id="Numero">
-        </div>
-        <div id="contenedor">
-            <label>Estado</label>
-            <input type="text" name="Estado" id="codigo">
-        </div>
-        <button class="btn btn-success" type="submit" id="guardar1">Guardar</button>
     </form>
 </body>
 <script>
     function inicio() {
-            document.f1.codigo.value = 1
+        document.f1.codigo.value = 1
     };
     window.onload = inicio;
 </script>
+
 </html>
