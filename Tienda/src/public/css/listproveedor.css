@@ -1,20 +1,6 @@
 body{
     background-image: url('/img/fondo_2.png');
 }
-#f1{
-    font-size: 20px;
-    position: relative;
-top: 10px;
-left: -40px;
-}
-#edit{
-position: absolute;
-left: 100px;
-}
-#eliminar{
-position: absolute;
-left: 280px;
-}
 #tarjeta{
 padding: 3px 10px;
   border:white 5px solid;
@@ -26,4 +12,4 @@ padding: 3px 10px;
       border:forestgreen 5px solid;
       border-top-left-radius: 20px;
       border-bottom-right-radius: 20px;
-    }
+    }       

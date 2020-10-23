@@ -1,0 +1,80 @@
+body{
+    background-image: url('..//img/fondo_2.png');
+}
+#guardar_1{
+    width: 20px;
+}
+#guardar{
+    width: 200%;
+    position: absolute;
+    left: 70px;
+}
+#guardar:hover{
+    border-color: yellow;
+    color: yellow;
+}
+#p{
+    font-size: 30px;
+    font-family: cursive;  
+    color: purple;
+position: absolute;
+left: 100px;
+}
+#contenedor_1{
+    position: absolute;
+    top: 70px;
+    left: 20px;
+}
+#lblnombre{
+    font-size: 30px;
+    font-family: cursive;     
+    color: white;
+    
+}
+#lbldir{
+    font-size: 30px;
+    font-family: cursive;     
+    color: white;
+}
+#lblnumero{
+    font-size: 30px;
+    font-family: cursive;     
+    color: white;
+}
+#lblestado{
+    font-size: 30px;
+    font-family: cursive;     
+    color: white;
+}
+#NombreProveedor{
+    border-radius: 10px;
+    width: 260px;
+    position: absolute;
+    top: 10px;
+    left: 170px;
+}
+#Direccion{
+    border-radius: 10px;
+    width: 260px;
+    position: absolute;
+    top: 60px;
+    left: 170px;
+}
+#Numero{
+    border-radius: 10px;
+    width: 260px;
+    position: absolute;
+    top: 113px;
+    left: 170px;
+}
+#Estado{
+    border-radius: 10px;
+    width: 260px;
+    position: absolute;
+    top: 165px;
+    left: 170px;
+}
+#imgeditar{
+    position: absolute;
+    left: -400px;
+}
