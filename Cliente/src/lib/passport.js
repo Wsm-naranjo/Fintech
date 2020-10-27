@@ -13,9 +13,7 @@ passport.use(
       passReqToCallback: true
     },
     async (req, username, password, done) => {
-      const rows = await pool.query("SELECT * FROM users WHERE username = ?", [
-        username
-      ]);
+      const rows = await pool.query("SELECT * FROM cliente WHERE username = ? AND rol = 'cliente' ", [username]);
       if (rows.length > 0) {
         const user = rows[0];
         const validPassword = await helpers.matchPassword(
@@ -47,22 +45,18 @@ passport.use(
       passReqToCallback: true
     },
     async (req, username, password, done) => {
-      const { Nombre, Apellido } = req.body;
-
-      let newUser = {
+      const {rol, Nombres } = req.body;
+      let newcliente = {
+        rol,
+        Nombres,
         username,
         password
-      };
-      let newcliente={
-        Nombre,
-        Apellido
       }
-      newUser.password = await helpers.encryptPassword(password);
+      newcliente.password = await helpers.encryptPassword(password);
       // Saving in the Database
-      const result = await pool.query("INSERT INTO users SET ? ", newUser);
-      await pool.query("INSERT INTO cliente SET ?", newcliente)
-      newUser.id = result.insertId;
-      return done(null, newUser);
+      const result = await pool.query("INSERT INTO cliente SET ?", newcliente)
+      newcliente.id = result.insertId;
+      return done(null, newcliente);
     }
   )
 );
@@ -72,6 +66,6 @@ passport.serializeUser((user, done) => {
 });
 
 passport.deserializeUser(async (id, done) => {
-  const rows = await pool.query("SELECT * FROM users WHERE id = ?", [id]);
+  const rows = await pool.query("SELECT * FROM cliente WHERE id = ?", [id]);
   done(null, rows[0]);
 });

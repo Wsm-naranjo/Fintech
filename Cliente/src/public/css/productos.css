@@ -4,7 +4,6 @@
     top: 10px;
      left: 450px;
 }
-
 #container{
     margin : 20px auto;
     background-color:transparent;
@@ -15,26 +14,66 @@
     top: 40px;
     font-size: 50%;
 }
-#button{
-    height: 50px;
-    width: 150px;
-    position: relative;
-    top: 50px;
-   
+#categorias{
+    position: absolute;
+    top: 30px;
+    font-size: 20px;
+    left: 20px;
 }
 #perfil{
     position: absolute;
     top: 40px;
     left: 1250px;
 }
-
-
 #carrito{
-    position: relative;
+    position: absolute;
     top: 40px;
-    left: 400px;   
+    left: 10px; 
 }
 
+#tienda{
+    position: absolute;
+    top: 180px;
+    left: 20px;
+}
 
+#Tiendas{
+    font-size: 25px;
+}
 
+#Consumibles{
+    font-size: 25px;
+}
 
+#noConsumibles{
+    font-size: 25px;
+}
+
+#Bebidas{
+    font-size: 25px;
+}
+
+#NombreProducto{
+    position: absolute;
+    left: 65px;
+}
+
+#precio{
+    position: absolute;
+    top: 50px;
+}
+
+#cantidad{
+    position: absolute;
+    top: 90px;
+}
+
+#imgproducto{
+    position: absolute;
+    top: 165px;
+}
+
+#btncarrito{
+    position: absolute;
+    top: 260px;
+}

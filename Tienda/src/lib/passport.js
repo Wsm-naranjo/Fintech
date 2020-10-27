@@ -13,10 +13,8 @@ passport.use(
       passReqToCallback: true
     },
     async (req, username, password, done) => {
-      const rows = await pool.query("SELECT * FROM users WHERE username = ?", [
-        username
-      ]);
-      if (rows.length > 0) {
+      const rows = await pool.query("SELECT * FROM users WHERE username=? AND rol='tienda'",[username]);
+      if (rows.length>0) {
         const user = rows[0];
         const validPassword = await helpers.matchPassword(
           password,
@@ -47,9 +45,10 @@ passport.use(
       passReqToCallback: true
     },
     async (req, username, password, done) => {
-      const { email } = req.body;
+      const { rol, email } = req.body;
 
       let newUser = {
+        rol,
         email,
         username,
         password

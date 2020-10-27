@@ -3,3 +3,6 @@ position: absolute;
 left: -100px;
 }
 
+body{
+    background-image: url("/img/pag-principal.jpg");
+}
