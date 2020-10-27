@@ -5,24 +5,24 @@
   <br>
   <form action="/registro" method="POST">
     <div id="Nombre">
-      <label>Nombre :</label>
+      <label id="lblbombre">Nombre :</label>
       <input type="text" name="Nombres" id="nombre"><br>
     </div>
     <div id="Cedula">
-      <label>Cedula :</label>
+      <label id="lblcedula">Cedula :</label>
       <input type="number" name="username" id="cedula"><br>
     </div>
-    <div id="contenedor">
-      <label>ROL</label>
-      <select name="rol" id="rol">
-        <option name="rol" value="cliente">cliente</option>
-      </select>
-    </div>
+
     <div id="Contraseña">
-      <label>Contraseña:</label>
+      <label id="lblcontraseña">Contraseña:</label>
       <input type="password" name="password" id="contrasena"><br>
     </div>
     <button type="submit" id="button" style="width: 150px;">Ingresar</button> <button id="button2"
       style="width: 150px;"><a href="/">Salir</a></button>
+    
+      <select name="rol" id="rol">
+        <option name="rol" value="cliente">cliente</option>
+      </select>
+  
   </form>
 </div>

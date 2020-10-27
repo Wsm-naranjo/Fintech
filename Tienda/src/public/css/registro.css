@@ -33,6 +33,10 @@
     position: absolute;
     top: 110px;
     left: 410px;
+    border-radius: 15px;
+}
+#Nombre:hover{
+    border-color: greenyellow;
 }
 #correo{
     
@@ -48,7 +52,11 @@
     width: 290px;
     position: absolute;
     top: 180px;
-    left: 410px
+    left: 410px;
+    border-radius: 15px;
+}
+#Correo:hover{
+    border-color: greenyellow;
 }
 #contraseña{
     position: absolute;
@@ -63,7 +71,11 @@
     width: 290px;
     position: absolute;
     top: 255px;
-    left: 410px
+    left: 410px;
+    border-radius: 15px;
+}
+#Contraseña:hover{
+    border-color: greenyellow;
 }
 #botonGuardar{
     position: absolute;
@@ -81,4 +93,9 @@
     font-family: cursive;
     color: rgb(0, 0, 0);
     text-decoration: none ;
+}
+#img{
+    width: 480px;
+    position: absolute;
+    top: -100px;
 }

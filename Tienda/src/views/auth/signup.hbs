@@ -7,7 +7,10 @@
   <LINK REL=StyleSheet HREF="css/registro.css" TYPE="text/css" MEDIA=screen>
 </head>
 
-<body style="background-image: url('img/registro.jpg');">
+<body style="background-image: url('/img/fondo_1.png');">
+<div id="imegen">
+  <img src="/img/logo.png" id="img">
+</div>
   <form action="/signup" method="POST" id="registros">
     <div>
       <label id="Usuario">Usuario </label>
@@ -17,12 +20,7 @@
       <label id="correo">Correo </label>
       <input type="email" id="Correo" name="email">
     </div>
-    <div id="contenedor">
-      <label>ROL</label>
-      <select name="rol" id="rol">
-        <option name="rol" value="tienda">tienda</option>
-      </select>
-    </div>
+  
     <div>
       <label id="contraseña">Contraseña </label>
       <input type="password" id="Contraseña" name="password">

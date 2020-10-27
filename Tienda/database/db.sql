@@ -1,6 +1,7 @@
 CREATE DATABASE fintech;
 USE fintech;
-
+-- TABLE USER
+-- all pasword wil be encrypted using SHA1
   CREATE TABLE users (
     id INT(11) NOT NULL PRIMARY KEY,
     username VARCHAR(16) NOT NULL,
@@ -45,7 +46,6 @@ CREATE TABLE Comentarios (
 ALTER TABLE Comentarios MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 1;
 
 
-
 CREATE TABLE proveedor(
 id INT(11) NOT NULL PRIMARY KEY,
 NombreProveedor	varchar(50) NOT NULL,
@@ -83,8 +83,7 @@ FechaCadusidad VARCHAR(225) NOT NULL,
 categoria varchar(50) NOT NULL,
 Tienda int(11) NOT NULL,
 usuario int(11) NOT NULL,
-FechaRegistro timestamp NOT NULL DEFAULT current_timestamp,
-CONSTRAINT fk_Producto_id FOREIGN KEY(categoria) REFERENCES categoria(id)
+FechaRegistro timestamp NOT NULL DEFAULT current_timestamp
 );
 
 ALTER TABLE producto ADD CONSTRAINT fk_usurioproducto FOREIGN KEY(usuario) REFERENCES users(id);
