@@ -19,7 +19,7 @@ clienteCtrl.addCliete = async (req, res) => {
 }
 
 clienteCtrl.renderClientes = async (req, res) => {
-    const clientes = await pool.query('SELECT * FROM cliente WHERE user_id = ?', [req.user.id]);
+    const clientes = await pool.query('SELECT * FROM cliente ');
     res.render('Clientes/list', {clientes});
 }
 
