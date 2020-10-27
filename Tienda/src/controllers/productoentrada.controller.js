@@ -7,7 +7,7 @@ ProductoEntradaCtrl.renderEntrada = (req, res) => {
 }
 
 ProductoEntradaCtrl.addEntrada = async (req, res) => {
-    const { NombreProducto, codigo, Nombre, Descripcion	, Cantidad, precio, FechaCadusidad, precioVenta } = req.body
+    const { NombreProducto, codigo, categoria, Descripcion, Cantidad, precio, FechaCadusidad, precioVenta } = req.body
     const NuevaEntrada = {
         codigo,
         NombreProducto,
@@ -17,7 +17,7 @@ ProductoEntradaCtrl.addEntrada = async (req, res) => {
         proveedor: req.user.id
     }
     const NuevaCategoria ={
-        Nombre,
+        categoria,
         Descripcion,
         user_id: req.user.id
     }
@@ -27,7 +27,7 @@ ProductoEntradaCtrl.addEntrada = async (req, res) => {
         Cantidad,
         precioVenta,
         FechaCadusidad,
-        categoria: req.user.id,
+        categoria,
         Tienda: req.user.id,
         usuario: req.user.id
     }
