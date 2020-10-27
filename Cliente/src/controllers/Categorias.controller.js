@@ -7,8 +7,10 @@ categoriaCtrl.renderConsumibles = async (req, res) => {
 }
 
 categoriaCtrl.renderNoConsumibles = async (req, res) => {
-    const NoConsumibles = await pool.query("SELECT * FROM producto WHERE categoria  = 'No Consumibles'");
-    res.render('categoria/noconsumibles', { NoConsumibles })
+
+const NoConsumibles = await pool.query("SELECT * FROM producto WHERE categoria = 'No consumible'");
+
+ res.render('categoria/noconsumibles', { NoConsumibles })
 }
 
 categoriaCtrl.renderBebidas = async (req, res) => {

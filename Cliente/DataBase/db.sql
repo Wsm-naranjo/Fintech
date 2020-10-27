@@ -15,7 +15,7 @@ USE fintech;
 
 CREATE TABLE categoria(
   id Int(11) NOT NULL PRIMARY KEY,
-  Nombre VARCHAR(255) NOT NULL,
+  categoria VARCHAR(255) NOT NULL,
   Descripcion VARCHAR(255) NOT NULL,
   user_id INT(11)NOT NULL,
   created_at timestamp NOT NULL DEFAULT current_timestamp,
