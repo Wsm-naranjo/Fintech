@@ -83,8 +83,7 @@ FechaCadusidad VARCHAR(225) NOT NULL,
 categoria varchar(50) NOT NULL,
 Tienda int(11) NOT NULL,
 usuario int(11) NOT NULL,
-FechaRegistro timestamp NOT NULL DEFAULT current_timestamp,
-CONSTRAINT fk_Producto_id FOREIGN KEY(categoria) REFERENCES categoria(id)
+FechaRegistro timestamp NOT NULL DEFAULT current_timestamp
 );
 
 ALTER TABLE producto ADD CONSTRAINT fk_usurioproducto FOREIGN KEY(usuario) REFERENCES users(id);
