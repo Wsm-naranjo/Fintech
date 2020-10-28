@@ -7,11 +7,11 @@ clienteCtrl.renderAddClientes = (req, res) => {
 };
 
 clienteCtrl.addCliete = async (req, res) => {
-    const {cedula, nombre, telefono} = req.body;
+    const {Cedula, Nombres, Telefono} = req.body;
     const newLink = {
-        cedula,
-        nombre,
-        telefono
+        Nombres,
+        Cedula,
+        Telefono
     };
     await pool.query('INSERT INTO cliente set ?', [newLink]);
     req.flash('success', 'Se Guardo Correctamente');
@@ -38,11 +38,11 @@ clienteCtrl.renderEditCliente = async (req, res) => {
 
 clienteCtrl.editCliente = async (req,res) => {
     const { id } = req.params;
-    const { cedula, nombre, telefono} = req.body; 
+    const { Cedula, Nombres, Telefono} = req.body; 
     const newLink = {
-        cedula,
-        nombre, 
-        telefono
+        Cedula,
+        Nombres, 
+        Telefono
     };
     await pool.query('UPDATE cliente set ? WHERE id = ?', [newLink, id]);
     req.flash('success', 'Se Actualizo Correctamente');
