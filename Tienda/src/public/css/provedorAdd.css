@@ -1,0 +1,81 @@
+body{
+    background-image: url('/img/fondo_2.png');
+}
+#contenedor_1{
+    position: absolute;
+    top: 170px;
+    left: 550px;
+}
+
+#NombreProveedor{
+    border-radius: 10px;
+    width: 260px;
+    position: absolute;
+    top: 6px;
+    left: 280px;
+}
+#lblnprovedor{
+    font-size: 30px;
+ font-family: cursive;  
+}
+#Direccion{
+    border-radius: 10px;
+    width: 260px;
+    position: absolute;
+    top: 60px;
+    left: 280px;
+}
+#Numero{
+    border-radius: 10px;
+    width: 260px;
+    position: absolute;
+    top: 120px;
+    left: 280px;
+}
+#codigo{
+    border-radius: 10px;
+    width: 260px;
+    position: absolute;
+    top: 170px;
+    left: 280px;
+}
+#lbldireccion{
+    font-size: 30px;
+    font-family: cursive;  
+}
+#lblnumero{
+    font-size: 30px;
+    font-family: cursive;  
+}
+#lblcodigo{
+    font-size: 30px;
+    font-family: cursive;  
+}
+#p{
+    font-size: 30px;
+    font-family: cursive;  
+    color: purple;
+    position: absolute;
+    top: 100px;
+    left: 580px;
+}
+#guardar1{
+    width: 140%;
+    position: absolute;
+    top: 240px;
+    left: 100px;
+    border-radius: 20px;
+}
+#guardar1:hover{
+color: yellow;
+}
+#contenedor_1{
+    position: absolute;
+    top: 150px;
+    left: 400px;
+}
+#imgcarrito{
+    width: 30px;
+    position: absolute;
+    left: 230px;
+}

@@ -2,22 +2,29 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <LINK REL=StyleSheet HREF="css/login.css" TYPE="text/css" MEDIA=screen>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <LINK REL=StyleSheet HREF="css/login.css" TYPE="text/css" MEDIA=screen>
 </head>
-<body style="background-image: url('img/registro.jpg');">
+
+<body style="background-image: url('img/fondo_1.png');">
+<div id="imegen">
+  <img src="/img/registro.png">
+</div>
   <form action="/signin" method="POST" id="ingresar">
-    <label id="Usuario">Usuario </label>
-    <input type="text" id="Nombre" name="username">
+    <div id="contenedor">
+      <label id="Usuario">Usuario </label>
+      <input type="text" id="Nombre" name="username">
+      <div>
+        <label id="contraseña">Contraseña </label>
+        <input type="password" id="Contraseña" name="password">
+      </div>
+      <div>
+        <button type="submit" id="botonIngresa">Ingresar</button>
+      </div>
     </div>
-    <div>
-      <label id="contraseña">Contraseña </label>
-      <input type="password" id="Contraseña" name="password">
-    </div>
-    <div>
-      <button type="submit" id="botonIngresa">Ingresar</button>
-    </div>
+
   </form>
 </body>
+
 </html>

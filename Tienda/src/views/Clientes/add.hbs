@@ -4,24 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <LINK REL=StyleSheet HREF="/css/cliente.css" TYPE="text/css" MEDIA=screen>
+    <LINK REL=StyleSheet HREF="/css/addCliente.css" TYPE="text/css" MEDIA=screen>
 </head>
 
 <body>
+
+    <p id="p">Agregar Cliente</p>
+    <img src="/img/cliente.png" alt="cliente" id="cliente">
     <form action="/clientes/add" method="POST" id="f1">
+    <div id="contenedor_1">
         <div id="contenedor">
-            <label>Cedula</label>
+            <label id="lblcedula">Cedula :</label>
             <input type="text" name="cedula" id="cedula">
         </div>
         <div id="contenedor">
-            <label>Nombre</label>
+            <label id="lblnombre">Nombre :</label>
             <input type="text" name="nombre" id="nombre">
         </div>
         <div id="contenedor">
-            <label>Telefono</label>
+            <label id="lbltelf">Telefono</label>
             <input type="number" name="telefono" id="telefono">
         </div>
-        <button class="btn btn-success" type="submit" id="guardar">Guardar</button>
+        <button class="btn btn-success" type="submit" id="guardar"><img  id="guardar_1" src="/img/guardar.png" alt="guardar"> Guardar</button>
+        </div>
     </form>
 </body>
 </html>

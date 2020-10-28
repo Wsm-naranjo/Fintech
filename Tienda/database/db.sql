@@ -43,6 +43,7 @@ CREATE TABLE Comentarios (
   CONSTRAINT fk_tienda FOREIGN KEY(tienda) REFERENCES Tienda(id)
 );
 
+
 ALTER TABLE Comentarios MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 1;
 
 

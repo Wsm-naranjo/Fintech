@@ -1,3 +1,6 @@
+body{
+    background-image: url('/img/fondo_2.png');
+}
 #f1{
     position: absolute;
     top: 170px;
@@ -58,9 +61,14 @@ border-radius: 20px;
     border-radius: 20px;  
 }
 #guardar1{
-    width: 235%;
+    width: 200%;
     font-size: 20px;
     position: absolute;
+    top: 380px;
+    border-radius: 100px;
+}
+#guardar1:hover{
+    color: yellow;
 }
 
 #NombreProducto{
@@ -100,4 +108,29 @@ border-radius: 20px;
     right: -310px;
     border-radius: 20px;
 }
-
+#imgguardar{
+    width: 5%;
+    position: absolute;
+    left: 200px;
+}
+#formulario_1{
+    width: 300px;
+    position: absolute;
+    top: -30px;
+    left: -70px;
+}
+#pn{
+    width: 300px;
+    position: absolute;
+    top: -100px;
+    left: 70px;
+    color: purple;
+    font-family: cursive;
+    font-size: 40px;
+}
+#imgregistrar{
+    width: 300px;
+    position: absolute;
+    top: -80px;
+    left: -400px;
+}

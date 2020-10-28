@@ -1,25 +1,29 @@
 <div class="col-md-4 mx-auto">
-<LINK REL=StyleSheet HREF="/css/cliente.css" TYPE="text/css" MEDIA=screen>
-    <div class="card">
-        <div class="card-body">
+    <LINK REL=StyleSheet HREF="/css/editproveedor.css" TYPE="text/css" MEDIA=screen>
+    <p id="p"> Editar Proveedor</p>
+    <img src="/img/editar.png" alt="editar" id="imgeditar">
+    <div id="contenedor_1">
+        <div>
             <form action="/proveedor/edit/{{proveedores.id}}" method="POST" id="f2">
                 <div id="contenedor">
-            <label>Nombre</label>
-            <input type="text" name="NombreProveedor" id="NombreProveedor" value="{{proveedores.NombreProveedor}}">
-        </div>
-        <div id="contenedor">
-            <label>Direccion</label>
-            <input type="text" name="Direccion" id="Direccion" value="{{proveedores.Direccion}}">
-        </div>
-        <div id="contenedor">
-            <label>Numero</label>
-            <input type="text" name="Numero"  id="Numero" value="{{proveedores.Numero}}">
-        </div>
-        <div id="contenedor">
-            <label>Estado</label>
-            <input type="text" name="Estado" id="Estado" value="{{proveedores.Estado}}">
-        </div>
-        <button type="submit" class="btn btn-success" id="guardar">Guardar</button>
+                    <label id="lblnombre" >Nombre :</label>
+                    <input type="text" name="NombreProveedor" id="NombreProveedor"
+                        value="{{proveedores.NombreProveedor}}">
+                </div>
+                <div id="contenedor">
+                    <label id="lbldir" >Direccion :</label>
+                    <input type="text" name="Direccion" id="Direccion" value="{{proveedores.Direccion}}">
+                </div>
+                <div id="contenedor">
+                    <label id="lblnumero">Numero :</label>
+                    <input type="text" name="Numero" id="Numero" value="{{proveedores.Numero}}">
+                </div>
+                <div id="contenedor">
+                    <label id="lblestado">Estado :</label>
+                    <input type="text" name="Estado" id="Estado" value="{{proveedores.Estado}}">
+                </div>
+                <button type="submit" class="btn btn-success" id="guardar"> <img id="guardar_1" src="/img/guardar.png"
+                        alt="guardar"> Guardar</button>
             </form>
         </div>
     </div>
