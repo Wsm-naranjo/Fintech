@@ -80,7 +80,7 @@ NombreProducto varchar(50) NOT NULL,
 Cantidad 	int(20) NOT NULL,
 precioVenta INT(4) NOT NULL,
 FechaCadusidad VARCHAR(225) NOT NULL,
-categoria varchar(50) NOT NULL,
+categoria VARCHAR(50) Not NULL,
 Tienda int(11) NOT NULL,
 usuario int(11) NOT NULL,
 FechaRegistro timestamp NOT NULL DEFAULT current_timestamp

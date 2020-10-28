@@ -1,18 +1,15 @@
-<div class="container p-4">
+<LINK REL=StyleSheet HREF="/css/pag-principal.css" TYPE="text/css" MEDIA=screen>
+<div class="container p-2">
     <div class="row">
         {{#each lista}}
-        <div class="col-md-3">
+        <div>
             <div class="card text-center">
                 <div class="card-body">
-                        <h3 class="card-title text-uppercase">
-                            {{nombreNegocio}}
-                        </h3>
-                    <p class="m-2">{{celular}}</p>
-                    <img src="/img/tienda.jpg" style="width: 200px;">
-                    <p class="m-2">{{telefono}}</p>
-                    <a class="btn btn-success" href="/producto/lista">
-                        compre aqui
-                    </a>
+                        <h3>{{nombreNegocio}}</h3>
+                        <p> Celular : {{celular}}</p>
+                        <img src="/img/tienda.jpg" style="width: 200px;">
+                        <p> Telefono :{{telefono}}</p>
+                        <a class="btn btn-success" href="/producto/lista">compre aqui</a>
                 </div>
             </div>
         </div>
