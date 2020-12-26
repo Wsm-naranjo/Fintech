@@ -1,0 +1,7 @@
+body{
+    color: rgb(255, 255, 255);
+    background-image: url(/img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size:auto;
+    max-width: 100%;
+}

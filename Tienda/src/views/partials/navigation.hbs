@@ -1,58 +1,63 @@
-<LINK REL=StyleSheet HREF="/css/navegacion.css" TYPE="text/css" MEDIA=screen>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
-      aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+    <a class="nav-link" href="/"><img src="/img/Fintech.png" style="max-width: 50px;"></a>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
         {{#if user}}
         <li class="nav-item dropdown">
-          <a class="nav-link" href="/productos/list"> Productos</a>
+          <a class="nav-link" href="/productos/list">
+            <h4>Productos</h4>
+          </a>
         </li>
-         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
-          Clientes
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+           <h4>Clientes</h4>
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/clientes/add">Agregar un Cliente</a>
-            <a class="dropdown-item" href="/clientes/list">Clientes</a>
+            <a class="dropdown-item" href="/clientes/add"><h4>Agregar un Cliente</h4></a>
+            <a class="dropdown-item" href="/clientes/list"><h4>Clientes</h4></a>
           </div>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
-          Proveedores
+           <h4>Proveedores</h4>
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/proveedor/add">Agregar un Proveedor</a>
-            <a class="dropdown-item" href="/proveedor/list">Proveedor</a>
+            <a class="dropdown-item" href="/proveedor/add"><h4>Agregar un Proveedor</h4></a>
+            <a class="dropdown-item" href="/proveedor/list"><h4>Proveedor</h4></a>
           </div>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
-          Producto Entrada
+            <h4>Entrada</h4>
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/ProductoEntrada/add">Agregar la Entrada de Producto</a>
-            <a class="dropdown-item" href="/ProductoEntrada/list">Producto Entrada</a>
+            <a class="dropdown-item" href="/ProductoEntrada/add"><h4>Agregar la Entrada de Producto</h4></a>
+            <a class="dropdown-item" href="/ProductoEntrada/list"><h4>Producto Entrada</h4></a>
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/perfil/list" >Perfil</a>
+          <a class="nav-link" href="/perfil/list"><h4>Perfil</h4></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/logout" >Cierre la Sesion</a>
+          <a class="nav-link" href="/logout"><h4>Cierre la Sesion</h4></a>
         </li>
         {{else}}
         <li class="nav-item">
-          <a class="nav-link" href="/signin" id="session">Inicio de Sesion</a>
+          <a class="nav-link" href="/signin" id="session">
+            <h3>Inicio de Sesion</h1>
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/signup" id="registro">Registrate</a>
+          <a class="nav-link" href="/signup" id="registro">
+            <h3>Registrate</h3>
+          </a>
         </li>
         {{/if}}
       </ul>

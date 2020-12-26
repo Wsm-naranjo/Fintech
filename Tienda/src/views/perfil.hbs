@@ -1,41 +1,31 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <LINK REL=StyleSheet HREF="/css/perfil.css" TYPE="text/css" MEDIA=screen>
-</head>
-
-<body>
-    <div id="datos">
-            <img src="/img/fondo_2.png" id="avatar">
-        <div id="datosUsuario">
-         <p>{{user.username}}<br>
-                 {{user.email}}
-         </p>
-         </div> 
-    </div>
-     <label id="DatoNegocio">Datos del Negocio</label>
-    <div id="formulario">
-        <form action="/perfil/add" method="POST">
+<img src="/img/avatar.png" id="avatar"></img>
+<LINK REL=StyleSheet HREF="/css/perfil.css" TYPE="text/css" MEDIA=screen>
+<div id="datosUsuario">
+    <p>
+        <label id="dato">{{user.username}}</label>
+    </p>
+</div>
+<label id="DatoNegocio">Datos del Negocio</label>
+<div id="formulario">
+    <form action="/perfil/add" method="POST">
         <div>
-        <label  id="Nombre">Nombre:</label>
-        <input type="text" name="nombreNegocio" id="nombreNegocio">
+            <label id="Nombre">Nombre:</label>
+            <input type="text" name="nombreNegocio" id="nombreNegocio">
         </div>
         <div>
-            <label  id="contactos">Contactos</label>
+            <label id="contactos">Contactos</label>
             <div id="numeros">
-           <label id="celular">Celular:</label> <label id="telefono">Telefono:</label>
-           </div>
-           <div id="numero">
-        <input type="number" name="celular" min="0" id="celular">   <input type="number" name="telefono" min="0" id="telefono">
-        </div>
+                <label id="celular">Celular:</label> <label id="telefono">Telefono:</label>
+            </div>
+            <div id="CELULAR">
+                <input type="number" name="celular" min="0" id="celular">
+            </div>
+            <div id="Telefono">
+                <input type="number" name="telefono" min="0" id="telefono">
+            </div>
         </div>
         <div id="boton">
-         <button  type="submit" id="guardar1">Guardar</button>
-         </div>
-        </form>
-     </div>                                    
-</body>
-</html>
+            <button type="submit" id="guardar1">Guardar</button>
+        </div>
+    </form>
+</div>

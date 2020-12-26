@@ -1,0 +1,14 @@
+#inicio{
+    position: fixed;
+    text-align: center; 
+    top: 250px;
+    left: 250px;
+}
+#Bienvenida{
+    font-style: italic;
+    font-family: fantasy;
+}
+#Mensaje{
+    font-style:italic;
+    font-family: fantasy;
+}

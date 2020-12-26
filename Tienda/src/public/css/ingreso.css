@@ -1,11 +1,6 @@
-#registros{
-    position: absolute;
-    top:300px;
-    left: 550px;
-}
 #imegen{
     position: absolute;
-    left: 630px;
+    left: 570px;
     top: 150px;
 }
 #avatar{
@@ -13,12 +8,16 @@
     flex-wrap: wrap;
     max-width: 250px;
 }
-#Usuario{
-    font-size: 35px;
-    font-style: italic;
-    font-family: fantasy;
+#contenedor{
+    position: absolute;
+    top: 370px;
+    left: 500px;
 }
-#contraseña{
+#datos{
+    position: absolute;
+    top: -60px;
+}
+#Usuario{
     font-size: 35px;
     font-style: italic;
     font-family: fantasy;
@@ -29,18 +28,23 @@
     top: 18px;
     border-radius: 10px;
 }
+#contraseña{
+    font-size: 35px;
+    font-style: italic;
+    font-family: fantasy;
+}
 #Contraseña{
     position:absolute;
     left: 190px;
-    top: 70px;
+    top: 15px;
     border-radius: 10px;
 }
-#guardar{
+#flecha{
     max-width: 50px;
 }
 #boton{
     background-color: rgb(255, 240, 245);
     border-radius: 20px;
     border-color: black;
-    width: 220%;
+    width: 210%;
 }
