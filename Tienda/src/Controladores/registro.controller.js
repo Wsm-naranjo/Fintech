@@ -3,22 +3,22 @@ const authCtrl = {};
 const passport = require('passport');
 
 authCtrl.renderSignUp = (req, res) => {
-    res.render('auth/signup');
+    res.render('Usuario/Registro');
 };
 
 authCtrl.signUp = passport.authenticate('local.signup', {
     successRedirect: '/perfil/list',
-    failureRedirect: '/signup',
+    failureRedirect: '/Registro',
     failureFlash: true
 });
 
 authCtrl.renderSignIn = (req, res, next) => {
-    res.render('auth/signin');
+    res.render('Usuario/Login');
 };
 
 authCtrl.signIn = passport.authenticate('local.signin', {
     successRedirect: '/perfil/list',
-    failureRedirect: '/signin',
+    failureRedirect: '/Login',
     failureFlash: true
 });
 

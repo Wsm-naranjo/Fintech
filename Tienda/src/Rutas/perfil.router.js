@@ -3,7 +3,7 @@ const router=express.Router()
 
 const {isLoggedIn}=require('../lib/auth')
 
-const {renderPerfil,addDatos,rederList,renderEdit,edit}=require('../controllers/perfil.controller')
+const {renderPerfil,addDatos,rederList,renderEdit,edit}=require('../Controladores/perfil.controller')
 
 router.use(isLoggedIn);
 

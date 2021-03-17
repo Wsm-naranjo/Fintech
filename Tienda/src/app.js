@@ -60,13 +60,13 @@ app.use(express.static(path.join(__dirname ,'public')));
 
 
 //routers
-app.use(require('./routes/index.routes'))
-app.use(require('./routes/auth.routes'))
-app.use(require('./routes/user.routes'))
-app.use('/perfil', require('./routes/perfil.router'));
-app.use('/clientes', require('./routes/Clientes.routes'));
-app.use('/ProductoEntrada', require('./routes/ProductosEntrada.routes'))
-app.use('/proveedor', require('./routes/proveedor.router'))
-app.use('/productos', require('./routes/Productos.routes'))
+app.use(require('./Rutas/index.routes'))
+app.use(require('./Rutas/Registro.routes'))
+app.use(require('./Rutas/user.routes'))
+app.use('/perfil', require('./Rutas/perfil.router'));
+app.use('/clientes', require('./Rutas/Clientes.routes'));
+app.use('/ProductoEntrada', require('./Rutas/ProductosEntrada.routes'))
+app.use('/proveedor', require('./Rutas/proveedor.router'))
+app.use('/productos', require('./Rutas/Productos.routes'))
 
 module.exports = app; 

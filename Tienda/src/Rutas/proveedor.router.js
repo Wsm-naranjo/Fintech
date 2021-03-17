@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { isLoggedIn } = require('../lib/auth');
 
-const { renderAddProveedor, addProveedor, renderProveedor, deleteProveedor, renderEditProveedor, editProveedor } = require('../controllers/provedor.controller')
+const { renderAddProveedor, addProveedor, renderProveedor, deleteProveedor, renderEditProveedor, editProveedor } = require('../Controladores/provedor.controller')
 
 router.use(isLoggedIn);
 
