@@ -1,14 +1,18 @@
 #inicio{
-    position: fixed;
+    position: absolute;
     text-align: center; 
     top: 250px;
     left: 250px;
 }
-#Bienvenida{
-    font-style: italic;
-    font-family: fantasy;
+
+#imagen{
+    width: 140px;
+    height: auto;
 }
-#Mensaje{
-    font-style:italic;
-    font-family: fantasy;
+#boton{
+    position: absolute;
+    background-color: rgba(240, 248, 255, 0);
+    border-color: rgba(240, 248, 255, 0);
+    top: 360px;
+    left: 570px;
 }

@@ -48,3 +48,12 @@
     border-color: black;
     width: 210%;
 }
+#sesion{
+    position: absolute;
+    top: 20px;
+    left: 1150px;
+    border-radius: 20px;
+    font-size: 32px;
+    font-family: fantasy;
+    font-style: italic;
+}

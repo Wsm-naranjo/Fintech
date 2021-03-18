@@ -16,14 +16,14 @@
             <div>
                 <label id="contactos">Contactos</label>
                 <div id="CELULAR">
-                    <input type="number" name="celular" min="0" id="celular">
+                    <input type="number" name="celular" min="0" id="celular" value="{{celular}}" disabled>
                 </div>
                 <div id="Telefono">
-                    <input type="number" name="telefono" min="0" id="telefono">
+                    <input type="number" name="telefono" min="0" id="telefono" value="{{telefono}}" disabled>
                 </div>
             </div>
             <div id="boton">
-                <button type="submit" id="guardar1"> <a href="/perfil/edit/{{id}}" style="color: aliceblue;"> Editar
+                <button type="submit" id="guardar1"> <a href="/perfil/edit/{{id}}"> Editar
                         Datos</a></button>
                 {{else}}
                 <div>
@@ -34,3 +34,4 @@
             </div>
         </div>
     </div>
+<button><a href="/proveedor/add">Agregar Proveedor</a></button>

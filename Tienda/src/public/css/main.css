@@ -1,7 +1,10 @@
 body{
-    color: rgb(255, 255, 255);
-    background-image: url(/img/fondo.jpg);
-    background-repeat: no-repeat;
+    color: rgb(2, 0, 0);
+    background-image: url(/img/fondo_T.jpeg);
     background-size:auto;
-    max-width: 100%;
+    font-family: fantasy;
+    font-style: italic;
+    font-weight: bolder;
+    width: 100%;
+    height: auto;
 }
