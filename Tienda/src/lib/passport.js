@@ -21,7 +21,7 @@ passport.use(
           user.password
         );
         if (validPassword) {
-          done(null, user, req.flash("success", "Bienvenido" + user.username));
+          done(null, user, req.flash("message", "Bienvenido" + user.username));
         } else {
           done(null, false, req.flash("message", "Contraseña incorrecta"));
         }
@@ -44,14 +44,15 @@ passport.use(
       passwordField: "password",
       passReqToCallback: true
     },
-    async (req, username, password, done) => {
+    async (req, username, password,rol, done) => {
       let newUser = {
         username,
-        password
+        password,
+        rol
       };
 
       newUser.password = await helpers.encryptPassword(password);
-      // Saving in the Database
+      // Guardar en la base de datos
       const result = await pool.query("INSERT INTO users SET ? ", newUser);
       newUser.id = result.insertId;
       return done(null, newUser);

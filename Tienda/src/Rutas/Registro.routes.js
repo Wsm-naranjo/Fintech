@@ -1,16 +1,16 @@
 const express = require('express');
-const router = express.Router();
+const rutas = express.Router();
 
-const { renderSignUp, signUp, renderSignIn, signIn, logout } = require('../Controladores/registro.controller')
+const { mostrarLogin, mostrarRegistro, Registro, Login, cierreSesion } = require('../Controladores/registro.controller')
 
-// SIGNUP
-router.get('/Registro', renderSignUp);
-router.post('/Registro', signUp);
 
-// SINGIN
-router.get('/Login', renderSignIn);
-router.post('/Login', signIn);
+rutas.get('/Registro', mostrarRegistro);
+rutas.post('/Registro', Registro);
 
-router.get('/CerrarSecion', logout);
 
-module.exports = router;
+rutas.get('/Login', mostrarLogin);
+rutas.post('/Login', Login);
+
+rutas.get('/CerrarSecion', cierreSesion);
+
+module.exports = rutas;

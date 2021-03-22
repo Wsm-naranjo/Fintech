@@ -20,11 +20,11 @@
                         <h3 class="card-title text-uppercase">
                             {{NombreProducto}}
                         </h3>
-                        <p class="m-2">{{Cantidad}}</p>
+                        <input type="text" value="{{Cantidad}}" readonly>
                         <img src="/img/tienda.jpg" style="width: 200px;">
                         <p class="m-2">{{precioVenta}}</p>
                         <a class="btn btn-success" href="/producto/lista">
-                            compre aqui
+                            comprar
                         </a>
                     </div>
                 </div>
@@ -32,5 +32,6 @@
             {{/each}}
         </div>
     </div>
+
 </form>
 <!--card-->

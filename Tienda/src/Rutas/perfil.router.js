@@ -9,7 +9,7 @@ router.use(isLoggedIn);
 
 router.get('/add', renderPerfil)
 router.post('/add',addDatos)
-router.get('/list',isLoggedIn,rederList)
+router.get('/list',rederList)
 router.get('/edit/:id',renderEdit) 
 router.post('/edit/:id',edit)
 
