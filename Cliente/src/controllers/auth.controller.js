@@ -3,7 +3,7 @@ const authCtrl = {};
 const passport = require('passport');
 
 authCtrl.renderSignUp = (req, res) => {
-    res.render('registro');
+    res.render('login/registro');
 };
 
 authCtrl.signUp = passport.authenticate('local.signup', {
@@ -13,7 +13,7 @@ authCtrl.signUp = passport.authenticate('local.signup', {
 });
 
 authCtrl.renderSignIn = (req, res, next) => {
-    res.render('login');
+    res.render('login/login');
 };
 
 authCtrl.signIn = passport.authenticate('local.signin', {

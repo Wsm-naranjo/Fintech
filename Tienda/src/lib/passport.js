@@ -23,7 +23,7 @@ passport.use(
         if (validPassword) {
           done(null, user, req.flash("message", "Bienvenido" + user.username));
         } else {
-          done(null, false, req.flash("message", "Contraseña incorrecta"));
+          done(null, false, req.flash("message", "Datos incorrecta"));
         }
       } else {
         return done(
@@ -44,11 +44,10 @@ passport.use(
       passwordField: "password",
       passReqToCallback: true
     },
-    async (req, username, password,rol, done) => {
+    async (req, username, password, done) => {
       let newUser = {
         username,
-        password,
-        rol
+        password
       };
 
       newUser.password = await helpers.encryptPassword(password);
