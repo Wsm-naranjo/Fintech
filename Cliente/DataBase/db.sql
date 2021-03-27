@@ -107,11 +107,6 @@ CREATE TABLE lista (
   id INT (11) PRIMARY KEY NOT NULL,
   Nombre VARCHAR(50) NOT NULL,
   Cantidad INT(6) NOT NULL,
-  Precio FLOAT (4,2),
-  Tienda INT(11) NOT NULL,
-  Cliente INT(11) NOT NULL,
-  CONSTRAINT fk_tienda_id FOREIGN KEY (Tienda) REFERENCES Tienda(id)
+  Precio FLOAT (4,2)
 );
-
-ALTER TABLE lista ADD CONSTRAINT fk_Cliente_tienda FOREIGN KEY(Cliente) REFERENCES Cliente(id);
 ALTER TABLE lista MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;

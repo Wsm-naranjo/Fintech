@@ -1,11 +1,10 @@
-<img src="/img/logo-inicial.png" id="logo-inicial" style="width: 390px; position: absolute; left: 470px; top:-60px ">
-
+<link rel="stylesheet" href="/css/productos.css">
 <div id="container">
     <div id="categorias">
-        <a class="btn btn-outline-light" id="Tiendas" href="/tienda/lista"> Tiendas</a>
-        <a class="btn btn-outline-light" id="Consumibles" href="/productos/consumibles"> Consumibles</a>
-        <a class="btn btn-outline-light" id="noConsumibles" href="/productos/noconsumibles"> No consumibles</a>
-        <a class="btn btn-outline-light" id="Bebidas" href="/productos/bebidas"> Bebidas </a>
+        <a id="Tiendas" href="/tienda/lista"> Tiendas</a>
+        <a id="Consumibles" href="/productos/consumibles"> Consumibles</a>
+        <a id="noConsumibles" href="/productos/noconsumibles"> No consumibles</a>
+        <a id="Bebidas" href="/productos/bebidas"> Bebidas </a>
     </div>
 </div>
 
@@ -17,21 +16,38 @@
             <div class="col-md-3">
                 <div class="card text-center">
                     <div class="card-body">
-                        <h3 class="card-title text-uppercase">
-                            {{NombreProducto}}
-                        </h3>
-                        <input type="text" value="{{Cantidad}}" readonly>
-                        <img src="/img/tienda.jpg" style="width: 200px;">
-                        <p class="m-2">{{precioVenta}}</p>
-                        <a class="btn btn-success" href="/producto/lista">
-                            comprar
-                        </a>
+                        <input type="text" name="Nombre" value="{{NombreProducto}}" readonly id="cantidad">
+                        <input type="text" name="Cantidad" value="{{Cantidad}}" readonly id="cantidad">
+                        <input type="text" name="Precio" value="{{precioVenta}}" readonly id="cantidad">
+                        <button type="submit">COMPRAR</button>
                     </div>
                 </div>
             </div>
             {{/each}}
         </div>
     </div>
-
 </form>
-<!--card-->
+
+<div id="lista">
+    <table border="1" id="tabla">
+        <tr>
+            <td id="nombres"><p id="nombre">Lista de Productos</p></td>
+            <td id="nombres"><p id="precio">Precios</p></td>
+        </tr>
+        {{#each listaProductos}}
+        <tr>
+            <td id="Producto">{{Nombre}}</td>
+            <td id="precio">${{Precio}}</td>
+        </tr>
+        {{/each}}
+    </table>
+    <div id="mover">
+    <button id="ver"><a href="Compra/listaCompleta" id="letras">Ver más productos</a></button>
+    </div>
+</div>
+<div id="boton">
+<button id="carrito" onclick="a.aparecerLista()"><img src="/img/carrito.png" id="img"></button>
+<button id="carrito1" onclick="a.esconderLista()"><img src="/img/carrito.png" id="img"></button>
+</div>
+
+<script src="/js/lista.js"></script>

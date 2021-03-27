@@ -1,8 +1,10 @@
-#perfil{
-position: absolute;
-left: -100px;
-}
-
 body{
-    background-image: url("/img/pag-principal.jpg");
+    color: rgb(2, 0, 0);
+    background-color: white;
+    font-size: 25px;
+    font-family: 'Dancing Script', cursive;
+    font-style: italic;
+    font-weight:bolder;
+    max-width: 100%;
+    max-height: 100%;
 }

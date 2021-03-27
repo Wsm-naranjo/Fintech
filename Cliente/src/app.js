@@ -66,7 +66,7 @@ app.use(require('./routers/user.router'))
 app.use('/tienda', require('./routers/principal.router'));
 app.use('/producto', require('./routers/productos'));
 app.use('/productos', require('./routers/Categoria.router'));
-
+app.use('/producto/Compra', require('./routers/lista'));
 
 //public
 

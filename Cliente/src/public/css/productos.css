@@ -1,79 +1,62 @@
-#logo-inicial{
-    width: 270px;
-    position: absolute;
-    top: 10px;
-     left: 450px;
+#boton{
+    position:absolute;
+    left: 1314px;
+    top: 350px;
 }
-#container{
-    margin : 20px auto;
-    background-color:transparent;
-    height: 100px;
-    width : 1350px;
-    box-shadow: 0px 5px 5px 0px;
-    position: absolute;
-    top: 40px;
-    font-size: 50%;
-}
-#categorias{
-    position: absolute;
-    top: 30px;
-    font-size: 20px;
-    left: 20px;
-}
-#perfil{
-    position: absolute;
-    top: 40px;
-    left: 1250px;
+#img{
+    height: 36px;
+    width: auto;
 }
 #carrito{
+background-color: black;
+border-radius: 20px;
+}
+#carrito1{
+    background-color: black;
+    border-radius: 20px;
+    }
+#lista{
     position: absolute;
-    top: 40px;
-    left: 10px; 
+    left: 880px;
+    top: 150px;
 }
-
-#tienda{
-    position: absolute;
-    top: 180px;
-    left: 20px;
+#tabla{
+    border-color: black;
 }
-
-#Tiendas{
-    font-size: 25px;
+#nombres{
+    background-color: white;
+    word-spacing: 0.25em;
+    font-size: 20px;
+    text-align: center;
+    width: 40%;
 }
-
-#Consumibles{
-    font-size: 25px;
+#Producto{
+    background-color: white;
+    word-spacing: 0.25em;
+    font-size: 20px;
+    text-align: center;
 }
-
-#noConsumibles{
-    font-size: 25px;
-}
-
-#Bebidas{
-    font-size: 25px;
-}
-
-#NombreProducto{
-    position: absolute;
-    left: 65px;
-}
-
 #precio{
-    position: absolute;
-    top: 50px;
+    background-color: white;
+    word-spacing: 0.25em;
+    font-size: 20px;
+    text-align: center;
 }
-
+#ver{
+    background-color: rgb(165, 247, 238);
+    border-color: wheat;
+    border-radius: 20px;
+}
+#letras{
+    color: rgb(5, 3, 41);
+    font-size: 21px;
+    font-family: fantasy;
+    font-style:italic;
+}
 #cantidad{
-    position: absolute;
-    top: 90px;
-}
-
-#imgproducto{
-    position: absolute;
-    top: 165px;
-}
-
-#btncarrito{
-    position: absolute;
-    top: 260px;
+    width: auto;
+    height: auto;
+    border-color: rgba(255, 255, 240, 0);
+    text-align: center;
+    background-color: rgba(255, 255, 240, 0);
 }

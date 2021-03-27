@@ -1,0 +1,20 @@
+<form action="/producto/Compra/listaCompleta">
+    <table border="1" id="tabla">
+        <tr>
+            <td id="nombres"><p id="nombre">Lista de Productos</p></td>
+            <td id="nombres"><p id="Cantidad">Cantidad</p></td>
+            <td id="nombres"><p id="precio">Precios</p></td>
+        </tr>
+        {{#each lista}}
+        <tr>
+            <td id="Producto">{{Nombre}}</td>
+            <td id="Cantidad"><input value="{{cantidad}}"></td>
+            <td id="precio"><input value="${{Precio}}"></td>
+            <td><button><a href="">Eliminar</a></button></td>
+        </tr>
+        {{/each}}
+    </table>
+    <div id="mover">
+    <button id="ver"><a href="" id="letras">Comprar</a></button>
+    </div>
+</form>

@@ -1,9 +1,10 @@
 const express = require('express');
-const router = express.Router();
+const rutas = express.Router();
 
 const {isLoggedIn}=require("../lib/auth")
-const {calidad}=require("../controllers/producto.controller")
+const {calidad, Mandar}=require("../controllers/producto.controller")
 
-router.use(isLoggedIn)
-router.get("/lista",isLoggedIn,calidad)
-module.exports=router
+rutas.use(isLoggedIn)
+rutas.get("/lista",isLoggedIn,calidad)
+rutas.post("/lista", Mandar)
+module.exports=rutas
