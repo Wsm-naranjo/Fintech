@@ -16,3 +16,8 @@
     font-style: italic;
     font-family: fantasy;
 }
+#nombreNegocio{
+    position: absolute;
+    left: 600px;
+    top: -10px;
+}

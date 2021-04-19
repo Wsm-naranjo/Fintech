@@ -1,0 +1,94 @@
+#avatar{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 150px;
+    position: absolute;
+    left: 1150px;
+    top: 9px;
+    top: 20px;
+}
+
+#datosUsuario{
+    position: absolute;
+    left: 1100px;
+    top: 270px;
+    top: 150px;
+}
+
+#dato{
+    font-size: 35px;
+    font-style: italic;
+    font-family: fantasy;
+}
+
+#nombreNegocio{
+    position: absolute;
+    left: 550px;
+    top: 50px;
+    font-size: 60px;
+    font-style: initial;
+    
+}
+
+#contactos{
+    position: absolute;
+    top: 235px;
+    left: 600px;
+    font-size: 40px;
+}
+
+#guardar1{
+    position: absolute;
+    top: 500px;
+    left: 800px;
+}
+
+#celular{
+    position: absolute;
+    top: 330px;
+    left: 500px;
+
+}
+
+#telefono{
+    position: absolute;
+    top: 400px;
+    top: -20;
+    left: 500px;
+
+}
+#DatoNegocio{
+    position: absolute;
+    top: 200px;
+    left: 550px;
+
+}
+
+button{
+    position: absolute;
+    color: salmon;
+}
+
+#boton1{
+    position: absolute;
+    top: 500px;
+    left: 400px;
+    
+
+}
+
+#contactos1{
+    position: absolute;
+    top: 330px;
+    right: 500px;
+    left: 300px;
+    font-size: 35px;;
+}
+
+#contactos2{
+    position: absolute;
+    top: 400px;
+    right: 500px;
+    left: 300px;
+    font-size: 35px;;
+}
