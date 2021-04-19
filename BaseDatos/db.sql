@@ -1,3 +1,4 @@
+DROP DATABASE IF EXISTS fintech;
 CREATE DATABASE fintech;
 USE fintech;
 -- TABLE USER
@@ -7,7 +8,6 @@ USE fintech;
     username VARCHAR(16) NOT NULL,
     password VARCHAR(60) NOT NULL,
     email VARCHAR(100) NOT NULL,
-    rol VARCHAR(25) NOT NULL,
     created_at timestamp NOT NULL DEFAULT current_timestamp
   );
 
@@ -30,9 +30,10 @@ CREATE TABLE Tienda (
   celular INT (10) NOT NULL,
   telefono INT(10) NOT NULL,
   user_id INT(11)NOT NULL,
-  created_at timestamp NOT NULL DEFAULT current_timestamp
+  created_at timestamp NOT NULL DEFAULT current_timestamp,
+  CONSTRAINT fk_usuarioTienda FOREIGN KEY(user_id) REFERENCES users(id)
 );
-ALTER TABLE Tienda ADD CONSTRAINT fk_usuarioTienda FOREIGN KEY(user_id) REFERENCES users(id);
+
 ALTER TABLE Tienda MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 1;
 
 CREATE TABLE Comentarios (
@@ -40,7 +41,7 @@ CREATE TABLE Comentarios (
   Tienda INT(11)NOT NULL,
   comentarios VARCHAR(100) NOT NULL,
   created_at timestamp NOT NULL DEFAULT current_timestamp,
-  CONSTRAINT fk_tienda FOREIGN KEY(tienda) REFERENCES Tienda(id)
+  CONSTRAINT fk_COMENTARIO FOREIGN KEY(tienda) REFERENCES Tienda(id)
 );
 
 
@@ -53,10 +54,10 @@ NombreProveedor	varchar(50) NOT NULL,
 Direccion	varchar(100) NOT NULL,
 Numero	int(10)NOT NULL,
 Estado	tinyint(1) NOT NULL,
-user_id INT(11),
+user_id INT(11) not NULL,
 
 created_at timestamp NOT NULL DEFAULT current_timestamp,
-CONSTRAINT fk_usurio FOREIGN KEY(user_id) REFERENCES users(id)
+CONSTRAINT fk_usurio_proveedor FOREIGN KEY(user_id) REFERENCES users(id)
 );
 
 ALTER TABLE proveedor MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 1;
@@ -69,7 +70,9 @@ Cantidad 	int(20) NOT NULL,
 precio VARCHAR(4) NOT NULL,
 FechaCadusidad VARCHAR(225) NOT NULL,
 proveedor int(11) NOT NULL,
-FechaRegistro timestamp NOT NULL DEFAULT current_timestamp
+user_id INT(11) not NULL,
+FechaRegistro timestamp NOT NULL DEFAULT current_timestamp,
+CONSTRAINT fk_usurios_PRODUCTOSeNTRADA FOREIGN KEY(user_id) REFERENCES users(id)
 );
 ALTER TABLE productoEntrada ADD CONSTRAINT fk_usuairosProveedores FOREIGN KEY(proveedor) REFERENCES proveedor(id);
 ALTER TABLE productoEntrada MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 1;
@@ -84,11 +87,11 @@ FechaCadusidad VARCHAR(225) NOT NULL,
 categoria VARCHAR(50) Not NULL,
 Tienda int(11) NOT NULL,
 usuario int(11) NOT NULL,
-FechaRegistro timestamp NOT NULL DEFAULT current_timestamp
+FechaRegistro timestamp NOT NULL DEFAULT current_timestamp,
+CONSTRAINT fk_usurioproductos FOREIGN KEY(usuario) REFERENCES users(id),
+CONSTRAINT fk_productotienda FOREIGN KEY(Tienda) REFERENCES Tienda(id)
 );
 
-ALTER TABLE producto ADD CONSTRAINT fk_usurioproducto FOREIGN KEY(usuario) REFERENCES users(id);
-ALTER TABLE producto ADD CONSTRAINT fk_productotienda FOREIGN KEY(Tienda) REFERENCES Tienda(id);
 ALTER TABLE producto MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 1;
 
 CREATE TABLE cliente(
@@ -108,6 +111,9 @@ CREATE TABLE lista (
   id INT (11) PRIMARY KEY NOT NULL,
   Nombre VARCHAR(50) NOT NULL,
   Cantidad INT(6) NOT NULL,
-  Precio VARCHAR (4)
+  Precio VARCHAR (4) not NULL,
+  Cliente INT(11) not NULL,
+  CONSTRAINT fk_clientes FOREIGN KEY(Cliente) REFERENCES cliente(id)
 );
+
 ALTER TABLE lista MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;

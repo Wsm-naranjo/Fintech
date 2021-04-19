@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="/css/lista.css">
+<button id="boton"><a href="/producto/lista"><img src="/img/flecha.png" id="img"></a></button>
+<form action="/producto/Compra/listaCompleta">
+    <table border="1" id="tabla">
+        <tr>
+            <td id="nombres"><p id="nombre">Lista de Productos</p></td>
+            <td id="nombres"><p id="Cantidad">Cantidad</p></td>
+            <td id="nombres"><p id="precio">Precios</p></td>
+        </tr>
+        {{#each lista}}
+        <tr>
+            <td id="Producto"><input type="text" name="Nombre" value="{{Nombre}}" readonly></td>
+            <td id="Cantidad"><input type="number" name="Cantidad" id="cantidaes" value="1" min="1" max="{{cantidad}}" onclick="listas.modificar()"></td>
+            <td id="precio"><input type="text" name="Precio" value="{{Precio}}" readonly id="precios"></td>
+            <td><button><a href="/producto/Compra/Eliminar/{{id}}">Eliminar</a></button></td>
+        </tr>
+        {{/each}}
+        <tr>
+            <td><label id="">Total:</label></td>
+            <td></td>
+            <td><input type="text" name="" id="total"></td>
+        </tr>
+    </table>
+    <div id="mover">
+    <button id="ver"><a href="" id="letras">Comprar</a></button>
+    </div>
+</form>
+
+<script src="/js/listaCompleta.js"></script>

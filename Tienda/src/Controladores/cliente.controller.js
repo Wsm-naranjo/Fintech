@@ -7,10 +7,10 @@ clienteCtrl.renderAddClientes = (req, res) => {
 };
 
 clienteCtrl.addCliete = async (req, res) => {
-    const {Cedula, Nombres, Telefono} = req.body;
+    const {username, Nombres, Telefono} = req.body;
     const newLink = {
         Nombres,
-        Cedula,
+        username,
         Telefono
     };
     await pool.query('INSERT INTO cliente set ?', [newLink]);
@@ -38,9 +38,9 @@ clienteCtrl.renderEditCliente = async (req, res) => {
 
 clienteCtrl.editCliente = async (req,res) => {
     const { id } = req.params;
-    const { Cedula, Nombres, Telefono} = req.body; 
+    const { username, Nombres, Telefono} = req.body; 
     const newLink = {
-        Cedula,
+        username,
         Nombres, 
         Telefono
     };

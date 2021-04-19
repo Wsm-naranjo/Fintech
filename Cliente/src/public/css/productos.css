@@ -1,0 +1,114 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+#navegacion{
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    padding: 20px 0px;
+}
+#navegacion div {
+    display: flex;
+
+}
+#navegacion a{
+    padding: 10px;
+}
+#navegacion #categorias{
+    flex: 1;
+    margin-left: 160px;
+}
+button{
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    overflow: hidden;
+    display: flex;
+}
+#img{
+    height: 36px;
+    width: auto;
+}
+
+#contenido .row{
+    padding: 10px;
+    gap: 20px;
+}
+#contenido .card{
+    border-radius: 22px;
+    border: 1px solid black;
+    width: auto;
+    height: auto;
+}
+.card-body{
+    padding: auto;
+    margin-left: 1px;
+}
+
+#lista{
+    display: flex;
+    margin: auto;
+    width: auto;
+    height: auto;
+}
+#tabla{
+    border-color: black;
+    position: absolute;
+    left: 1025px;
+    width: 20%;
+    height: auto;
+}
+#boton{
+    position: absolute;
+    left: 1300px;
+    padding-top: 30px;
+}
+#nombres{
+    background-color: white;
+    word-spacing: 0.25em;
+    font-size: 20px;
+    text-align: center;
+    width: 40%;
+}
+#Producto{
+    background-color: white;
+    word-spacing: 0.25em;
+    font-size: 20px;
+    text-align: center;
+}
+#precio{
+    background-color: white;
+    word-spacing: 0.25em;
+    font-size: 20px;
+    text-align: center;
+}
+#ver{
+    background-color: rgb(165, 247, 238);
+    border-color: wheat;
+    border-radius: 20px;
+}
+#letras{
+    color: rgb(5, 3, 41);
+    font-size: 21px;
+}
+#cantidad{
+    margin: 3px;
+    padding: 2px;
+    margin-left: px;
+    width: 150px;
+    height: auto;
+    border-color: rgba(255, 255, 240, 0);
+    text-align: center;
+    background-color: rgba(255, 255, 240, 0);
+}
+#comprar{
+    display: flex;
+    padding-left: 20px;
+}

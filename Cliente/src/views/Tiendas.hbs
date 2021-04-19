@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="/css/Tienda.css">
+<div id="contenido">
+    <div class="container p-4">
+        <div class="row">
+            {{#each lista}}
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h3>{{nombreNegocio}}</h3>
+                        <p>{{celular}}</p>
+                        <p>{{telefono}}</p>
+                        <button id="boton"><a href="/producto/lista" id="letra">Productos</a></button>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>

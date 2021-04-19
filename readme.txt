@@ -1,3 +1,0 @@
-k_fintech
-Linkear a toda la comunidad que quiera registrar su información financiera hasta tener una criptomoneda como modo de intercambio en el país
-Obtener la capacidad de administrar los vienes y valores contabilizados de una empresa y organizarlos de una manera eficaz y rentable en distintos tipos de empresas de ventas o en empresas administrativas de igual manera creando una conciencia económica haciendo de la manera mas transparente las transacciones internas de la empresa 

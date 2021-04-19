@@ -14,7 +14,8 @@ ProductoEntradaCtrl.addEntrada = async (req, res) => {
         Cantidad,
         precio,
         FechaCadusidad,
-        proveedor: req.user.id
+        proveedor: req.user.id,
+        user_id: req.user.id
     }
     const NuevaCategoria ={
         categoria,

@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+button{
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    overflow: hidden;
+    display: flex;
+}
+#contenido .row{
+    padding: 10px;
+    gap: 20px;
+}
+#contenido .card{
+    border-radius: 22px;
+    border: 1px solid black;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+}
+.card-body{
+    padding: auto;
+    margin-left: 1px;
+}
+a{
+    text-decoration: none;
+}
+#letra{
+    display: flex;
+    padding-left: 20px;
+}
+@media(max-width: 840px){
+    #letras{
+        overflow: hidden;
+        height: auto;
+    }
+}
