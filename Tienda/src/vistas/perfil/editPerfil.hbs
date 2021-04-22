@@ -1,11 +1,13 @@
-<img src="/img/avatar.png" id="avatar"></img>
 <LINK REL=StyleSheet HREF="/css/perfilaeditar2.css" TYPE="text/css" MEDIA=screen>
+<img src="/img/avatar.png" id="avatar"></img>
 <div id="datosUsuario">
     <p>
         <label id="dato">{{user.username}}</label>
     </p>
 </div>
-<label id="DatoNegocio">Datos del Negocio</label>
+<div id="DatoNegocio">
+<label>Datos del Negocio</label>
+</div>
 <div id="formulario">
     <form action="/perfil/edit/{{tiendas.id}}" method="POST">
         <div>

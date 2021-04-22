@@ -14,8 +14,10 @@ input{
     text-align: center;
 }
 button{
-    display: flex;
     cursor: pointer;
+    border-radius: 20px;
+    display: block;
+    margin: auto;
 }
 
 @media(max-width: 840px){

@@ -1,31 +1,33 @@
-<img src="/img/avatar.png" id="avatar"></img>
 <LINK REL=StyleSheet HREF="/css/perfilhbs3.css" TYPE="text/css" MEDIA=screen>
-<div id="datosUsuario">
-    <p>
-        <label id="dato">{{user.username}}</label>
-    </p>
-</div>
-<label id="DatoNegocio">Datos del Negocio</label>
-<div id="formulario">
-    <form action="/perfil/add" method="POST">
-        <div>
-            <label id="Nombre">Nombre:</label>
-            <input type="text" name="nombreNegocio" id="nombreNegocio">
-        </div>
-        <div>
-            <label id="contactos">Contactos</label>
-            <div id="numeros">
-                <label id="celular1">Celular:</label> <label id="telefono">Telefono:</label>
+<div id="contenido">
+    <img src="/img/avatar.png" id="avatar"></img>
+    <div id="datosUsuario">
+        <p>
+            <label id="dato">{{user.username}}</label>
+        </p>
+    </div>
+    <label id="DatoNegocio">Datos del Negocio</label>
+    <div id="formulario">
+        <form action="/perfil/add" method="POST">
+            <div>
+                <label id="Nombre">Nombre:</label>
+                <input type="text" name="nombreNegocio" id="nombreNegocio">
             </div>
-            <div id="CELULAR">
-                <input type="number" name="celular" min="0" id="celular">
+            <div>
+                <label id="contactos">Contactos</label>
+                <div id="numeros">
+                    <label id="celular1">Celular:</label> <label id="telefono">Telefono:</label>
+                </div>
+                <div id="CELULAR">
+                    <input type="number" name="celular" min="0" id="celular">
+                </div>
+                <div id="Telefono">
+                    <input type="number" name="telefono" min="0" id="Telefono">
+                </div>
             </div>
-            <div id="Telefono">
-                <input type="number" name="telefono" min="0" id="Telefono">
+            <div id="boton">
+                <button type="submit" id="guardar1">Guardar</button>
             </div>
-        </div>
-        <div id="boton">
-            <button type="submit" id="guardar1">Guardar</button>
-        </div>
-    </form>
+        </form>
+    </div>
 </div>

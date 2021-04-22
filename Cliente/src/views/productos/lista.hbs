@@ -1,5 +1,4 @@
 <link rel="stylesheet" href="/css/lista.css">
-<button id="boton"><a href="/producto/lista"><img src="/img/flecha.png" id="img"></a></button>
 <form action="/producto/Compra/listaCompleta">
     <table border="1" id="tabla">
         <tr>
@@ -10,7 +9,7 @@
         {{#each lista}}
         <tr>
             <td id="Producto"><input type="text" name="Nombre" value="{{Nombre}}" readonly></td>
-            <td id="Cantidad"><input type="number" name="Cantidad" id="cantidaes" value="1" min="1" max="{{cantidad}}" onclick="listas.modificar()"></td>
+            <td id="Cantidad"><input type="number" name="Cantidad" id="cantidaes" value="1" min="1" max="{{Cantidades}}" onclick="listas.modificar()"></td>
             <td id="precio"><input type="text" name="Precio" value="{{Precio}}" readonly id="precios"></td>
             <td><button><a href="/producto/Compra/Eliminar/{{id}}">Eliminar</a></button></td>
         </tr>

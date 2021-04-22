@@ -4,15 +4,13 @@
     max-width: 150px;
     position: absolute;
     left: 1150px;
-    top: 9px;
-    top: 20px;
+    top: 120px;
 }
 
 #datosUsuario{
     position: absolute;
     left: 1100px;
-    top: 270px;
-    top: 150px;
+    top: 220px;
 }
 
 #dato{
@@ -24,7 +22,7 @@
 #nombreNegocio{
     position: absolute;
     left: 550px;
-    top: 50px;
+    top: 120px;
     font-size: 60px;
     font-style: initial;
     
@@ -91,4 +89,16 @@ button{
     right: 500px;
     left: 300px;
     font-size: 35px;;
+}
+#contenido{
+    position: absolute;
+}
+
+#LogoFintech{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 130px;
+    position: absolute;
+    top: 120px;
 }

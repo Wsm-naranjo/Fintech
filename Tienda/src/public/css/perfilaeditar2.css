@@ -8,14 +8,23 @@
     top: 20px;
 }
 
-#Fintech{
+#formulario{
+    position: absolute;
+    top: 30px;
+}
+
+#DatoNegocio{
+    position: absolute;
+    top: 120px;
+}
+
+#LogoFintech{
     position: absolute;
     display: flex;
     flex-wrap: wrap;
-    max-width: 150px;
+    max-width: 130px;
     position: absolute;
-    top: 9px;
-    top: 20px;
+    top: 120px;
 }
 
 #datosUsuario{
@@ -58,8 +67,6 @@
     
       
 }
-
-
 
 #Telefono1{
     position: absolute;

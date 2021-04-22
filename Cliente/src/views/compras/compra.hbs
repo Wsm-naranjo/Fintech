@@ -1,0 +1,24 @@
+<div id="contenedor">
+{{#each producto}}
+<form action="/Compras/eleccion/{{id}}" method="POST">
+    <div id="nombres">
+        <input type="text" name="Nombre" id="nombres" value="{{NombreProducto}}" readonly>
+    </div>
+    <div id="Cantidades">
+        <input type="text" name="Cantidades" id="nombres" value="{{Cantidad}}">
+    </div>
+    <div id="Precios">
+        <input type="text" name="Precio" id="nombres" value="{{precioVenta}}" readonly>
+    </div>
+    <div id="categorias">
+        <input type="text" name="categoria" id="categoria" value="{{categoria}}" readonly>
+    </div>
+    <div id="caducidades">
+        <input type="text" name="FechaCadusidad" id="caducidad" value="{{FechaCadusidad}}" readonly>
+    </div>
+    <div id="boton">
+        <button type="submit" id="comprar">Comprar</button>
+    </div>
+{{/each}}
+</form>
+</div>
