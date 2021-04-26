@@ -5,3 +5,18 @@
     position: absolute;
     left: 20px;
 }
+
+#tabla{
+    position: absolute;
+    background-color: rgb(139, 126, 185);
+    top: 70px;
+    left: 230px;
+    border-radius: 30px;
+}
+
+#ver{
+    position: absolute;
+    top: 300px;
+    left: 400px;
+}
+
