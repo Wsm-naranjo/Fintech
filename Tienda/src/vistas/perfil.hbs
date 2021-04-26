@@ -1,11 +1,11 @@
 <LINK REL=StyleSheet HREF="/css/perfilhbs3.css" TYPE="text/css" MEDIA=screen>
+<img src="/img/avatar.png" id="avatar"></img>
+<div id="datosUsuario">
+    <p>
+        <label id="dato">{{user.username}}</label>
+    </p>
+</div>
 <div id="contenido">
-    <img src="/img/avatar.png" id="avatar"></img>
-    <div id="datosUsuario">
-        <p>
-            <label id="dato">{{user.username}}</label>
-        </p>
-    </div>
     <label id="DatoNegocio">Datos del Negocio</label>
     <div id="formulario">
         <form action="/perfil/add" method="POST">
@@ -14,7 +14,6 @@
                 <input type="text" name="nombreNegocio" id="nombreNegocio">
             </div>
             <div>
-                <label id="contactos">Contactos</label>
                 <div id="numeros">
                     <label id="celular1">Celular:</label> <label id="telefono">Telefono:</label>
                 </div>

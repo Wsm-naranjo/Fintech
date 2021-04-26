@@ -11,14 +11,20 @@ body{
     
 }
 
-#LogoFintech{
+nav{
+    width: 100%;
+}
+
+#logo{
     position: absolute;
+    top: 50px;
+    left: 20px;
+}
+
+#LogoFintech{
     display: flex;
     flex-wrap: wrap;
     max-width: 130px;
-    position: absolute;
-    top: 9px;
-    top: 20px;
 }
 
 button{

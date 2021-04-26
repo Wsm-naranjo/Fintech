@@ -1,27 +1,27 @@
 #container{
     margin : 20px auto;
-    background-color:transparent;
-    height: 340px;
-    width : 450px;
+    background-color:rgb(105, 170, 170);
+    height: 410px;
+    width : 520px;
     box-shadow: 0px 5px 5px 0px;
     border-radius: 5%;
     position: absolute;
-    top: 180px;
+    top: 70px;
     left: 450px;
 }
 
 #h1{
-font-size: 40px;
-font-style: oblique;
-position: absolute;
-left: 140px;
+    font-size: 40px;
+    font-style: oblique;
+    position: absolute;
+    left: 160px;
 }
 
 #imagen{
-width: 140px;
-position: absolute;
-top: -30px;
-left: 365px;
+    width: 140px;
+    position: absolute;
+    top: -30px;
+    left: 365px;
 }
 
 label{
@@ -59,7 +59,7 @@ label{
 
 #Cedula{
     position: absolute;
-    top: 160px;
+    top: 140px;
     width: 250px;
 }
 
@@ -87,9 +87,9 @@ label{
     color: black; 
     border-radius: 15%;
     position: absolute;
-   top: 270px;
-   left: 50px;
-   font-size: 25px;
+    top: 300px;
+    left: 50px;
+    font-size: 25px;
   }
   
 #button:hover {
@@ -102,9 +102,9 @@ label{
     color: black; 
     border-radius: 15%;
     position: absolute;
-   top: 270px;
-   left: 250px;
-   font-size: 25px;
+    top: 300px;
+    left: 280px;
+    font-size: 25px;
   }
   
 #button2:hover {

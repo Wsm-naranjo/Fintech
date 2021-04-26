@@ -4,14 +4,25 @@
     max-width: 150px;
     position: absolute;
     left: 1150px;
-    top: 9px;
-    top: 20px;
+    top: 120px;
 }
+
+nav{
+    position: absolute;
+    top: -20px;
+}
+
+#dato{
+    position: absolute;
+    left: 1180px;
+    top: 220px;
+}
+
 
 #DatoNegocio{
     position: absolute;
-    left: 550px;
-    top: 50px;
+    left: 470px;
+    top: 120px;
     font-size: 40px;
 }
 
@@ -64,7 +75,18 @@
 
 #guardar1{
     position: absolute;
-    top: 500px;
+    top: 450px;
     left: 600px;
-    
+}
+
+#contenido{
+    position: absolute;
+    top: 50px;
+    left: -60px;
+    width: 100%;
+}
+
+#logo{
+    position: absolute;
+    top: 120px;
 }

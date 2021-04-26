@@ -1,40 +1,45 @@
 #container{
     margin : 20px auto;
-    background-color:transparent;
+    background-color: rgb(165, 150, 207);
     height: 300px;
     width : 450px;
     box-shadow: 0px 5px 5px 0px;
 }
 #frase{
-    font-size: 28px;
-    font-style: oblique;
+  position: absolute;
+  top: 230px;
+  font-size: 31px;
+  font-style: oblique;
+  
+
 }
+
 #button {
-    background-color: white; 
+    background-color: rgb(175, 238, 224); 
     color: black; 
     border-radius: 15%;
     position: absolute;
-   top: 370px;
-   left: 100px;
-   font-size: 25px;
+    top: 430px;
+    left: 100px;
+    font-size: 25px;
   }
   
 #button:hover {
-    background-color: #008CBA;
+    background-color: #1d7d9c;
     color: white;
   }
   #button2 {
-    background-color: white; 
+    background-color: rgb(175, 238, 214); 
     color: black; 
     border-radius: 15%;
     position: absolute;
-    top: 370px;
+    top: 430px;
     left: 300px;
     font-size: 25px;
   }
   
 #button2:hover {
-    background-color: greenyellow;
+    background-color: rgb(85, 179, 223);
     color: white;
   }
 

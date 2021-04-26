@@ -25,7 +25,6 @@
     top: 120px;
     font-size: 60px;
     font-style: initial;
-    
 }
 
 #contactos{
@@ -45,7 +44,6 @@
     position: absolute;
     top: 330px;
     left: 500px;
-
 }
 
 #telefono{
@@ -53,13 +51,11 @@
     top: 400px;
     top: -20;
     left: 500px;
-
 }
 #DatoNegocio{
     position: absolute;
     top: 200px;
     left: 550px;
-
 }
 
 button{
@@ -71,8 +67,6 @@ button{
     position: absolute;
     top: 500px;
     left: 400px;
-    
-
 }
 
 #contactos1{
@@ -94,11 +88,319 @@ button{
     position: absolute;
 }
 
-#LogoFintech{
+#logo{
     position: absolute;
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 130px;
-    position: absolute;
-    top: 120px;
+    top: 80px;
 }
+
+#mensaje{
+    position: absolute;
+    top: 170px;
+    left: -200px;
+}
+
+@media(max-width: 1125px){
+    #datosUsuario{
+        position: absolute;
+        left: 980px;
+    }
+    #avatar{
+        position: absolute;
+        left: 970px;
+    }
+
+    #contenido{
+        position: absolute;
+        left: -70px;
+    }
+}
+
+@media(max-width: 1090px){
+    #datosUsuario{
+        position: absolute;
+        left: 920px;
+    }
+    #avatar{
+        position: absolute;
+        left: 900px;
+    }
+
+    #contenido{
+        position: absolute;
+        left: -100px;
+    }
+}
+
+@media(max-width: 1060px){
+    #datosUsuario{
+        position: absolute;
+        left: 920px;
+    }
+    #avatar{
+        position: absolute;
+        left: 900px;
+    }
+
+    #contenido{
+        position: absolute;
+        left: -100px;
+    }
+}
+
+@media(max-width: 1030px){
+    #datosUsuario{
+        position: absolute;
+        left: 860px;
+    }
+    #avatar{
+        position: absolute;
+        left: 840px;
+    }
+
+    #contenido{
+        position: absolute;
+        left: -160px;
+    }
+}
+
+@media(max-width: 1000px){
+    #datosUsuario{
+        position: absolute;
+        left: 860px;
+    }
+    #avatar{
+        position: absolute;
+        left: 840px;
+    }
+
+    #contenido{
+        position: absolute;
+        left: -160px;
+    }
+}
+
+@media(max-width: 960px){
+    #datosUsuario{
+        position: absolute;
+        left: 790px;
+    }
+    #avatar{
+        position: absolute;
+        left: 790px;
+    }
+
+    #contenido{
+        position: absolute;
+        left: -210px;
+    }
+}
+
+@media(max-width: 920px){
+    #datosUsuario{
+        position: absolute;
+        left: 760px;
+    }
+    #avatar{
+        position: absolute;
+        left: 750px;
+    }
+
+    #contenido{
+        position: absolute;
+        left: -210px;
+    }
+}
+
+@media(max-width: 870px){
+    #datosUsuario{
+        position: absolute;
+        left: 720px;
+    }
+    #avatar{
+        position: absolute;
+        left: 710px;
+    }
+
+    #contenido{
+        position: absolute;
+        left: -250px;
+    }
+}
+
+@media(max-width: 830px){
+    #datosUsuario{
+        position: absolute;
+        left: 680px;
+    }
+    #avatar{
+        position: absolute;
+        left: 670px;
+    }
+
+    #contenido{
+        position: absolute;
+        left: -290px;
+    }
+}
+
+@media(max-width: 750px){
+    #datosUsuario{
+        position: absolute;
+        left: 600px;
+    }
+    #avatar{
+        position: absolute;
+        left: 590px;
+    }
+
+    #contenido{
+        position: absolute;
+        left: -300px;
+    }
+}
+
+@media(max-width: 710px){
+    #datosUsuario{
+        position: absolute;
+        left: 560px;
+    }
+    #avatar{
+        position: absolute;
+        left: 550px;
+    }
+}
+
+@media(max-width: 670px){
+    #datosUsuario{
+        position: absolute;
+        left: 520px;
+    }
+    #avatar{
+        position: absolute;
+        left: 510px;
+    }
+    #nombreNegocio{
+        position: absolute;
+        left: 500px;
+    }
+    #contactos{
+        position: absolute;
+        left: 510px;
+    }
+
+    #celular{
+        position: absolute;
+        left: 470px;
+    
+    }
+    
+    #telefono{
+        position: absolute;
+        left: 470px;
+    }
+
+    #boton1{
+        position: absolute;
+        left: 360px;
+    }
+
+    #guardar1{
+        position: absolute;
+        left: 760px;
+    }
+}
+
+@media(max-width: 630px){
+    #datosUsuario{
+        position: absolute;
+        left: 480px;
+    }
+    #avatar{
+        position: absolute;
+        left: 470px;
+    }
+    #nombreNegocio{
+        position: absolute;
+        left: 460px;
+    }
+    #contactos{
+        position: absolute;
+        left: 480px;
+    }
+
+    #celular{
+        position: absolute;
+        left: 470px;
+        width: 300px;
+    
+    }
+    
+    #telefono{
+        position: absolute;
+        left: 470px;
+        width: 300px;
+    }
+
+    #boton1{
+        position: absolute;
+        left: 320px;
+    }
+
+    #guardar1{
+        position: absolute;
+        left: 720px;
+    }
+}
+
+@media(max-width: 590px){
+    #datosUsuario{
+        position: absolute;
+        left: 440px;
+    }
+    #avatar{
+        position: absolute;
+        left: 430px;
+    }
+    #nombreNegocio{
+        position: absolute;
+        left: 460px;
+    }
+    #contactos{
+        position: absolute;
+        left: 480px;
+    }
+
+    #celular{
+        position: absolute;
+        left: 470px;
+        width: 300px;
+    
+    }
+    
+    #telefono{
+        position: absolute;
+        left: 470px;
+        width: 300px;
+    }
+
+    #boton1{
+        position: absolute;
+        left: 310px;
+    }
+
+    #guardar1{
+        position: absolute;
+        left: 680px;
+    }
+}
+
+@media(max-width: 590px){
+    #datosUsuario{
+        position: absolute;
+        left: 400px;
+    }
+    #avatar{
+        position: absolute;
+        left: 390px;
+    }
+}    

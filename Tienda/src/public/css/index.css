@@ -14,5 +14,58 @@
     background-color: rgba(240, 248, 255, 0);
     border-color: rgba(240, 248, 255, 0);
     top: 360px;
-    left: 570px;
+    left: 570px; 
+}
+
+@media(max-width: 1125px){
+    #inicio{
+        position: absolute;
+        left: 100px;
+    }
+    #boton{
+        position: absolute;
+        left: 450px; 
+    }
+}
+
+@media(max-width: 860px){
+    #boton{
+        position: absolute;
+        left: 400px; 
+    }
+}
+
+@media(max-width: 680px){
+    #boton{
+        position: absolute;
+        left: 300px; 
+    }
+}
+
+@media(max-width: 612px){
+    #boton{
+        position: absolute;
+        top: 400px;
+        left: 300px; 
+    }
+}
+
+@media(max-width: 550px){
+    #inicio{
+        position: absolute;
+        left: 0px;
+    }
+    #boton{
+        position: absolute;
+        top: 400px;
+        left: 200px; 
+    }
+}
+
+@media(max-width: 400px){
+    #boton{
+        position: absolute;
+        top: 450px;
+        left: 130px; 
+    }
 }

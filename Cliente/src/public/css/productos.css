@@ -9,19 +9,25 @@ a{
 #navegacion{
     display: flex;
     justify-content: space-between;
-    height: 60px;
-    padding: 20px 0px;
+    height: 75px;
+    padding: 20px;
+    background-color: rgb(180, 194, 204);
 }
 #navegacion div {
     display: flex;
+    background-color: rgb(180, 194, 204);
+    
 
 }
 #navegacion a{
     padding: 10px;
+    
+    
 }
 #navegacion #categorias{
     flex: 1;
     margin-left: 160px;
+    
 }
 button{
     border-radius: 20px;
@@ -59,7 +65,7 @@ button{
     height: auto;
 }
 #tabla{
-    border-color: black;
+    border-color: rgb(2, 2, 2);
     position: absolute;
     left: 1025px;
     width: 20%;
