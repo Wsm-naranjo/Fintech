@@ -30,6 +30,8 @@ input{
 button{
     cursor: pointer;
     border-radius: 20px;
+    display: block;
+    margin: auto;
 }
 
 @media(max-width: 840px){

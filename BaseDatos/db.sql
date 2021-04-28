@@ -100,7 +100,6 @@ Cedula INT(10) NOT NULL,
 Nombres VARCHAR(50) NOT NULL,
 username VARCHAR(16) NOT NULL,
 password VARCHAR(60) NOT NULL,
-rol VARCHAR(25) NOT NULL,
 Telefono INT(10) NOT NULL,
 created_at timestamp NOT NULL DEFAULT current_timestamp
 );

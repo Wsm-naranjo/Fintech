@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/css/compra.css">
 <div id="contenedor">
 {{#each producto}}
 <form action="/Compras/eleccion/{{id}}" method="POST">
@@ -5,7 +6,7 @@
         <input type="text" name="Nombre" id="nombres" value="{{NombreProducto}}" readonly>
     </div>
     <div id="Cantidades">
-        <input type="text" name="Cantidades" id="nombres" value="{{Cantidad}}">
+        <input type="text" name="Cantidades" id="nombres" value="{{Cantidad}}" >
     </div>
     <div id="Precios">
         <input type="text" name="Precio" id="nombres" value="{{precioVenta}}" readonly>

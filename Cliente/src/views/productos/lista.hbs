@@ -1,6 +1,8 @@
 <link rel="stylesheet" href="/css/lista.css">
-<form action="/producto/Compra/listaCompleta">
-    <table border="1" id="tabla">
+{{#each tienda}}
+<form action="/Compra/listaCompleta/{{id}}">
+{{/each}}
+    <table id="tabla">
         <tr>
             <td id="nombres"><p id="nombre">Lista de Productos</p></td>
             <td id="nombres"><p id="Cantidad">Cantidad</p></td>
@@ -19,10 +21,15 @@
             <td></td>
             <td><input type="text" name="" id="total"></td>
         </tr>
+        <tr>
+            <td></td>
+        </tr>
+        <tr>
+            <td id="nombres"><p id="nombre">Confirmar Compra</p></td>
+            <td></td>
+            <td><button id="boton"><a href="">Comprar</a></button></td>
+        </tr>
     </table>
-    <div id="mover">
-    <button id="ver"><a href="">Comprar</a></button>
-    </div>
 </form>
 
 <script src="/js/listaCompleta.js"></script>

@@ -2,8 +2,8 @@
     width: 30px;
 }
 #boton{
-    position: absolute;
-    left: 20px;
+  width: 100%; 
+  font-size: 30px; 
 }
 
 #tabla{
@@ -12,11 +12,6 @@
     top: 70px;
     left: 230px;
     border-radius: 30px;
-}
-
-#ver{
-    position: absolute;
-    top: 300px;
-    left: 400px;
+    text-align: center;
 }
 

@@ -21,8 +21,6 @@ a{
 }
 #navegacion a{
     padding: 10px;
-    
-    
 }
 #navegacion #categorias{
     flex: 1;
@@ -36,7 +34,8 @@ button{
     background-color: black;
     color: rgb(255, 255, 255);
     overflow: hidden;
-    display: flex;
+    display: block;
+    margin: auto;
 }
 #img{
     height: 36px;
@@ -97,7 +96,11 @@ button{
 #ver{
     background-color: rgb(165, 247, 238);
     border-color: wheat;
-    border-radius: 20px;
+    border-radius: 50px;
+    width: 15%;
+    position: absolute;
+    left: 1060px;
+    top:67px;
 }
 #letras{
     color: rgb(5, 3, 41);
@@ -115,5 +118,6 @@ button{
 }
 #comprar{
     display: flex;
-    padding-left: 20px;
+    display: block;
+    margin: auto;
 }
