@@ -9,10 +9,10 @@ compra.traer = async(req,res)=>{
 
 compra.Mandar = async(req, res) =>{
     const {id} = req.params
-    const{Nombre, Cantidades, Precio} = req.body
+    const{Nombre, Cantidad, Precio} = req.body
     const nuevaLista = {
         Nombre,
-        Cantidades,
+        Cantidad,
         Precio,
         Cliente: req.user.id
     }
