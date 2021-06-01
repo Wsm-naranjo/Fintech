@@ -93,8 +93,14 @@ button{
     font-size: 20px;
     text-align: center;
 }
+
+#letras{
+    color: rgb(65, 59, 172);
+    font-size: 21px;
+}
+
 #ver{
-    background-color: rgb(165, 247, 238);
+    background-color: rgb(205, 158, 209);
     border-color: wheat;
     border-radius: 50px;
     width: 15%;
@@ -102,10 +108,40 @@ button{
     left: 1060px;
     top:67px;
 }
-#letras{
-    color: rgb(5, 3, 41);
-    font-size: 21px;
+
+#lista{
+    background-color: rgb(139, 126, 185);
+    border-radius: 20px;
+    color:rgb(2, 3, 3);
 }
+
+#tabla{
+    position: absolute;
+    background-color: rgb(139, 126, 185);
+    color:rgb(2, 3, 3);
+    border-radius: 20px;
+}
+
+#nombres{
+    background-color: rgb(139, 126, 185);
+    border-radius: 20px;
+}
+
+#nombre{
+    background-color: rgb(139, 126, 185);
+    border-radius: 20px;
+}
+
+#precio{
+    background-color: rgb(139, 126, 185);
+    border-radius: 20px;
+}
+
+#Producto{
+    background-color: rgb(139, 126, 185);
+    border-radius: 20px;
+}
+
 #cantidad{
     margin: 3px;
     padding: 2px;
@@ -121,3 +157,4 @@ button{
     display: block;
     margin: auto;
 }
+
