@@ -1,0 +1,30 @@
+#contenedor{
+    width: 100%;
+    position: absolute;
+    top: 120px;
+    left: 400px;
+}
+
+#logo{
+    top: 80px;
+}
+
+#p{
+    position: absolute;
+    left: 130px;
+}
+
+#contenedor_1{
+    position: absolute;
+    top: 80px;
+}
+
+#guardar{
+    position: absolute;
+    width: 500px;
+    left: 20px;
+}
+#guardar_1{
+    width: 50px;
+
+}

@@ -7,7 +7,7 @@ registro.mostrarRegistro = (req, res) => {
 };
 
 registro.Registro = passport.authenticate('local.signup', {
-    successRedirect: '/perfil/list',
+    successRedirect: '/perfil/add',
     failureRedirect: '/Registro',
     failureFlash: true
 });
@@ -17,7 +17,7 @@ registro.mostrarLogin = (req, res, next) => {
 };
 
 registro.Login = passport.authenticate('local.signin', {
-    successRedirect: '/perfil/list',
+    successRedirect: '/perfil/add',
     failureRedirect: '/Login',
     failureFlash: true
 });

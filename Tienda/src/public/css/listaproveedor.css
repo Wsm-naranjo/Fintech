@@ -1,3 +1,13 @@
+#conetendor{
+    position: absolute;
+    top: 120px;
+    left: 170px;
+}
+
+#logo{
+    top: 80px;
+}
+
 #agregar{
     position: absolute;
     left: 400px;
@@ -16,17 +26,4 @@
 #direccion{
     position: absolute;
     left: 300px;
-}
-
-#edit{
-    position:absolute;
-    left: 300px;
-    top: 250px;
-
-}
-
-#eliminar{
-    position: absolute;
-    left: 500px;
-    top: 250px;
 }

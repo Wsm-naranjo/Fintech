@@ -1,16 +1,30 @@
+#f1{
+    position: absolute;
+    top: 50px;
+    width: 100%;
+}
+
+nav{
+    width: 100%;
+    position: absolute;
+    top: -38px;
+}
+
+#logo{
+    top: 120px;
+}
+
 #p{
     position: absolute;
     top: 70px;
     left: 550px;
     font-size: 35px;
-
 }
 
 #lblnprovedor{
     position: absolute;
     top: 140px;
     left: 300px;
-
 }
 
 #NombreProveedor{
@@ -29,7 +43,6 @@
     position: absolute;
     top: 200px;
     left: 550px;
-
 }
 
 
@@ -37,7 +50,6 @@
     position: absolute;
     top: 250px;
     left: 430px;
-
 }
 
 #Numero{
@@ -56,11 +68,11 @@
     position: absolute;
     top: 300px;
     left: 550px;
-
 }
 
 #guardar1{
     position: absolute;
-    top: 400px;
-    left: 600px;
+    top: 380px;
+    left: 500px;
+    width: 420px;
 }
