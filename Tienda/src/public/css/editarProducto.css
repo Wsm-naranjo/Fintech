@@ -1,0 +1,13 @@
+#logo{
+    top: 80px;
+}
+
+form{
+    position: absolute;
+    left: 400px;
+    top: 200px;
+}
+
+#guardar{
+    width: 100%;
+}
