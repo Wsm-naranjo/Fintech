@@ -1,7 +1,7 @@
+<form action="/productos/edit/{{producto.id}}" method="POST" id="f1">
 <div class="col-md-4 mx-auto">
     <div class="card">
         <div class="card-body">
-            <form action="/productos/edit/{{producto.id}}" method="POST" id="f1">
               <label>Codigo</label>
             <input type="text" name="codigo" id="codigo" value="{{producto.codigo}}" disabled>
         </div>
@@ -23,7 +23,7 @@
             <input type="date" name="FechaCadusidad" id="FechaCadusidad" value="{{producto.FechaCadusidad}}" disabled>
         </div>
         <button class="btn btn-success" type="submit" id="guard">Guardar</button>
-            </form>
         </div>
     </div>
 </div>
+</form>

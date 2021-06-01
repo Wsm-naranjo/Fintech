@@ -1,41 +1,27 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <LINK REL=StyleSheet HREF="/css/editproductos.css" TYPE="text/css" MEDIA=screen>
-</head>
-
-<body>
-    <form action="/ProductoEntrada/edit/{{ProductoEditado.id}}" method="POST" id="f1">
+<LINK REL=StyleSheet HREF="/css/editproductos.css" TYPE="text/css" MEDIA=screen>
+    <form action="/ProductoEntrada/edit/{{ProductoEditado.id}}" method="POST">
         <p id="p">Edita Producto </p>
-       <img src="/img/editar.png" alt="editar">
         <div id="contenedor_1">
-            
-            <div id="contenedor">
-                <label id="lblcodigo">Codigo:</label>
+            <div id="">
+                <label id="codigo">Codigo:</label>
                 <input type="text" name="codigo" id="codigo" value="{{ProductoEditado.codigo}}">
             </div>
-            <div id="contenedor">
-                <label id="lblnproducto">Nombre del Producto :</label>
+            <div id="">
+                <label id="producto">Nombre del Producto :</label>
                 <input type="text" name="NombreProducto" id="NombreProducto" value="{{ProductoEditado.NombreProducto}}">
             </div>
-            <div id="contenedor">
-                <label id="lblcantidad">Cantidad:</label>
+            <div id="">
+                <label id="cantidad">Cantidad:</label>
                 <input type="number" name="Cantidad" id="Cantidad" value="{{ProductoEditado.Cantidad}}">
             </div>
-            <div id="contenedor">
-                <label id="lblprecio">Precio:</label>
+            <div id="">
+                <label id="precio">Precio:</label>
                 <input type="number" name="precio" id="precio" value="{{ProductoEditado.precio}}">
             </div>
-            <div id="contenedor">
-                <label id="lblcaducidad">Fecha Caducidad</label>
+            <div id="">
+                <label id="caducidad">Fecha Caducidad</label>
                 <input type="date" name="FechaCadusidad" id="FechaCadusidad" value="{{ProductoEditado.FechaCadusidad}}">
             </div>
-            <button class="btn btn-success" type="submit" id="guardar1"> <img id="guardar_2" src="/img/guardar.png" alt="guardar"> Guardar</button>
+            <button type="submit" id="guardar1"> <img id="guardar_2" src="/img/guardar.png"> Guardar</button>
         </div>
     </form>
-</body>
-
-</html>
