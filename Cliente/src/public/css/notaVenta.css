@@ -1,0 +1,21 @@
+#contenido{
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+#notaVenta{
+    background-color: transparent;
+    border-color: transparent;
+}
+#nombreNegocio{
+    width: 80%;
+}
+#celular{
+    width: 80%;
+}
+#telefono{
+    width: 80%;
+}
+#cantidad{
+    width: 80%;
+}

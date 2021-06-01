@@ -1,0 +1,60 @@
+<link rel="stylesheet" href="/css/notaVenta.css">
+<form action="/formaPago/notaVenta" method="get"></form>
+<div id="contenido">
+    <table>
+        <tr>
+            <td></td>
+            <td><input type="text" id="notaVenta" value="NotaVenta" readonly></td>
+            <td></td>
+        </tr>
+        <tr>
+            {{#each datos}}
+            <td><input type="text" name="nombreNegocio" id="nombreNegocio" value="{{nombreNegocio}}" readonly></td>
+            <tr>
+                <td><input type="text" name="celular" id="celular" value="{{celular}}" readonly></td>
+            </tr>
+            <tr><td><input type="text" name="telefono" id="telefono" value="{{telefono}}" readonly></td></tr>
+            {{/each}}
+        </tr>
+        <tr>
+            {{#each cliente}}
+            <td><label>Sr(es):</label></td>
+            <td><input type="text" name="nombres" id="nombres" value="{{Nombres}}" readonly></td>
+            <td><label>R.U.C/C.I: </label></td>
+            <td><input type="text" name="RUC/CI" id="RUC/CI" value="{{username}}" readonly></td>
+            <tr>
+                <td><label>Fecha</label></td>
+                <td><input type="date" name="fecha" id="fecha" placeholder="Ingrese la fecha" checked></td>
+            </tr>
+            {{/each}}
+        </tr>
+        <tr>
+            <td>Cantidad</td>
+            <td> Descripción</td>
+            <td>P.Unitario</td>
+            <td>V.Total</td>
+        </tr>
+        {{#each lista}}
+        <tr>
+            <td><input type="text" name="cantidad" id="cantidad" value="{{Cantidades}}" readonly></td>
+            <td><input type="text" name="descipcion" id="descripcion" value="{{Nombre}}" readonly></td>
+            <td><input type="text" name="precio" id="precio" value="{{Precio}}" readonly></td>
+        </tr>
+        {{/each}}
+          <tr>
+            <td></td>
+            <td></td>
+            <td>VALOR TOTAL</td>
+            <td><input type="text" name="valorTotal" id="valorTotal" readonly checked></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><label>VALIDO PARA SU EMISIÓN HASTA:</label></td>
+            <td></td>
+            <td><input type="date" name="fechaEmision" id="fechaEmision" checked></td>
+        </tr>
+    </table>
+    <div id="validar">
+        <button>Validad</button>
+    </div>
+</div>
