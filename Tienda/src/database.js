@@ -6,6 +6,9 @@ const tiendaModelos = require('./modelos/tienda')
 const comentarioModelos = require('./modelos/comentarios') 
 const provedorModelos = require('./modelos/provedor')
 const productoEntradaModelos = require('./modelos/productoEntrada')
+const productoModelos = require('./modelos/productos')
+const clienteModelos = require('./modelos/cliente')
+const listaProductosModelos = require('./modelos/listaProductos')
 
 const sequelize = new Sequelize(
   'fintech', 
@@ -42,6 +45,9 @@ const tienda = tiendaModelos(sequelize, Sequelize)
 const comentario = comentarioModelos(sequelize, Sequelize)
 const provedor = provedorModelos(sequelize, Sequelize)
 const entredaProductos = productoEntradaModelos(sequelize, Sequelize)
+const productos = productoModelos(sequelize, Sequelize)
+const cliente = clienteModelos(sequelize, Sequelize)
+const listaProductos = listaProductosModelos(sequelize, Sequelize) 
 
 usuarios.hasMany(categoria)
 categoria.belongsTo(usuarios)
@@ -58,6 +64,11 @@ provedor.belongsTo(usuarios)
 provedor.hasMany(entredaProductos)
 entredaProductos.belongsTo(provedor)
 
+tienda.hasMany(productos)
+productos.belongsTo(tienda)
+
+cliente.hasMany(listaProductos)
+listaProductos.belongsTo(cliente)
 
 module.exports = {
   usuarios,
@@ -65,5 +76,7 @@ module.exports = {
   tienda,
   comentario,
   provedor,
-  entredaProductos
+  entredaProductos,
+  productos,
+  cliente,
 }
