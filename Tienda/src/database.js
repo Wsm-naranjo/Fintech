@@ -1,30 +1,69 @@
-const mysql = require('mysql');
-const { promisify }= require('util');
+const Sequelize = require('sequelize')
 
-const { database } = require('./keys');
+const UsuarioModelos = require('./modelos/usuario')
+const categoriaModelos = require('./modelos/Categoria')
+const tiendaModelos = require('./modelos/tienda')
+const comentarioModelos = require('./modelos/comentarios') 
+const provedorModelos = require('./modelos/provedor')
+const productoEntradaModelos = require('./modelos/productoEntrada')
 
-const pool = mysql.createPool(database);
-
-pool.getConnection((err, connection) => {
-  if (err) {
-    if (err.code === 'PROTOCOL_CONNECTION_LOST') {
-      console.error('Se cerró la conexión a la base de datos.');
-    }
-    if (err.code === 'ER_CON_COUNT_ERROR') {
-      console.error('La base de datos tiene muchas conexiones');
-    }
-    if (err.code === 'ECONNREFUSED') {
-      console.error('la conexión a la base de datos no realizada');
-    }
+const sequelize = new Sequelize(
+  'fintech', 
+  'root', 
+  '', 
+  {
+  host: 'localhost',
+  dialect: 'mysql',
+  pool:{
+    max:5,
+    min:0,
+    require:30000,
+    idle: 10000
+   }
   }
+)
 
-  if (connection) connection.release();
-  console.log('Database la Connectada');
+sequelize.authenticate()
+  .then(() => {
+    console.log('Conectado')
+  })
+  .catch(err => {
+    console.log('No se conecto')
+  })
 
-  return;
-});
+  sequelize.sync({ force: false})
+  .then(() =>{
+    console.log("Tablas sincronizadas")
+  })
 
-// Promisify Pool Querys
-pool.query = promisify(pool.query);
+const usuarios = UsuarioModelos(sequelize, Sequelize)
+const categoria = categoriaModelos(sequelize, Sequelize)
+const tienda = tiendaModelos(sequelize, Sequelize)
+const comentario = comentarioModelos(sequelize, Sequelize)
+const provedor = provedorModelos(sequelize, Sequelize)
+const entredaProductos = productoEntradaModelos(sequelize, Sequelize)
 
-module.exports = pool;
+usuarios.hasMany(categoria)
+categoria.belongsTo(usuarios)
+
+usuarios.hasMany(tienda)
+tienda.belongsTo(usuarios)
+
+tienda.hasMany(comentario)
+comentario.belongsTo(tienda)
+
+usuarios.hasMany(provedor)
+provedor.belongsTo(usuarios)
+
+provedor.hasMany(entredaProductos)
+entredaProductos.belongsTo(provedor)
+
+
+module.exports = {
+  usuarios,
+  categoria,
+  tienda,
+  comentario,
+  provedor,
+  entredaProductos
+}
