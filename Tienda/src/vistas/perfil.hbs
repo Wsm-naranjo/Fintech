@@ -1,4 +1,4 @@
-<LINK REL=StyleSheet HREF="/css/perfilhbs3.css" TYPE="text/css" MEDIA=screen>
+<LINK REL=StyleSheet HREF="/css/" TYPE="text/css" MEDIA=screen>
 <img src="/img/avatar.png" id="avatar"></img>
 <div id="datosUsuario">
     <p>
@@ -8,17 +8,25 @@
 <div id="contenido">
     <label id="DatoNegocio">Datos del Negocio</label>
     <div id="formulario">
-        <form action="/perfil/add" method="POST">
+        <form action="/perfil/add/{{user.id}}" method="POST">
             <div>
                 <label id="Nombre">Nombre:</label>
-                <input type="text" name="nombreNegocio" id="nombreNegocio">
+                <input type="text" name="nombreNegocio" id="nombreNegocio" checked>
             </div>
             <div>
+                 <div>
+                     <label id="RUC">RUC:</label>
+                     <input type="text" name="ruc" id="ruc" checked>
+                 </div>
+                 <div>
+                     <label id="Direccion">Direccion</label>
+                     <input type="text" name="direccion" id="direccion" checked>
+                 </div>
                 <div id="numeros">
                     <label id="celular1">Celular:</label> <label id="telefono">Telefono:</label>
                 </div>
                 <div id="CELULAR">
-                    <input type="number" name="celular" min="0" id="celular">
+                    <input type="number" name="celular" min="0" id="celular" checked>
                 </div>
                 <div id="Telefono">
                     <input type="number" name="telefono" min="0" id="Telefono">

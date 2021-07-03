@@ -63,7 +63,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(require('./Rutas/index.routes'))
 app.use(require('./Rutas/Registro.routes'))
 app.use(require('./Rutas/user.routes'))
-app.use('/perfil', require('./Rutas/perfil.router'));
+app.use('/perfil', require('./Rutas/tienda.router'));
 app.use('/clientes', require('./Rutas/Clientes.routes'));
 app.use('/ProductoEntrada', require('./Rutas/ProductosEntrada.routes'))
 app.use('/proveedor', require('./Rutas/proveedor.router'))

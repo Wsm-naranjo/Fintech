@@ -70,6 +70,9 @@ productos.belongsTo(tienda)
 cliente.hasMany(listaProductos)
 listaProductos.belongsTo(cliente)
 
+tienda.hasMany(entredaProductos)
+entredaProductos.belongsTo(tienda)
+
 module.exports = {
   usuarios,
   categoria,
@@ -79,4 +82,5 @@ module.exports = {
   entredaProductos,
   productos,
   cliente,
+  listaProductos
 }

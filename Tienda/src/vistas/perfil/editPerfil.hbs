@@ -1,4 +1,4 @@
-<LINK REL=StyleSheet HREF="/css/perfilaeditar2.css" TYPE="text/css" MEDIA=screen>
+<LINK REL=StyleSheet HREF="/css/" TYPE="text/css" MEDIA=screen>
 <img src="/img/avatar.png" id="avatar"></img>
 <div id="datosUsuario">
     <p>
@@ -9,10 +9,11 @@
 <label>Datos del Negocio</label>
 </div>
 <div id="formulario">
-    <form action="/perfil/edit/{{tiendas.id}}" method="POST">
+    {{#each tienda}}
+    <form action="/perfil/edit/{{id}}" method="POST">
         <div>
             <label id="Nombre">Nombre:</label>
-            <input type="text" name="nombreNegocio" id="nombreNegocio" value="{{tiendas.nombreNegocio}}">
+            <input type="text" name="nombreNegocio" id="nombreNegocio" value="{{nombreNegocio}}">
         </div>
         <div>
             <label id="contactos">Contactos</label>
@@ -20,12 +21,13 @@
                 <label id="celular">Celular:</label> <label id="telefono">Telefono:</label>
             </div>
             <div id="numero">
-                <input type="number" name="celular" min="0" id="Celular" value="{{tiendas.celular}}"> 
-                <input type="number" name="telefono" min="0" id="Telefono" value="{{tiendas.telefono}}">
+                <input type="number" name="celular" min="0" id="Celular" value="{{celular}}"> 
+                <input type="number" name="telefono" min="0" id="Telefono" value="{{telefono}}">
             </div>
         </div>
         <div id="boton">
             <button type="submit" id="guardar1">Guardar</button>
         </div>
     </form>
+    {{/each}}
 </div>

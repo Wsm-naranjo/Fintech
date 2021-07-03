@@ -8,7 +8,7 @@ USE fintech;
     username VARCHAR(16) NOT NULL,
     password VARCHAR(60) NOT NULL,
     email VARCHAR(100) NOT NULL,
-    created_at timestamp NOT NULL DEFAULT current_timestamp
+    createdAt timestamp NOT NULL DEFAULT current_timestamp
   );
 
   ALTER TABLE users MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 1;

@@ -15,7 +15,7 @@ const usuarios = (sequelize, type) =>{
         },
         updatedAt:{
             type: 'TIMESTAMP',
-            defaultValue: type.literal('CURRENT_TIMESTAMP '),
+            defaultValue: type.literal('CURRENT_TIMESTAMP'), 
             allowNull: false
         }
     })

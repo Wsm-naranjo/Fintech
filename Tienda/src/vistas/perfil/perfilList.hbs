@@ -1,5 +1,4 @@
-<LINK REL=StyleSheet HREF="/css/perfileditarlist1.css" TYPE="text/css" MEDIA=screen>
-
+<LINK REL=StyleSheet HREF="/css/" TYPE="text/css" MEDIA=screen>
 <img src="/img/avatar.png" id="avatar"></img>
 <div id="datosUsuario">
     <p>
@@ -7,10 +6,10 @@
     </p>
 </div>
 <div id="contenido">
-    <form action="/perfil/list"></form>
+    <form action="/perfil/list/{{user.id}}"></form>
     <div class="container p-4">
         <div class="row">
-            {{#each tienda}}
+            {{#each tiendas}}
             <h1 id="nombreNegocio">{{nombreNegocio}}</h1>
             <div>
                 <label id="contactos">Contactos:</label>

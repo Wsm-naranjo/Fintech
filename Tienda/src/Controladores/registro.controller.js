@@ -1,13 +1,14 @@
 const registro = {};
 
 const passport = require('passport');
+const pool = require('../database')
 
 registro.mostrarRegistro = (req, res) => {
     res.render('Usuario/Registro');
 };
 
 registro.Registro = passport.authenticate('local.signup', {
-    successRedirect: '/perfil/add',
+    successRedirect: '/perfil/add/',
     failureRedirect: '/Registro',
     failureFlash: true
 });
@@ -17,7 +18,7 @@ registro.mostrarLogin = (req, res, next) => {
 };
 
 registro.Login = passport.authenticate('local.signin', {
-    successRedirect: '/perfil/add',
+    successRedirect: '/perfil/add/',
     failureRedirect: '/Login',
     failureFlash: true
 });
