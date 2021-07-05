@@ -25,12 +25,8 @@ proveedorCtrl.addProveedor = async (req, res) => {
 }
 proveedorCtrl.renderProveedor = async (req, res) => {
     const id = req.params.id
-    await pool.provedor.findByPk(id)
-        .then(proveedores => {
-            res.render('proveedor/list', {
-                proveedores
-            })
-        })
+    const proveedores  = await sql.query('SELECT * FROM provedores  WHERE usuarioId = ?', [id])
+    res.render('proveedor/list', {proveedores })
 }
 
 proveedorCtrl.deleteProveedor = async (req, res) => {
@@ -42,12 +38,8 @@ proveedorCtrl.deleteProveedor = async (req, res) => {
 
 proveedorCtrl.renderEditProveedor = async (req, res) => {
     const id = req.params.id;
-    await pool.provedor.findByPk(id)
-        .then(proveedores => {
-            res.render('proveedor/edit', {
-                proveedores
-            })
-        })
+    const proveedores = await sql.query('SELECT * FROM provedores  WHERE id = ?', [id])
+    res.render('proveedor/edit', {proveedores})
 };
 
 proveedorCtrl.editProveedor = async (req, res) => {

@@ -58,6 +58,9 @@ tienda.belongsTo(usuarios)
 tienda.hasMany(comentario)
 comentario.belongsTo(tienda)
 
+cliente.hasMany(comentario)
+comentario.belongsTo(cliente)
+
 usuarios.hasMany(provedor)
 provedor.belongsTo(usuarios)
 

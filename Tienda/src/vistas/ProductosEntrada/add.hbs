@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/css/productoEntrada.css">
 <div>
-<form action="/ProductoEntrada/add" method="POST">   
+<form action="/ProductoEntrada/add/{{user.id}}" method="POST">   
     <p id="">Nuevo Producto</p>
     <div id="">
         <div id="">
@@ -29,7 +29,7 @@
         </div>
         <div id="">
             <label>Precio Original</label>
-            <input type="text" name="precio" id="precio">
+            <input type="text" name="precioActual" id="precio">
         </div>
         <div id="">
             <label>Precio Venta</label>

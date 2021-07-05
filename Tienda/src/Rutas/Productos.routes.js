@@ -10,8 +10,8 @@ const {  renderProductos, editLink, renderEditLink} = require('../Controladores/
 router.use(isLoggedIn);
 
 // Routes
-router.get('/list', isLoggedIn, renderProductos);
-router.get('/edit/:id', renderEditLink);
-router.post('/edit/:id', editLink);
+router.get('/list/:id', isLoggedIn, renderProductos);
+router.get('/edit/:id', isLoggedIn, renderEditLink);
+router.post('/edit/:id', isLoggedIn, editLink);
 
 module.exports = router;

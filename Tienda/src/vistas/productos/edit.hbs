@@ -1,27 +1,29 @@
 <link rel="stylesheet" href="/css/editarProducto.css">
-<form action="/productos/edit/{{producto.id}}" method="POST" id="f1">
+{{#each Productos}}
+<form action="/productos/edit/{{id}}" method="POST" id="f1">
     <div>
         <div>
             <label>Codigo</label>
-            <input type="text" name="codigo" id="codigo" value="{{producto.codigo}}" disabled>
+            <input type="text" name="codigo" id="codigo" value="{{codigo}}" disabled>
         </div>
         <div id="">
             <label>Nombre del Producto</label>
-            <input type="text" name="NombreProducto" id="NombreProducto" value="{{producto.NombreProducto}}" disabled>
+            <input type="text" name="NombreProducto" id="NombreProducto" value="{{NombreProducto}}" disabled>
         </div>
         <div id="">
             <label>Cantidad</label>
-            <input type="number" name="Cantidad" id="Cantidad" value="{{producto.Cantidad}}" disabled>
+            <input type="number" name="Cantidad" id="Cantidad" value="{{Cantidad}}" disabled>
         </div>
         <div id="">
             <label>Precio</label>
 
-            <input type="number" name="precioVenta" id="precio" value="{{producto.precioVenta}}">
+            <input type="number" name="precioVenta" id="precio" value="{{precioVenta}}">
         </div>
         <div id="">
             <label>Fecha Caducidad</label>
-            <input type="date" name="FechaCadusidad" id="FechaCadusidad" value="{{producto.FechaCadusidad}}" disabled>
+            <input type="date" name="FechaCadusidad" id="FechaCadusidad" value="{{FechaCadusidad}}" disabled>
         </div>
         <button type="submit" id="guardar">Guardar</button>
     </div>
 </form>
+{{/each}}

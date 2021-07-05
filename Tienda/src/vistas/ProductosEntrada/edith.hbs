@@ -1,27 +1,29 @@
 <LINK REL=StyleSheet HREF="/css/editproductos.css" TYPE="text/css" MEDIA=screen>
-    <form action="/ProductoEntrada/edit/{{ProductoEditado.id}}" method="POST">
-        <p id="p">Edita Producto </p>
-        <div id="contenedor_1">
-            <div id="">
-                <label id="codigo">Codigo:</label>
-                <input type="text" name="codigo" id="codigo" value="{{ProductoEditado.codigo}}">
-            </div>
-            <div id="">
-                <label id="producto">Nombre del Producto :</label>
-                <input type="text" name="NombreProducto" id="NombreProducto" value="{{ProductoEditado.NombreProducto}}">
-            </div>
-            <div id="">
-                <label id="cantidad">Cantidad:</label>
-                <input type="number" name="Cantidad" id="Cantidad" value="{{ProductoEditado.Cantidad}}">
-            </div>
-            <div id="">
-                <label id="precio">Precio:</label>
-                <input type="number" name="precio" id="precio" value="{{ProductoEditado.precio}}">
-            </div>
-            <div id="">
-                <label id="caducidad">Fecha Caducidad</label>
-                <input type="date" name="FechaCadusidad" id="FechaCadusidad" value="{{ProductoEditado.FechaCadusidad}}">
-            </div>
-            <button type="submit" id="guardar1"> <img id="guardar_2" src="/img/guardar.png"> Guardar</button>
+ {{#each Productos}}
+<form action="/ProductoEntrada/edit/{{id}}" method="POST">
+    <p id="p">Edita Producto </p>
+    <div id="contenedor_1">
+        <div id="">
+            <label id="codigo">Codigo:</label>
+            <input type="text" name="codigo" id="codigo" value="{{codigo}}">
         </div>
-    </form>
+        <div id="">
+            <label id="producto">Nombre del Producto :</label>
+            <input type="text" name="NombreProducto" id="NombreProducto" value="{{NombreProducto}}">
+        </div>
+        <div id="">
+            <label id="cantidad">Cantidad:</label>
+            <input type="number" name="Cantidad" id="Cantidad" value="{{Cantidad}}">
+        </div>
+        <div id="">
+            <label id="precio">Precio:</label>
+            <input type="number" name="precioActual" id="precio" value="{{precioActual}}">
+        </div>
+        <div id="">
+            <label id="caducidad">Fecha Caducidad</label>
+            <input type="datetime" name="FechaCadusidad" id="FechaCadusidad" value="{{FechaCadusidad}}">
+        </div>
+        <button type="submit" id="guardar1"> <img id="guardar_2" src="/img/guardar.png"> Guardar</button>
+    </div>
+    {{/each}}
+</form>

@@ -7,11 +7,11 @@ const { isLoggedIn } = require('../lib/auth');
 const{ renderEntrada,addEntrada,renderProductos,EliminarProductos,renderEditarEntrada,EditarEntrada }=require("../Controladores/productoentrada.controller")
 router.use(isLoggedIn)
 
-router.get("/add",renderEntrada)
-router.post("/add",addEntrada)
-router.get("/list",isLoggedIn,renderProductos)
-router.get("/delete/:id",EliminarProductos)
-router.get("/edit/:id",renderEditarEntrada)
-router.post("/edit/:id",EditarEntrada)
+router.get("/add/:id", isLoggedIn, renderEntrada)
+router.post("/add/:id", isLoggedIn, addEntrada)
+router.get("/list/:id",isLoggedIn, renderProductos)
+router.get("/delete/:id", isLoggedIn, EliminarProductos)
+router.get("/edit/:id", isLoggedIn, renderEditarEntrada)
+router.post("/edit/:id", isLoggedIn, EditarEntrada)
 
 module.exports=router

@@ -8,20 +8,21 @@ ProductoEntradaCtrl.renderEntrada = (req, res) => {
 }
 
 ProductoEntradaCtrl.addEntrada = async (req, res) => {
-    const { NombreProducto, codigo, categoria, Descripcion, Cantidad, precio, FechaCadusidad, precioVenta } = req.body
+    const id = req.params.id
+    const { NombreProducto, codigo, categoria, Descripcion, Cantidad, precioActual, FechaCadusidad, precioVenta } = req.body
     const NuevaEntrada = {
         codigo,
         NombreProducto,
         Cantidad,
-        precio,
+        precioActual,
         FechaCadusidad,
-        proveedor: req.user.id,
-        user_id: req.user.id
+        provedoreId: id,
+        tiendaId: id
     }
     const NuevaCategoria ={
         categoria,
         Descripcion,
-        user_id: req.user.id
+        usuarioId: id
     }
     const productoVenta={
         codigo,
@@ -30,47 +31,51 @@ ProductoEntradaCtrl.addEntrada = async (req, res) => {
         precioVenta,
         FechaCadusidad,
         categoria,
-        Tienda: req.user.id,
-        usuario: req.user.id
+        tiendaId: id
     }
-    await pool.query("INSERT INTO productoentrada set ?", [NuevaEntrada])
-    await pool.query("INSERT INTO categoria set ?", [NuevaCategoria])
-    await pool.query("INSERT INTO producto set ?", [productoVenta])
+    await orm.entredaProductos.create(NuevaEntrada);
+    await orm.categoria.create(NuevaCategoria);
+    await orm.productos.create(productoVenta);
     req.flash('success', "Se guardo correctamente")
-    res.redirect("/ProductoEntrada/list")
+    res.redirect("/ProductoEntrada/list/" + id)
 }
 
 ProductoEntradaCtrl.renderProductos = async (req, res) => {
-    const DatosProducto = await pool.query("SELECT * FROM productoentrada WHERE proveedor = ?", [req.user.id])
+    const id = req.params.id
+    const DatosProducto = await sql.query("SELECT * FROM productoEntradas WHERE tiendaId = ?", [id])
     res.render("ProductosEntrada/list", { DatosProducto })
 
 }
 
 ProductoEntradaCtrl.EliminarProductos = async (req, res) => {
-    const { id } = req.params;
-    await pool.query("DELETE FROM productoentrada WHERE ID = ?", [id])
-    await pool.query("DELETE FROM producto WHERE ID = ?", [id])
-    req.flash('success', "Eliminacion correcta")
-    res.redirect("/ProductoEntrada/list")
+    const id  = req.params.id;
+    await orm.entredaProductos.destroy({ where: { id: id } });
+    await orm.productos.destroy({ where: { id: id } });
+    await orm.categoria.destroy({ where: { id: id } });
+    req.flash('success', 'Se Elimino Correctamente');
+    res.redirect('/ProductoEntrada/list/' + id);
 
 }
 ProductoEntradaCtrl.renderEditarEntrada = async (req, res) => {
-    const { id } = req.params;
-    const Productos = await pool.query("SELECT * FROM productoentrada WHERE id =?", [id])
-    res.render("ProductosEntrada/edith", { ProductoEditado: Productos[0]})
+    const id = req.params.id;
+    const Productos = await sql.query("SELECT * FROM productoEntradas WHERE id =?", [id])
+    res.render("ProductosEntrada/edith", {Productos})
 }
 ProductoEntradaCtrl.EditarEntrada = async (req, res) => {
-    const { id } = req.params;
-    const { NombreProducto, Cantidad, precio, FechaCadusidad } = req.body
+    const id = req.params.id
+    const { NombreProducto, Cantidad, precioActual, FechaCadusidad } = req.body
     const EntradaEditad = {
         NombreProducto,
         Cantidad,
-        precio,
+        precioActual,
         FechaCadusidad
     }
 
-    await pool.query("UPDATE productoentrada set ? WHERE id = ?", [EntradaEditad, id])
-    req.flash('success', "Se guardo correctamente")
-    res.redirect("/ProductoEntrada/list")
+    await orm.entredaProductos.findOne({ where: { id: id } })
+        .then(productoEntrada => {
+            productoEntrada.update(EntradaEditad)
+            req.flash('success', 'Se Actualizo Correctamente');
+            res.redirect('/ProductoEntrada/list/' + id);
+        })
 }
 module.exports = ProductoEntradaCtrl

@@ -1,5 +1,5 @@
 <LINK REL=StyleSheet HREF="/css/listaProductos.css" TYPE="text/css" MEDIA=screen>
-<form action="/productos/list">
+<form action="/productos/list/{{user.id}}">
     <div>
         <div class="row">
             {{#each productos}}
@@ -33,7 +33,7 @@
             <div class="col-md-4 mx-auto">
                 <div class="card card-body text-center">
                     <p>¡No has registrado productos.!</p>
-                    <a href="/ProductoEntrada/add">¡Introducir uno!</a>
+                    <a href="/ProductoEntrada/add/{{user.id}}">¡Introducir uno!</a>
                 </div>
             </div>
             {{/each}}

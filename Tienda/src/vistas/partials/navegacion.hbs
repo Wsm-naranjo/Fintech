@@ -8,7 +8,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item dropdown">
-          <a class="nav-link" href="/productos/list"> Productos</a>
+          <a class="nav-link" href="/productos/list/{{user.id}}"> Productos</a>
         </li>
          <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -16,8 +16,8 @@
           Clientes
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/clientes/add">Agregar un Cliente</a>
-            <a class="dropdown-item" href="/clientes/list">Clientes</a>
+            <a class="dropdown-item" href="/clientes/add/{{user.id}}">Agregar un Cliente</a>
+            <a class="dropdown-item" href="/clientes/list/{{user.id}}">Clientes</a>
           </div>
         </li>
         <li class="nav-item dropdown">
@@ -26,8 +26,8 @@
           Proveedores
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/proveedor/add">Agregar un Proveedor</a>
-            <a class="dropdown-item" href="/proveedor/list">Proveedor</a>
+            <a class="dropdown-item" href="/proveedor/add/{{user.id}}">Agregar un Proveedor</a>
+            <a class="dropdown-item" href="/proveedor/list/{{user.id}}">Proveedor</a>
           </div>
         </li>
         <li class="nav-item dropdown">
@@ -36,8 +36,8 @@
           Producto Entrada
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/ProductoEntrada/add">Agregar la Entrada de Producto</a>
-            <a class="dropdown-item" href="/ProductoEntrada/list">Producto Entrada</a>
+            <a class="dropdown-item" href="/ProductoEntrada/add/{{user.id}}">Agregar la Entrada de Producto</a>
+            <a class="dropdown-item" href="/ProductoEntrada/list/{{user.id}}">Producto Entrada</a>
           </div>
         </li>
         <li class="nav-item">

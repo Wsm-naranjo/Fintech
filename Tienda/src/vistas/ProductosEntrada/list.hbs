@@ -21,7 +21,7 @@
                         </tr>
                         <tr>
                             <td>Precio:</td>
-                            <td style="text-align: right;">{{precio}}</td>
+                            <td style="text-align: right;">{{precioActual}}$</td>
                         </tr>                                                
                     </table>
                     <button><a href="/ProductoEntrada/edit/{{id}}">Editar Producto</a></button>
@@ -34,7 +34,7 @@
         <div class="col-md-4 mx-auto">
             <div class="card card-body text-center">
                 <p>¡No has registrado Productos.!</p>
-                <a href="/ProductoEntrada/add">¡Introducir uno!</a>
+                <a href="/ProductoEntrada/add/{{user.id}}">¡Introducir uno!</a>
             </div>
         </div>
         {{/each}}

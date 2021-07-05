@@ -13,3 +13,9 @@
 ## Todo
 1. [x] Improve Links Routes
 1. [ ] Write Route Validation with Express Validator
+
+
+arreglos por hacer
+Estilos editar tienda
+estilos lista tienda
+estilos de lista proveedores

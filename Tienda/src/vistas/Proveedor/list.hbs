@@ -2,7 +2,7 @@
 <form action="/proveedor/list/{{user.id}}" id="f1">
     <div id="conetendor">
         <div class="row">
-            {{#each proveedores}}
+            {{#each proveedores }}
             <div class="col-md-4,5 col-ml-8">
                 <div>
                     <div class="card-body">
@@ -44,7 +44,7 @@
 </form>
 
 <div>
-    {{#each proveedores}}
+    {{#each proveedores }}
     <button><a href="/ProductoEntrada/add/{{id}}">Agregar un Producto</a></button>
     {{/each}}
 </div>
