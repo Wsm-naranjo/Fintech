@@ -1,6 +1,7 @@
 const ProductoEntradaCtrl = {};
 
-const pool = require('../database');
+const orm = require('../configuracionBaseDatos/baseDatos.orm')
+const sql = require('../configuracionBaseDatos/baseDatos.sql')
 
 ProductoEntradaCtrl.renderEntrada = (req, res) => {
     res.render("ProductosEntrada/add")

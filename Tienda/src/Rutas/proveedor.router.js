@@ -6,11 +6,11 @@ const { renderAddProveedor, addProveedor, renderProveedor, deleteProveedor, rend
 
 router.use(isLoggedIn);
 
-router.get('/add', renderAddProveedor)
-router.post('/add', addProveedor)
-router.get('/list', renderProveedor)
-router.get('/delete/:id', deleteProveedor);
-router.get('/edit/:id', renderEditProveedor);
-router.post('/edit/:id', editProveedor);
+router.get('/add/:id', isLoggedIn, renderAddProveedor)
+router.post('/add/:id', isLoggedIn, addProveedor)
+router.get('/list/:id', isLoggedIn, renderProveedor)
+router.get('/delete/:id', isLoggedIn, deleteProveedor);
+router.get('/edit/:id', isLoggedIn, renderEditProveedor);
+router.post('/edit/:id', isLoggedIn, editProveedor);
 
 module.exports = router;

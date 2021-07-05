@@ -1,53 +1,69 @@
 const proveedorCtrl = {};
 
-const pool = require('../database');
+const orm = require('../configuracionBaseDatos/baseDatos.orm')
+const sql = require('../configuracionBaseDatos/baseDatos.sql')
 
 proveedorCtrl.renderAddProveedor = (req, res) => {
     res.render('proveedor/add');
 };
 
 proveedorCtrl.addProveedor = async (req, res) => {
-    const {NombreProveedor,Direccion,Numero,Estado} = req.body;
+    const id = req.params.id
+    const { NombreProveedor, Direccion, Numero, Estado } = req.body;
     const newLink = {
         NombreProveedor,
         Direccion,
         Numero,
         Estado,
-        user_id: req.user.id
+        usuarioId: id
     };
-    await pool.query('INSERT INTO proveedor set ?', [newLink]);
-    req.flash('success', 'Se Guardo Correctamente');
-    res.redirect('/proveedor/list');
+    await orm.provedor.create(newLink)
+        .then(() => {
+            req.flash('success', 'Se Guardo Correctamente');
+            res.redirect('/proveedor/list/' + id);
+        })
 }
 proveedorCtrl.renderProveedor = async (req, res) => {
-    const proveedores = await pool.query('SELECT * FROM proveedor WHERE user_id = ?', [req.user.id]);
-    res.render('proveedor/list', {proveedores});
+    const id = req.params.id
+    await pool.provedor.findByPk(id)
+        .then(proveedores => {
+            res.render('proveedor/list', {
+                proveedores
+            })
+        })
 }
 
 proveedorCtrl.deleteProveedor = async (req, res) => {
-    const { id } = req.params;
-    await pool.query('DELETE FROM proveedor WHERE ID = ?', [id]);
+    const id = req.params.id;
+    await orm.provedor.destroy({ where: { id: id } });
     req.flash('success', 'Se Elimino Correctamente');
-    res.redirect('/proveedor/list');
+    res.redirect('/proveedor/list/' + id);
 };
 
 proveedorCtrl.renderEditProveedor = async (req, res) => {
-    const { id } = req.params;
-    const Proveedor = await pool.query('SELECT * FROM proveedor WHERE id = ?', [id]);
-    res.render('Proveedor/edit', {proveedores: Proveedor[0]});
+    const id = req.params.id;
+    await pool.provedor.findByPk(id)
+        .then(proveedores => {
+            res.render('proveedor/edit', {
+                proveedores
+            })
+        })
 };
 
-proveedorCtrl.editProveedor = async (req,res) => {
-    const { id } = req.params;
-    const { NombreProveedor,Direccion,Numero,Estado} = req.body; 
+proveedorCtrl.editProveedor = async (req, res) => {
+    const id = req.params.id;
+    const { NombreProveedor, Direccion, Numero, Estado } = req.body;
     const newLink = {
         NombreProveedor,
         Direccion,
         Numero,
         Estado,
     };
-    await pool.query('UPDATE proveedor set ? WHERE id = ?', [newLink, id]);
-    req.flash('success', 'Se Actualizo Correctamente');
-    res.redirect('/proveedor/list');
+    await orm.provedor.findOne({ where: { id: id } })
+        .then(provedor => {
+            provedor.update(newLink)
+            req.flash('success', 'Se Actualizo Correctamente');
+            res.redirect('/proveedor/list/' + id);
+        })
 }
-module.exports=proveedorCtrl
+module.exports = proveedorCtrl

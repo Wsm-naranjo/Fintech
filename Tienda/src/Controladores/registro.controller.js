@@ -1,7 +1,6 @@
 const registro = {};
 
 const passport = require('passport');
-const pool = require('../database')
 
 registro.mostrarRegistro = (req, res) => {
     res.render('Usuario/Registro');

@@ -14,9 +14,10 @@ const provedor = (sequelize, type)=>{
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
+        //ON UPDATE CURRENT_TIMESTAMP pegar antes de crear la base
         updatedAt:{
             type: 'TIMESTAMP',
-            defaultValue: type.literal('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'),
+            defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
         }
     })

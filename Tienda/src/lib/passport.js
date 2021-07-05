@@ -1,7 +1,7 @@
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 
-const pool = require("../database");
+const orm = require('../configuracionBaseDatos/baseDatos.orm')
 const helpers = require("./helpers");
 
 passport.use(
@@ -13,7 +13,7 @@ passport.use(
       passReqToCallback: true
     },
     async (req, username, password, done) => {
-      const rows = await pool.usuarios.findOne({where: {username: username}});
+      const rows = await orm.usuarios.findOne({where: {username: username}});
       if (rows) {
         const user = rows;
         const validPassword = await helpers.matchPassword(
@@ -52,7 +52,7 @@ passport.use(
 
       newUser.password = await helpers.encryptPassword(password);
       // Guardar en la base de datos
-      const result = await pool.usuarios.create(newUser);
+      const result = await orm.usuarios.create(newUser);
       newUser.id = result.insertId;
       return done(null, newUser);
     }

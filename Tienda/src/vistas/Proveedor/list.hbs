@@ -1,21 +1,20 @@
 <LINK REL=StyleSheet HREF="/css/listaproveedor.css" TYPE="text/css" MEDIA=screen>
-    <form action="/proveedor/list" id="f1">
-
-        <div id="conetendor">
-            <div class="row">
-                {{#each proveedores}}
-                <div class="col-md-4,5 col-ml-8">
-                    <div>
-                        <div class="card-body">
-                            <div id="tarjeta">
+<form action="/proveedor/list/{{user.id}}" id="f1">
+    <div id="conetendor">
+        <div class="row">
+            {{#each proveedores}}
+            <div class="col-md-4,5 col-ml-8">
+                <div>
+                    <div class="card-body">
+                        <div id="tarjeta">
                             <table border="0.5">
                                 <tr>
-                                    <td >NombreProveedor:</td>
+                                    <td>NombreProveedor:</td>
                                     <td style="text-align:right;">{{NombreProveedor}}</td>
                                 </tr>
                                 <tr>
                                     <td>Direccion:</td>
-                                    <td style="text-align: right;" >{{Direccion}}</td>
+                                    <td style="text-align: right;">{{Direccion}}</td>
                                 </tr>
                                 <tr>
                                     <td>Numero:</td>
@@ -26,20 +25,26 @@
                                     <td style="text-align: left;">{{Estado}}</td>
                                 </tr>
                             </table>
-                            <button><a  href="/proveedor/edit/{{id}}" id="edit">Editar Proveedor</a></button>
-                           <button><a href="/proveedor/delete/{{id}}" id="eliminar">Eliminar Proveedor</a></button>
-                            </div>
+                            <button><a href="/proveedor/edit/{{id}}" id="edit">Editar Proveedor</a></button>
+                            <button><a href="/proveedor/delete/{{id}}" id="eliminar">Eliminar Proveedor</a></button>
                         </div>
                     </div>
                 </div>
-                {{else}}
-                <div class="col-md-4 mx-auto">
-                    <div class="card card-body text-center">
-                        <p>¡No has registrado Proveedores.!</p>
-                        <a href="/proveedor/add">¡Introducir uno!</a>
-                    </div>
-                </div>
-                {{/each}}
             </div>
+            {{else}}
+            <div class="col-md-4 mx-auto">
+                <div class="card card-body text-center">
+                    <p>¡No has registrado Proveedores.!</p>
+                    <a href="/proveedor/add/{{user.id}}">¡Introducir uno!</a>
+                </div>
+            </div>
+            {{/each}}
         </div>
+    </div>
 </form>
+
+<div>
+    {{#each proveedores}}
+    <button><a href="/ProductoEntrada/add/{{id}}">Agregar un Producto</a></button>
+    {{/each}}
+</div>

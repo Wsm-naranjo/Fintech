@@ -1,6 +1,7 @@
 const clienteCtrl = {};
 
-const pool = require('../database');
+const orm = require('../configuracionBaseDatos/baseDatos.orm')
+const sql = require('../configuracionBaseDatos/baseDatos.sql')
 
 clienteCtrl.renderAddClientes = (req, res) => {
     res.render('clientes/add');

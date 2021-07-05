@@ -1,6 +1,7 @@
 const ProductosCtrl = {};
 
-const pool = require('../database');
+const orm = require('../configuracionBaseDatos/baseDatos.orm')
+const sql = require('../configuracionBaseDatos/baseDatos.sql')
 
 ProductosCtrl.renderProductos = async (req, res) => {
     const productos =  await pool.query("SELECT * FROM producto where Tienda=?",[req.user.id])

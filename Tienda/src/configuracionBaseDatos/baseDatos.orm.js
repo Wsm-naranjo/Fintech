@@ -1,14 +1,14 @@
 const Sequelize = require('sequelize')
 
-const UsuarioModelos = require('./modelos/usuario')
-const categoriaModelos = require('./modelos/Categoria')
-const tiendaModelos = require('./modelos/tienda')
-const comentarioModelos = require('./modelos/comentarios') 
-const provedorModelos = require('./modelos/provedor')
-const productoEntradaModelos = require('./modelos/productoEntrada')
-const productoModelos = require('./modelos/productos')
-const clienteModelos = require('./modelos/cliente')
-const listaProductosModelos = require('./modelos/listaProductos')
+const UsuarioModelos = require('../modelos/usuario')
+const categoriaModelos = require('../modelos/Categoria')
+const tiendaModelos = require('../modelos/tienda')
+const comentarioModelos = require('../modelos/comentarios') 
+const provedorModelos = require('../modelos/provedor')
+const productoEntradaModelos = require('../modelos/productoEntrada')
+const productoModelos = require('../modelos/productos')
+const clienteModelos = require('../modelos/cliente')
+const listaProductosModelos = require('../modelos/listaProductos')
 
 const sequelize = new Sequelize(
   'fintech', 

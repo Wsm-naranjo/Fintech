@@ -1,6 +1,8 @@
 const perfilCtrl = {}
 
-const pool = require('../database');
+const orm = require('../configuracionBaseDatos/baseDatos.orm')
+const sql = require('../configuracionBaseDatos/baseDatos.sql')
+
 
 perfilCtrl.renderPerfil = (req,res) => {
     res.render('perfil');
@@ -17,15 +19,21 @@ perfilCtrl.addDatos = async (req, res) => {
         direccion,
         usuarioId:ids
     }
-    await pool.tienda.create(newTienda);
-    req.flash('success', 'Se guaardo con exito')
-    res.redirect('/perfil/list/'+ids);
+    await orm.tienda.create(newTienda)
+    .then(()=>{
+        req.flash('success', 'Se guaardo con exito')
+        res.redirect('/perfil/list/'+ids);
+    }) 
 }
 
 perfilCtrl.rederList = async (req, res) => {
-    const ids = req.params.id
-    const tiendas = await pool.tienda.findOne({where: {usuarioId: ids}})
-    res.render('perfil/perfilList', {tiendas: tiendas});
+    const id = req.params.id
+    await pool.tienda.findByPk(id)
+    .then(tiendas =>{
+        res.render('perfil/perfilList', {
+            tiendas
+        })
+    })
 }
 
 perfilCtrl.renderEdit = async (req, res) => {
@@ -43,7 +51,7 @@ perfilCtrl.edit = async (req, res) => {
         telefono
     }
 
-    await pool.tienda.findOne({where: {id: ids}})
+    await orm.tienda.findOne({where: {id: ids}})
         .then(tiendas => {
             tiendas.update(newTienda)
         })
