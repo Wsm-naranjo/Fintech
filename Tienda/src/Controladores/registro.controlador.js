@@ -2,12 +2,16 @@ const registro = {};
 
 const passport = require('passport');
 
+const ids
+
 registro.mostrarRegistro = (req, res) => {
+    const id = req.params.id
+    ids = id
     res.render('Usuario/Registro');
 };
 
 registro.Registro = passport.authenticate('local.signup', {
-    successRedirect: '/perfil/add/',
+    successRedirect: '/tienda/agregar/' + ids,
     failureRedirect: '/Registro',
     failureFlash: true
 });
@@ -17,7 +21,7 @@ registro.mostrarLogin = (req, res, next) => {
 };
 
 registro.Login = passport.authenticate('local.signin', {
-    successRedirect: '/perfil/add/',
+    successRedirect: '/tienda/agregar/' + ids,
     failureRedirect: '/Login',
     failureFlash: true
 });

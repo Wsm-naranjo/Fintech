@@ -4,7 +4,7 @@ const router = express.Router();
 const { isLoggedIn } = require('../lib/auth');
 
 
-const{ renderEntrada,addEntrada,renderProductos,EliminarProductos,renderEditarEntrada,EditarEntrada }=require("../Controladores/productoentrada.controller")
+const{ renderEntrada,addEntrada,renderProductos,EliminarProductos,renderEditarEntrada,EditarEntrada }=require("../Controladores/productoentrada.controlador")
 router.use(isLoggedIn)
 
 router.get("/add/:id", isLoggedIn, renderEntrada)

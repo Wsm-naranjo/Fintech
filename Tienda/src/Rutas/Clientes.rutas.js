@@ -3,7 +3,7 @@ const router = express.Router();
 
 const { isLoggedIn } = require('../lib/auth');
 
-const {renderAddClientes,addCliete,renderClientes,deleteClientes,renderEditCliente,editCliente}=  require('../Controladores/cliente.controller');
+const {renderAddClientes,addCliete,renderClientes,deleteClientes,renderEditCliente,editCliente}=  require('../Controladores/cliente.controlador');
 
 // Authorization
 router.use(isLoggedIn);

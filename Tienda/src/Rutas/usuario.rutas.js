@@ -2,8 +2,8 @@ const express = require('express');
 const router = express.Router();
 
 const { isLoggedIn } = require('../lib/auth');
-const { renderUserProfile } = require('../Controladores/user.controller');
+const { renderUserProfile } = require('../Controladores/usuario.controlador');
 
-router.get('/perfil', isLoggedIn, renderUserProfile);
+router.get('/tienda', isLoggedIn, renderUserProfile);
 
 module.exports = router;

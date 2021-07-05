@@ -1,7 +1,7 @@
 const express = require('express');
 const rutas = express.Router();
 
-const { mostrarLogin, mostrarRegistro, Registro, Login, cierreSesion } = require('../Controladores/registro.controller')
+const { mostrarLogin, mostrarRegistro, Registro, Login, cierreSesion } = require('../Controladores/registro.controlador')
 
 
 rutas.get('/Registro', mostrarRegistro);

@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const { renderIndex } = require('../Controladores/index.conroller');
+const { renderIndex } = require('../Controladores/index.controlador');
 
 router.get('/', renderIndex);
 
