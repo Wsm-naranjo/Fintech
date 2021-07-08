@@ -1,32 +1,38 @@
-<LINK REL=StyleSheet HREF="/css/perfilaeditar2.css" TYPE="text/css" MEDIA=screen>
+<LINK REL=StyleSheet HREF="/css/tienda/tiendaEditar.css" TYPE="text/css" MEDIA=screen>
 <img src="/img/avatar.png" id="avatar"></img>
 <div id="datosUsuario">
     <p>
         <label id="dato">{{user.username}}</label>
     </p>
 </div>
-<div id="DatoNegocio">
-<label>Datos del Negocio</label>
-</div>
 <div id="formulario">
+    <div id="DatoNegocio">
+        <label>Datos del Negocio</label>
+    </div>
     {{#each tienda}}
     <form action="/tienda/editar/{{id}}" method="POST">
-        <div>
+        <div id="NombreNegocio">
             <label id="Nombre">Nombre:</label>
             <input type="text" name="nombreNegocio" id="nombreNegocio" value="{{nombreNegocio}}">
         </div>
-        <div>
+        <div id="RUC">
+            <label id="RUCs">RUC:</label>
+            <input type="text" name="ruc" id="ruc" value="{{ruc}}">
+        </div>
+        <div id="DIRECCION">
+            <label id="Direccion">Direccion:</label>
+            <input type="text" name="direccion" id="direccion" value="{{direccion}}">
+        </div>
+        <div id="Contactos">
             <label id="contactos">Contactos</label>
-            <div id="numeros">
-                <label id="celular">Celular:</label>
-            </div>
-            <div id="celular">
-                <input type="number" name="celular" min="0" id="Celular" value="{{celular}}"> 
-            </div>
-            <div id="telefono">
-                <label id="telefono">Telefono:</label>
-                <input type="number" name="telefono" min="0" id="Telefono" value="{{telefono}}">
-            </div>
+        </div>
+        <div id="CELULAR">
+            <label id="celular">Celular:</label>
+            <input type="number" name="celular" min="0" id="Celular" value="{{celular}}">
+        </div>
+        <div id="TELEFONO">
+            <label id="telefonos">Telefono:</label>
+            <input type="number" name="telefono" min="0" id="Telefonos" value="{{telefono}}">
         </div>
         <div id="boton">
             <button type="submit" id="guardar1">Guardar</button>

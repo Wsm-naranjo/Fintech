@@ -1,5 +1,5 @@
-<LINK REL=StyleSheet HREF="/css/productoslist.css" TYPE="text/css" MEDIA=screen>
-<form action="/ProductoEntrada/list">
+<LINK REL=StyleSheet HREF="/css/productoEntrada/productoslista.css" TYPE="text/css" MEDIA=screen>
+<form action="/ProductoEntrada/lista">
 <div id="contenedor">
     <div class="row"  >
         {{#each DatosProducto}}
@@ -24,8 +24,8 @@
                             <td style="text-align: right;">{{precioActual}}$</td>
                         </tr>                                                
                     </table>
-                    <button><a href="/ProductoEntrada/edit/{{id}}">Editar Producto</a></button>
-                   <button><a href="/ProductoEntrada/delete/{{id}}">Eliminar Producto</a></button>
+                    <button><a href="/ProductoEntrada/editar/{{id}}">Editar Producto</a></button>
+                   <button><a href="/ProductoEntrada/Eliminar/{{id}}">Eliminar Producto</a></button>
                 </div>
             </div>
             <br>
@@ -34,7 +34,7 @@
         <div class="col-md-4 mx-auto">
             <div class="card card-body text-center">
                 <p>¡No has registrado Productos.!</p>
-                <a href="/ProductoEntrada/add/{{user.id}}">¡Introducir uno!</a>
+                <a href="/ProductoEntrada/agregar/{{user.id}}">¡Introducir uno!</a>
             </div>
         </div>
         {{/each}}

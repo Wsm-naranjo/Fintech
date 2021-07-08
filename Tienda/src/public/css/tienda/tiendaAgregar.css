@@ -22,7 +22,7 @@ nav{
 #DatoNegocio{
     position: absolute;
     left: 470px;
-    top: 100px;
+    top: 90px;
     font-size: 40px;
 }
 
@@ -95,8 +95,8 @@ nav{
 
 #Telefono{
     position: absolute;
-    top: 210px;
-    left: 300px;
+    top: 410px;
+    left: 600px;
 }
 
 #guardar1{

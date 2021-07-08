@@ -27,3 +27,15 @@
     position: absolute;
     left: 300px;
 }
+
+#masProveedor{
+    position: absolute;
+    top: 550px;
+    left: 1250px;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+#mas{
+    width: 50px;
+}

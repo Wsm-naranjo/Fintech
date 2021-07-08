@@ -7,7 +7,7 @@ const {renderPerfil,addDatos,rederList,renderEdit,edit}=require('../Controladore
 
 router.use(isLoggedIn);
 
-router.get('/agregar/:id', isLoggedIn, renderPerfil)
+router.get('/agregar/', isLoggedIn, renderPerfil)
 router.post('/agregar/:id', isLoggedIn, addDatos)
 router.get('/lista/:id', isLoggedIn, rederList)
 router.get('/editar/:id', isLoggedIn, renderEdit) 

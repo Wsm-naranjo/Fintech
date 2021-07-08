@@ -9,11 +9,11 @@ const {renderAddClientes,addCliete,renderClientes,deleteClientes,renderEditClien
 router.use(isLoggedIn);
 
 // Routes
-router.get('/add/:id', isLoggedIn, renderAddClientes);
-router.post('/add/:id', isLoggedIn, addCliete);
-router.get('/list/:id', isLoggedIn, renderClientes);
-router.get('/delete/:id', isLoggedIn, deleteClientes);
-router.get('/edit/:id', isLoggedIn, renderEditCliente);
-router.post('/edit/:id', isLoggedIn, editCliente);
+router.get('/agregar/:id', isLoggedIn, renderAddClientes);
+router.post('/agregar/:id', isLoggedIn, addCliete);
+router.get('/lista/:id', isLoggedIn, renderClientes);
+router.get('/Elimnar/:id', isLoggedIn, deleteClientes);
+router.get('/editar/:id', isLoggedIn, renderEditCliente);
+router.post('/editar/:id', isLoggedIn, editCliente);
 
 module.exports = router;

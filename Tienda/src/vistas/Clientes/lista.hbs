@@ -1,0 +1,38 @@
+<form action="/clientes/lista" id="f1"></form>
+<LINK REL=StyleSheet HREF="/css/list.css" TYPE="text/css" MEDIA=screen>
+<div class="container p-4">
+    <div class="row">
+        {{#each clientes}}
+        <div class="col-md-4,5">
+            <div class="card">
+                <div class="card-body text-left">
+                    <table border="0.5">
+                        <tr>
+                            <td>Cedula:</td>
+                            <td style="text-align:right;">{{username}}</td>
+                        </tr>
+                        <tr>
+                            <td>Nombre:</td>
+                            <td style="text-align: right;">{{Nombres}}</td>
+                        </tr>
+                        <tr>
+                            <td>Telefono:</td>
+                            <td style="text-align: right;">{{Telefono}}</td>
+                        </tr>
+                    </table>
+                    <a class="btn btn-success" href="/clientes/editar/{{id}}"> Editar Cliente </a>
+                    <a class="btn btn-danger" href="/clientes/Eliminar/{{id}}"> Eliminar Cliente </a>
+                </div>
+            </div>
+        </div>
+        {{else}}
+        <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>¡No has registrado Clientes.!</p>
+                <a href="/clientes/agregar">¡Introducir uno!</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
+</form>

@@ -22,24 +22,25 @@ perfilCtrl.addDatos = async (req, res) => {
     await orm.tienda.create(newTienda)
         .then(() => {
             req.flash('success', 'Se guaardo con exito')
-            res.redirect('/teinda/lista/' + ids);
+            res.redirect('/tienda/lista/' + ids);
         })
 }
 
 perfilCtrl.rederList = async (req, res) => {
     const id = req.params.id
     const tiendas = await sql.query("SELECT * FROM tiendas WHERE usuarioId = ?", [id])
-    res.render('/tienda/tiendaLista', { tiendas })
+    res.render('tienda/tiendaLista', { tiendas })
 }
 
 perfilCtrl.renderEdit = async (req, res) => {
     const id = req.params.id
     const tienda = await sql.query("SELECT * FROM tiendas WHERE id = ?", [id])
-    res.render('/tienda/tiendaEditar', { tienda: tienda });
+    res.render('tienda/tiendaEditar', { tienda: tienda });
 }
 
 perfilCtrl.edit = async (req, res) => {
     const ids = req.params.id
+    const id = req.user.id
     const { nombreNegocio, celular, telefono } = req.body
     const newTienda = {
         nombreNegocio,
@@ -51,7 +52,7 @@ perfilCtrl.edit = async (req, res) => {
         .then(tiendas => {
             tiendas.update(newTienda)
             req.flash('success', "Se guardo correctamente")
-            res.redirect("/tienda/lista/" + ids)
+            res.redirect("/tienda/lista/" + id)
         })
 }
 

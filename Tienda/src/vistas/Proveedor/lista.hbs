@@ -1,5 +1,5 @@
-<LINK REL=StyleSheet HREF="/css/listaproveedor.css" TYPE="text/css" MEDIA=screen>
-<form action="/proveedor/list/{{user.id}}" id="f1">
+<LINK REL=StyleSheet HREF="/css/proveedor/listaproveedor.css" TYPE="text/css" MEDIA=screen>
+<form action="/proveedor/lista/{{user.id}}" id="f1">
     <div id="conetendor">
         <div class="row">
             {{#each proveedores }}
@@ -22,21 +22,20 @@
                                 </tr>
                                 <tr>
                                     <td>Estado:</td>
-                                    <td style="text-align: left;">{{Estado}}</td>
+                                    <td style="text-align: left;"><input type="text" id="estado" value="{{Estado}}"></td>
                                 </tr>
                             </table>
-                            <button><a href="/proveedor/edit/{{id}}" id="edit">Editar Proveedor</a></button>
-                            <button><a href="/proveedor/delete/{{id}}" id="eliminar">Eliminar Proveedor</a></button>
+                            <button><a href="/proveedor/editar/{{id}}" id="edit">Editar Proveedor</a></button>
+                            <button id="agregarProducto"><a href="/ProductoEntrada/agregar/{{id}}">Agregar un Producto</a></button>
+                            <button><a href="/proveedor/Eliminar/{{id}}" id="eliminar">Eliminar Proveedor</a></button>
                         </div>
                     </div>
                 </div>
             </div>
             {{else}}
-            <div class="col-md-4 mx-auto">
-                <div class="card card-body text-center">
-                    <p>¡No has registrado Proveedores.!</p>
-                    <a href="/proveedor/add/{{user.id}}">¡Introducir uno!</a>
-                </div>
+            <div>
+                <p>¡No has registrado Proveedores.!</p>
+                <a href="/proveedor/agregar/{{user.id}}">¡Introducir uno!</a>
             </div>
             {{/each}}
         </div>
@@ -45,6 +44,7 @@
 
 <div>
     {{#each proveedores }}
-    <button><a href="/ProductoEntrada/add/{{id}}">Agregar un Producto</a></button>
+    <button id="masProveedor"><a href="/proveedor/agregar/{{id}}"><img src="/img/proveedor/mas.png" id="mas"></a></button>
     {{/each}}
 </div>
+<script src="/js/proveedor/estado.js"></script>

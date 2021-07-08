@@ -4,7 +4,7 @@ const orm = require('../configuracionBaseDatos/baseDatos.orm')
 const sql = require('../configuracionBaseDatos/baseDatos.sql')
 
 ProductoEntradaCtrl.renderEntrada = (req, res) => {
-    res.render("ProductosEntrada/add")
+    res.render("ProductosEntrada/agregar")
 }
 
 ProductoEntradaCtrl.addEntrada = async (req, res) => {
@@ -37,13 +37,13 @@ ProductoEntradaCtrl.addEntrada = async (req, res) => {
     await orm.categoria.create(NuevaCategoria);
     await orm.productos.create(productoVenta);
     req.flash('success', "Se guardo correctamente")
-    res.redirect("/ProductoEntrada/list/" + id)
+    res.redirect("/ProductoEntrada/lista/" + id)
 }
 
 ProductoEntradaCtrl.renderProductos = async (req, res) => {
     const id = req.params.id
     const DatosProducto = await sql.query("SELECT * FROM productoEntradas WHERE tiendaId = ?", [id])
-    res.render("ProductosEntrada/list", { DatosProducto })
+    res.render("ProductosEntrada/lista", { DatosProducto })
 
 }
 
@@ -53,13 +53,13 @@ ProductoEntradaCtrl.EliminarProductos = async (req, res) => {
     await orm.productos.destroy({ where: { id: id } });
     await orm.categoria.destroy({ where: { id: id } });
     req.flash('success', 'Se Elimino Correctamente');
-    res.redirect('/ProductoEntrada/list/' + id);
+    res.redirect('/ProductoEntrada/lista/' + id);
 
 }
 ProductoEntradaCtrl.renderEditarEntrada = async (req, res) => {
     const id = req.params.id;
     const Productos = await sql.query("SELECT * FROM productoEntradas WHERE id =?", [id])
-    res.render("ProductosEntrada/edith", {Productos})
+    res.render("ProductosEntrada/editar", {Productos})
 }
 ProductoEntradaCtrl.EditarEntrada = async (req, res) => {
     const id = req.params.id
@@ -75,7 +75,7 @@ ProductoEntradaCtrl.EditarEntrada = async (req, res) => {
         .then(productoEntrada => {
             productoEntrada.update(EntradaEditad)
             req.flash('success', 'Se Actualizo Correctamente');
-            res.redirect('/ProductoEntrada/list/' + id);
+            res.redirect('/ProductoEntrada/lista/' + id);
         })
 }
 module.exports = ProductoEntradaCtrl

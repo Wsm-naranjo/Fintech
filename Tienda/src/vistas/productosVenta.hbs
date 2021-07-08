@@ -1,5 +1,5 @@
-<LINK REL=StyleSheet HREF="/css/listaProductos.css" TYPE="text/css" MEDIA=screen>
-<form action="/productos/list/{{user.id}}">
+<LINK REL=StyleSheet HREF="/css/productos/listaProductos.css" TYPE="text/css" MEDIA=screen>
+<form action="/productos/lista/{{user.id}}">
     <div>
         <div class="row">
             {{#each productos}}
@@ -27,13 +27,13 @@
                             <td style="text-align: right;">{{precioVenta}}</td>
                         </tr>
                     </table>
-                    <button><a href="/productos/edit/{{id}}">Editar Producto</a></button>
+                    <button><a href="/productos/editar/{{id}}">Editar Producto</a></button>
             </div>
             {{else}}
             <div class="col-md-4 mx-auto">
                 <div class="card card-body text-center">
                     <p>¡No has registrado productos.!</p>
-                    <a href="/ProductoEntrada/add/{{user.id}}">¡Introducir uno!</a>
+                    <a href="/ProductoEntrada/agregar/{{user.id}}">¡Introducir uno!</a>
                 </div>
             </div>
             {{/each}}

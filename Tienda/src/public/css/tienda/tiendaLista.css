@@ -9,7 +9,7 @@
 
 #datosUsuario{
     position: absolute;
-    left: 1100px;
+    left: 1150px;
     top: 220px;
 }
 
@@ -17,75 +17,6 @@
     font-size: 35px;
     font-style: italic;
     font-family: fantasy;
-}
-
-#nombreNegocio{
-    position: absolute;
-    left: 550px;
-    top: 120px;
-    font-size: 60px;
-    font-style: initial;
-}
-
-#contactos{
-    position: absolute;
-    top: 235px;
-    left: 600px;
-    font-size: 40px;
-}
-
-#guardar1{
-    position: absolute;
-    top: 500px;
-    left: 800px;
-}
-
-#celular{
-    position: absolute;
-    top: 330px;
-    left: 500px;
-}
-
-#telefono{
-    position: absolute;
-    top: 400px;
-    top: -20;
-    left: 500px;
-}
-#DatoNegocio{
-    position: absolute;
-    top: 200px;
-    left: 550px;
-}
-
-button{
-    position: absolute;
-    color: salmon;
-}
-
-#boton1{
-    position: absolute;
-    top: 500px;
-    left: 400px;
-}
-
-#contactos1{
-    position: absolute;
-    top: 330px;
-    right: 500px;
-    left: 300px;
-    font-size: 35px;;
-}
-
-#contactos2{
-    position: absolute;
-    top: 400px;
-    right: 500px;
-    left: 300px;
-    font-size: 35px;;
-}
-#contenido{
-    position: absolute;
 }
 
 #logo{
@@ -97,6 +28,85 @@ button{
     position: absolute;
     top: 170px;
     left: -200px;
+}
+
+#contenido{
+    position: absolute;
+    top: 180px;
+    left: 360px;
+    width: 50%;
+}
+
+#nombreNegocio{
+    position: absolute;
+    left: 220px;
+    top: -20px;
+}
+
+#RUC{
+    position: absolute;
+    top: 60px;
+    left: 50px;
+}
+
+#DIRECCION{
+    position: absolute;
+    top: 120px;
+    left: 50px;
+}
+
+#contactos{
+    position: absolute;
+    top: 180px;
+}
+
+#botones{
+    position: absolute;
+    top: 340px;
+}
+
+#ruc{
+    position: absolute;
+    left:135px;
+}
+
+#Contactos{
+    position: absolute;
+    left: 270px;
+}
+
+#CELULAR{
+    position: absolute;
+    top: 40px;
+    left: -40px;
+}
+
+#TELEFONO{
+    position: absolute;
+    top: 40px;
+    left: 380px;
+}
+
+#boton{
+    position: absolute;
+    left: 550px;
+}
+
+#Boton{
+    position: absolute;
+    left: -40px;
+}
+
+#Editar{
+    width: 200px;
+}
+
+#Agregar{
+    width: 300px;
+}
+
+#Boton{
+    position: absolute;
 }
 
 @media(max-width: 1125px){

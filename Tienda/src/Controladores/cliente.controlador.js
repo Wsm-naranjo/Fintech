@@ -4,7 +4,7 @@ const orm = require('../configuracionBaseDatos/baseDatos.orm')
 const sql = require('../configuracionBaseDatos/baseDatos.sql')
 
 clienteCtrl.renderAddClientes = (req, res) => {
-    res.render('clientes/add');
+    res.render('clientes/agregar');
 };
 
 clienteCtrl.addCliete = async (req, res) => {
@@ -17,26 +17,26 @@ clienteCtrl.addCliete = async (req, res) => {
     };
     await orm.cliente.create(nuevocliente);
     req.flash('success', 'Se Guardo Correctamente');
-    res.redirect('/clientes/list/'+ id);
+    res.redirect('/clientes/lista/'+ id);
 }
 
 clienteCtrl.renderClientes = async (req, res) => {
     const id = req.params.id
-    const clientes = await pool.query('SELECT * FROM cliente join comentarios on tiendaId = ?',[id]);
-    res.render('Clientes/list', {clientes});
+    const clientes = await sql.query('SELECT * FROM clientes join comentarios on tiendaId = ?',[id]);
+    res.render('Clientes/lista', {clientes});
 }
 
 clienteCtrl.deleteClientes = async (req, res) => {
     const id  = req.params.id;
-    await pool.query('DELETE FROM cliente WHERE ID = ?', [id]);
+    await orm.cliente.destroy({ where: { id: id } });
     req.flash('success', 'Se Elimino Correctamente');
-    res.redirect('/clientes/list/' + id);
+    res.redirect('/clientes/lista/' + id);
 };
 
 clienteCtrl.renderEditCliente = async (req, res) => {
     const id  = req.params.id;
-    const Productos = await pool.query('SELECT * FROM cliente WHERE id = ?', [id]);
-    res.render('Clientes/edit', { Productos});
+    const Productos = await sql.query('SELECT * FROM clientes WHERE id = ?', [id]);
+    res.render('Clientes/editar', { Productos});
 };
 
 clienteCtrl.editCliente = async (req,res) => {
@@ -51,7 +51,7 @@ clienteCtrl.editCliente = async (req,res) => {
     .then(clientes => {
         clientes.update(actulizarCliente)
         req.flash('success', 'Se Actualizo Correctamente');
-        res.redirect('/clientes/list/' + id);
+        res.redirect('/clientes/lista/' + id);
     })
 }
 

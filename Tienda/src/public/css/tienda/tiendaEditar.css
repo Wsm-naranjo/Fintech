@@ -1,0 +1,108 @@
+#avatar{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 150px;
+    position: absolute;
+    left: 1150px;
+    top: 120px;
+}
+
+#datosUsuario{
+    position: absolute;
+    left: 1150px;
+    top: 220px;
+}
+
+#dato{
+    font-size: 35px;
+    font-style: italic;
+    font-family: fantasy;
+}
+
+#logo{
+    position: absolute;
+    top: 80px;
+}
+
+#formulario{
+    position: absolute;
+    top: 120px;
+    left: 350px;
+    width: 50%;
+}
+
+#DatoNegocio{
+    position: absolute;
+    left: 120px;
+    top: -20px;
+    font-size:30px
+}
+
+#NombreNegocio{
+    position: absolute;
+    top: 40px;
+}
+
+#RUC{
+    position: absolute;
+    top: 100px;
+}
+
+#DIRECCION{
+    position: absolute;
+    top: 160px;
+}
+
+#Contactos{
+    position: absolute;
+    top: 220px;
+}
+
+#CELULAR{
+    position: absolute;
+    top: 270px;
+}
+
+#TELEFONO{
+    position: absolute;
+    top: 330px;
+}
+
+#boton{
+    position: absolute;
+    top: 390px;
+    left: 50px;
+}
+
+#guardar1{
+    width: 450px
+}
+
+#nombreNegocio{
+    position: absolute;
+    left: 140px;
+}
+#ruc{
+    position: absolute;
+    left: 140px;
+}
+
+#direccion{
+    position: absolute;
+    left: 140px;
+}
+
+#contactos{
+    position: absolute;
+    left: 230px;
+}
+
+#Celular{
+    position: absolute;
+    left: 140px;
+}
+
+#Telefonos{
+    position: absolute;
+    left: 140px;
+}

@@ -1,37 +1,41 @@
-<LINK REL=StyleSheet HREF="/css/perfileditarlist1.css" TYPE="text/css" MEDIA=screen>
+<LINK REL=StyleSheet HREF="/css/tienda/tiendaLista.css" TYPE="text/css" MEDIA=screen>
 <img src="/img/avatar.png" id="avatar"></img>
 <div id="datosUsuario">
-    <p>
-        <label id="dato">{{user.username}}</label>
-    </p>
+    <label id="dato">{{user.username}}</label>
 </div>
 <div id="contenido">
     <form action="/tienda/lista/{{user.id}}">
-    {{#each tiendas}}
-    <h1 id="nombreNegocio">{{nombreNegocio}}</h1>
-    <div>
-        <label id="RUC">RUC:</label>
-        <input type="text" name="ruc" id="ruc" value="{{ruc}}" readonly>
-    </div>
-    <div>
-        <label id="Direccion">Direccion</label>
-        <input type="text" name="direccion" id="direccion" value="{{direccion}}" readonly>
-    </div>
-    <label id="contactos">Contactos:</label>
-    <div id="CELULAR">
-        <label id="contactos1">Celular:</label>
-        <input type="number" name="celular" min="0" id="celular" value="{{celular}}" readonly>
-    </div>
-    <div id="Telefono">
-        <label id="contactos2">Telefono:</label>
-        <input type="number" name="telefono" min="0" id="telefono" value="{{telefono}}" readonly>
-    </div>
-    <div id="boton">
-        <button type="submit" id="guardar1"><a href="/perfil/edit/{{id}}"> Editar Datos </a></button>
-    </div>
-    {{/each}}
-    <div id="Boton">
-        <button id="boton1"><a href="/proveedor/add/{{user.id}}">Agregar Proveedor</a></button>
-    </div>
+        {{#each tiendas}}
+        <div id="nombreNegocio">
+            <h1>{{nombreNegocio}}</h1>
+        </div>
+        <div id="RUC">
+            <label id="Ruc">RUC:</label>
+            <input type="text" name="ruc" id="ruc" value="{{ruc}}" readonly>
+        </div>
+        <div id="DIRECCION">
+            <label id="Direccion">Dirección:</label>
+            <input type="text" name="direccion" id="direccion" value="{{direccion}}" readonly>
+        </div>
+        <div id="contactos">
+            <label id="Contactos">Contactos</label>
+            <div id="CELULAR">
+                <label id="Celular">Celular:</label>
+                <input type="number" name="celular" min="0" id="celular" value="{{celular}}" readonly>
+            </div>
+            <div id="TELEFONO">
+                <label id="Telefono">Telefono:</label>
+                <input type="number" name="telefono" min="0" id="telefono" value="{{telefono}}" readonly>
+            </div>
+        </div>
+        <div id="botones">
+        <div id="boton">
+            <button type="submit" id="Editar"><a href="/tienda/editar/{{id}}"> Editar Datos </a></button>
+        </div>
+        {{/each}}
+        <div id="Boton">
+            <button id="Agregar"><a href="/proveedor/agregar/{{user.id}}">Agregar Proveedor</a></button>
+        </div>
+        </div>
     </form>
 </div>

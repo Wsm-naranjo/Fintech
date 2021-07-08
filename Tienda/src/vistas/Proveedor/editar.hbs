@@ -1,10 +1,10 @@
-<LINK REL=StyleSheet HREF="/css/editproveedor.css" TYPE="text/css" MEDIA=screen>
+<LINK REL=StyleSheet HREF="/css/proveedor/editarproveedor.css" TYPE="text/css" MEDIA=screen>
 <div id="contenedor">
     <p id="p"> Editar Proveedor</p>
     <div id="contenedor_1">
         <div>
             {{#each proveedores}}
-            <form action="/proveedor/edit/{{id}}" method="POST" id="f2">
+            <form action="/proveedor/editar/{{id}}" method="POST" id="f2">
                 <div id="">
                     <label id="lblnombre" >Nombre :</label>
                     <input type="text" name="NombreProveedor" id="NombreProveedor"
