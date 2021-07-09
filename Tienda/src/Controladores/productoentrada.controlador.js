@@ -3,26 +3,30 @@ const ProductoEntradaCtrl = {};
 const orm = require('../configuracionBaseDatos/baseDatos.orm')
 const sql = require('../configuracionBaseDatos/baseDatos.sql')
 
-ProductoEntradaCtrl.renderEntrada = (req, res) => {
-    res.render("ProductosEntrada/agregar")
+ProductoEntradaCtrl.renderEntrada = async (req, res) => {
+    const id = req.params.id
+    const listaProveedor = await sql.query("SELECT * FROM provedores WHERE id = ?", [id])
+    res.render("ProductosEntrada/agregar", {listaProveedor})
 }
 
 ProductoEntradaCtrl.addEntrada = async (req, res) => {
     const id = req.params.id
-    const { NombreProducto, codigo, categoria, Descripcion, Cantidad, precioActual, FechaCadusidad, precioVenta } = req.body
+    const IDS = req.user.id
+    const { NombreProducto, NombreProvedor, codigo, categoria, Descripcion, Cantidad, precioActual, FechaCadusidad, precioVenta } = req.body
     const NuevaEntrada = {
         codigo,
         NombreProducto,
+        NombreProvedor,
         Cantidad,
         precioActual,
         FechaCadusidad,
         provedoreId: id,
-        tiendaId: id
+        tiendaId: IDS
     }
     const NuevaCategoria ={
         categoria,
         Descripcion,
-        usuarioId: id
+        usuarioId: IDS
     }
     const productoVenta={
         codigo,
@@ -31,13 +35,13 @@ ProductoEntradaCtrl.addEntrada = async (req, res) => {
         precioVenta,
         FechaCadusidad,
         categoria,
-        tiendaId: id
+        tiendaId: IDS
     }
     await orm.entredaProductos.create(NuevaEntrada);
     await orm.categoria.create(NuevaCategoria);
     await orm.productos.create(productoVenta);
     req.flash('success', "Se guardo correctamente")
-    res.redirect("/ProductoEntrada/lista/" + id)
+    res.redirect("/ProductoEntrada/lista/" + IDS)
 }
 
 ProductoEntradaCtrl.renderProductos = async (req, res) => {

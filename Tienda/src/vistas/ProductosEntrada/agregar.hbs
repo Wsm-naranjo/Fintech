@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="/css/productoEntrada/productoEntrada.css">
 <div>
-<form action="/ProductoEntrada/agregar/{{user.id}}" method="POST">   
+{{#each listaProveedor}}
+<form action="/ProductoEntrada/agregar/{{id}}" method="POST">   
     <p id="">Nuevo Producto</p>
     <div id="">
         <div id="">
@@ -10,6 +11,10 @@
         <div id="">
             <label>Nombre del Producto</label>
             <input type="text" name="NombreProducto" id="NombreProducto">
+        </div>
+        <div id="">
+            <label>Nombre del Proveedor</label>
+            <input type="text" name="NombreProvedor" id="NombreProvedor" value="{{NombreProveedor}}" readonly>
         </div>
         <div id="">
             <label>Cantidad</label>
@@ -41,5 +46,6 @@
         </div>
         <button type="submit" id="guardar1">Guardar</button>
 </form>
+{{/each}}
 </div>
 <script src="/js/codigo.js"></script>
