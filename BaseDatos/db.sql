@@ -1,5 +1,5 @@
 DROP DATABASE IF EXISTS fintech;
-CREATE DATABASE fintech;
+CREATE DATABASE IF NOT EXISTS fintech;
 USE fintech;
 -- TABLE USER
 -- all pasword wil be encrypted using SHA1

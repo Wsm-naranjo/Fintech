@@ -1,8 +1,9 @@
+const ids = require('./passport')
+
 module.exports = {
     isLoggedIn (req, res, next) {
-
         if (req.isAuthenticated()) 
             return next();
-        res.redirect('/tienda/agregar/');
+        res.redirect('/tienda/agregar/' + ids.ids);
     }
 };

@@ -1,4 +1,4 @@
-const usuarios = (sequelize, type) =>{
+const usuarios =(sequelize, type) =>{
     return sequelize.define('usuarios', {
         id: {
             type: type.INTEGER,

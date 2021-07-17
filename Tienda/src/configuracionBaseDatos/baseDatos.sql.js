@@ -1,5 +1,5 @@
 const mysql = require('mysql');
-const { promisify }= require('util');
+const { promisify } = require('util');
 
 const { database } = require('../keys');
 
@@ -17,14 +17,17 @@ pool.getConnection((err, connection) => {
       console.error('la conexión a la base de datos no realizada');
     }
   }
+  if (connection) { 
+    connection.release()
+    console.log('Database la Connectada')
+    return
+  }
+})
 
-  if (connection) connection.release();
-  console.log('Database la Connectada');
 
-  return;
-});
 
 // Promisify Pool Querys
 pool.query = promisify(pool.query);
+
 
 module.exports = pool;
