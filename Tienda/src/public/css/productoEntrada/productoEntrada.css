@@ -4,6 +4,57 @@
 
 form{
     position: absolute;
-    top: 120px;
+    top: 90px;
     left: 420px;
+    width: 60%;
+}
+
+#TITULO{
+    position: absolute;
+    left: 170px;
+
+}
+
+#cinco{
+    position: absolute;
+    left: -200px;
+    top: 60px;
+}
+
+#cuatro{
+    position: absolute;
+    left: 360px;
+    top: 60px;
+}
+
+#guardar1{
+    position: absolute;
+    top: 500px;
+    left: 60px;
+    width: 450px;
+}
+
+#CODIGO{
+    position: absolute;
+    top: 0px;
+}
+
+#NOMBREproducto{
+    position: absolute;
+    top: 90px;
+}
+
+#NOMBREproveedor{
+    position: absolute;
+    top: 180px;
+}
+
+#CANTIDAD{
+    position: absolute;
+    top: 270px;
+}
+
+#CATEGORIA{
+    position: absolute;
+    top: 360px;
 }

@@ -5,11 +5,11 @@ const productoEntrada = (sequelize, type)=>{
             primaryKey: true,
             autoIncrement: true
         },
-        codigo: type.INTEGER,
+        codigo: type.INTEGER(13),
         NombreProducto: type.STRING,
         NombreProvedor: type.STRING,
         Cantidad: type.INTEGER,
-        precioActual: type.FLOAT,
+        precioActual: type.FLOAT(6.2),
         FechaCadusidad: type.DATE,
         createdAt:{
             type: 'TIMESTAMP',

@@ -1,8 +1,57 @@
 #contenedor{
     position: absolute;
     top: 120px;
-    left:150px
+    left:170px;
 }
 #logo{
     top: 80px;
+}
+
+.row{
+    gap: 20px;
+}
+
+#tarjeta{
+    border: 1px solid;
+    border-radius: 20px;
+    width: 380px;
+    height: 241px;
+}
+
+#eliminar{
+    width: 70px;
+}
+
+#botonX{
+    border-color: transparent;
+    background-color: transparent;
+    position: absolute;
+    margin-top: -210px;
+    margin-left: 320px;
+}
+
+#editar{
+    width: 50px;
+}
+
+#BotonEditar{
+    background-color: transparent;
+    border-color: transparent;
+    position: absolute;
+}
+
+#codigo{
+    width: 50%;
+}
+
+#NombreProducto{
+    width: 50%;
+}
+
+#Cantidad{
+    width: 50%;
+}
+
+#precioActual{
+    width: 50%;
 }

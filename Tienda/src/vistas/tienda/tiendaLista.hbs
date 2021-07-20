@@ -32,10 +32,15 @@
         <div id="boton">
             <button type="submit" id="Editar"><a href="/tienda/editar/{{id}}"> Editar Datos </a></button>
         </div>
-        {{/each}}
         <div id="Boton">
-            <button id="Agregar"><a href="/proveedor/agregar/{{user.id}}">Agregar Proveedor</a></button>
+            <button id="Agregar"><a href="/proveedor/agregar/{{id}}">Agregar Proveedor</a></button>
         </div>
         </div>
+        {{else}}
+        <div id="aviso">
+            <p>¡Antes de continuar. <a href="/tienda/agregar/{{user.id}}">Registre los datos de su Negocio.!</a></p>
+            <p>¡¡Si ya Tiene registrado su Negocio de Click en Tienda!!</p>
+        </div>
+        {{/each}}
     </form>
 </div>

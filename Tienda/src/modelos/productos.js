@@ -5,10 +5,10 @@ const productos = (sequelize, type)=>{
             primaryKey: true,
             autoIncrement: true
         },
-        codigo: type.INTEGER,
+        codigo: type.INTEGER(13),
         NombreProducto: type.STRING,
         Cantidad: type.INTEGER,
-        precioVenta: type.FLOAT,
+        precioVenta: type.FLOAT(6.2),
         FechaCadusidad: type.DATE,
         categoria: type.STRING,
         createdAt:{

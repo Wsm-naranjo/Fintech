@@ -1,51 +1,55 @@
 <link rel="stylesheet" href="/css/productoEntrada/productoEntrada.css">
 <div>
-{{#each listaProveedor}}
-<form action="/ProductoEntrada/agregar/{{id}}" method="POST">   
-    <p id="">Nuevo Producto</p>
-    <div id="">
+    {{#each listaProveedor}}
+    <form action="/ProductoEntrada/agregar/{{id}}" method="POST">
+        <p id="TITULO">Nuevo Producto</p>
         <div id="">
-            <label>Codigo</label>
-            <input type="text" name="codigo" id="codigo">
-        </div>
-        <div id="">
-            <label>Nombre del Producto</label>
-            <input type="text" name="NombreProducto" id="NombreProducto">
-        </div>
-        <div id="">
-            <label>Nombre del Proveedor</label>
-            <input type="text" name="NombreProvedor" id="NombreProvedor" value="{{NombreProveedor}}" readonly>
-        </div>
-        <div id="">
-            <label>Cantidad</label>
-            <input type="number" name="Cantidad" id="Cantidad">
-        </div>
-        <div id="">
-            <label>Categoria</label>
-            <select name="categoria" id="categoria">
-                <option name="categoria" value="Consumible">Consumible</option>
-                <option name="categoria" value="No consumible">No consumible</option>
-                <option name="categoria" value="Bebidas">Bebidas</option>
-            </select>
-        </div>
-        <div id="">
-            <label>Descripcion</label>
-            <input type="text" name="Descripcion" id="descripcion">
-        </div>
-        <div id="">
-            <label>Precio Original</label>
-            <input type="text" name="precioActual" id="precio">
-        </div>
-        <div id="">
-            <label>Precio Venta</label>
-            <input type="text" name="precioVenta" id="precio">
-        </div>
-        <div id="">
-            <label>Fecha Caducidad</label>
-            <input type="date" name="FechaCadusidad" id="FechaCadusidad">
-        </div>
-        <button type="submit" id="guardar1">Guardar</button>
-</form>
-{{/each}}
+            <div id="cinco">
+                <div id="CODIGO">
+                    <label>Codigo</label>
+                    <input type="text" name="codigo" id="codigo">
+                </div>
+                <div id="NOMBREproducto">
+                    <label>Nombre del Producto</label>
+                    <input type="text" name="NombreProducto" id="NombreProducto">
+                </div>
+                <div id="NOMBREproveedor">
+                    <label>Nombre del Proveedor</label>
+                    <input type="text" name="NombreProvedor" id="NombreProvedor" value="{{NombreProveedor}}" readonly>
+                </div>
+                <div id="CANTIDAD">
+                    <label>Cantidad</label>
+                    <input type="number" name="Cantidad" id="Cantidad">
+                </div>
+                <div id="CATEGORIA">
+                    <label>Categoria</label>
+                    <select name="categoria" id="categoria">
+                        <option name="categoria" value="Consumible">Consumible</option>
+                        <option name="categoria" value="No consumible">No consumible</option>
+                        <option name="categoria" value="Bebidas">Bebidas</option>
+                    </select>
+                </div>
+            </div>
+            <div id="cuatro">
+                <div id="">
+                    <label>Unidad</label>
+                    <input type="text" name="Descripcion" id="descripcion">
+                </div>
+                <div id="">
+                    <label>Precio Original ("Porfavor coloque los precios con un . ejemplo: 1.20")</label>
+                    <input type="text" name="precioActual" id="precio">
+                </div>
+                <div id="">
+                    <label>Precio Venta</label>
+                    <input type="text" name="precioVenta" id="precio">
+                </div>
+                <div id="">
+                    <label>Fecha Caducidad</label>
+                    <input type="date" name="FechaCadusidad" id="FechaCadusidad">
+                </div>
+            </div>
+            <button type="submit" id="guardar1">Guardar</button>
+    </form>
+    {{/each}}
 </div>
 <script src="/js/codigo.js"></script>
