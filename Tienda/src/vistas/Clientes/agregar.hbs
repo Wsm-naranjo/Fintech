@@ -1,32 +1,23 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <LINK REL=StyleSheet HREF="/css/addCliente.css" TYPE="text/css" MEDIA=screen>
-</head>
-
-<body>
-
-    <p id="p">Agregar Cliente</p>
-    <img src="/img/cliente.png" alt="cliente" id="cliente">
-    <form action="/clientes/agregar" method="POST" id="f1">
+<link rel="stylesheet" href="/css/clientes/clientesAgregar.css">
+<form action="/clientes/agregar/{{user.id}}" method="POST" id="f1">
+<p id="p">Agregar Cliente</p>
     <div id="contenedor_1">
         <div id="contenedor">
-            <label id="lblcedula">Cedula :</label>
-            <input type="text" name="Cedula" id="cedula">
+            <label id="lblnprovedor">Nombres:</label>
+            <input type="text" name="Nombres" id="Nombres">
         </div>
         <div id="contenedor">
-            <label id="lblnombre">Nombre :</label>
-            <input type="text" name="Nombres" id="nombre">
+            <label id="lbldireccion">Direccion :</label>
+            <input type="text" name="Direccion" id="Direccion">
         </div>
         <div id="contenedor">
-            <label id="lbltelf">Telefono</label>
-            <input type="number" name="Telefono" id="telefono">
+            <label id="lblnumero">Celular:</label>
+            <input type="number" name="Celular" id="Numero">
         </div>
-        <button class="btn btn-success" type="submit" id="guardar"><img  id="guardar_1" src="/img/guardar.png" alt="guardar"> Guardar</button>
+        <div id="contenedor">
+            <label id="lblcodigo">Telefono:</label>
+            <input type="text" name="telefono" id="telefono">
         </div>
-    </form>
-</body>
-</html>
+        <button type="submit" id="guardar1">Guardar</button>
+    </div>
+</form>

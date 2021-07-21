@@ -6,11 +6,11 @@ const tienda = (sequelize, type)=>{
             autoIncrement: true
         },
         nombreNegocio: type.STRING,
-        ruc: type.INTEGER,
+        ruc: type.INTEGER(13),
         fechaCreacion: type.DATE,
         direccion: type.STRING,
-        celular: type.INTEGER,
-        telefono: type.INTEGER,
+        celular: type.INTEGER(10),
+        telefono: type.INTEGER(10),
         createdAt:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),

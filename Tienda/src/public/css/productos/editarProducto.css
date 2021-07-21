@@ -4,10 +4,41 @@
 
 form{
     position: absolute;
-    left: 400px;
-    top: 200px;
+    top: 90px;
+    left: 450px;
+}
+#guardar_2{
+    width: 80px;
 }
 
-#guardar{
-    width: 100%;
+#guardar1{
+    background-color: transparent;
+    border-color: transparent;
+    position: absolute;
+    left: 420px;
+    top: 440px;
+}
+
+#CODIGO{
+    position: absolute;
+}
+
+#PRODUCTO{
+    position: absolute;
+    top: 140px;
+}
+
+#CANTIDAD{
+    position: absolute;
+    top: 240px;
+}
+
+#PRECIO{
+    position: absolute;
+    top:340px;
+}
+
+#CADUCIDAD{
+    position: absolute;
+    top: 440px;
 }

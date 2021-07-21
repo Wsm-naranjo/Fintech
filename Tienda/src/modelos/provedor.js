@@ -7,7 +7,7 @@ const provedor = (sequelize, type)=>{
         },
         NombreProveedor: type.STRING,
         Direccion: type.STRING,
-        Numero: type.INTEGER,
+        Numero: type.INTEGER(10),
         Estado: type.BOOLEAN,
         createdAt:{
             type: 'TIMESTAMP',

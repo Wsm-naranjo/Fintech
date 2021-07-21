@@ -5,7 +5,7 @@ const productoEntrada = (sequelize, type)=>{
             primaryKey: true,
             autoIncrement: true
         },
-        codigo: type.INTEGER(13),
+        codigo: type.STRING(13),
         NombreProducto: type.STRING,
         NombreProvedor: type.STRING,
         Cantidad: type.INTEGER,

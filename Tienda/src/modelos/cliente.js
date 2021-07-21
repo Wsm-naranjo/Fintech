@@ -6,9 +6,11 @@ const cliente = (sequelize, type)=>{
             autoIncrement: true
         },
         Nombres: type.STRING,
-        username: type.STRING,
+        Direccion: type.STRING,
+        username: type.STRING(99),
         password: type.STRING,
-        telefono: type.INTEGER,
+        telefono: type.INTEGER(7),
+        Celular: type.INTEGER(10), 
         createdAt:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),

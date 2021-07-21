@@ -7,7 +7,7 @@ const listaProductos = (sequelize, type)=>{
         },
         NombreProducto: type.STRING,
         Cantidad: type.INTEGER,
-        Precio: type.INTEGER,
+        Precio: type.FLOAT(6.2),
         createdAt:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),

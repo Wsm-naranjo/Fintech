@@ -1,9 +1,66 @@
-#logo{
-    top:80px;
-}
-
-form{
+#contenedor{
     position: absolute;
     top: 120px;
-    left: 150px;
+    left:170px;
+}
+#logo{
+    top: 80px;
+}
+
+.row{
+    gap: 20px;
+}
+
+#tarjeta{
+    border: 1px solid;
+    border-radius: 20px;
+    width: 400px;
+}
+
+#eliminar{
+    width: 70px;
+}
+
+#botonX{
+    border-color: transparent;
+    background-color: transparent;
+    position: absolute;
+    margin-top: -250px;
+    margin-left: 340px;
+}
+
+#editar{
+    width: 50px;
+}
+
+#BotonEditar{
+    background-color: transparent;
+    border-color: transparent;
+}
+
+input{
+    width: 50%;
+}
+
+#codigo{
+    margin-left: 40px;
+}
+
+#NombreProducto{
+    margin-left: 10px;
+}
+
+#Cantidad{
+    margin-left: 10px;
+}
+
+#precioActual{
+    margin-left: 43px;
+}
+
+#agregar{
+    position: absolute;
+    left: 400px;
+    top: 120px;
+    width: 300px;
 }

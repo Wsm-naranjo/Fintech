@@ -66,6 +66,7 @@ ProductoEntradaCtrl.renderEditarEntrada = async (req, res) => {
     res.render("ProductosEntrada/editar", {Productos})
 }
 ProductoEntradaCtrl.EditarEntrada = async (req, res) => {
+    const IDS = req.user.id
     const id = req.params.id
     const { NombreProducto, Cantidad, precioActual, FechaCadusidad } = req.body
     const EntradaEditad = {
@@ -79,7 +80,7 @@ ProductoEntradaCtrl.EditarEntrada = async (req, res) => {
         .then(productoEntrada => {
             productoEntrada.update(EntradaEditad)
             req.flash('success', 'Se Actualizo Correctamente');
-            res.redirect('/ProductoEntrada/lista/' + id);
+            res.redirect('/ProductoEntrada/lista/' + IDS);
         })
 }
 module.exports = ProductoEntradaCtrl

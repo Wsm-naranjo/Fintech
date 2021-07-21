@@ -11,12 +11,13 @@ ProductosCtrl.renderProductos = async (req, res) => {
 
 ProductosCtrl.renderEditLink = async (req, res) => {
     const id = req.params.id;
-    const Productos = await pool.query('SELECT * FROM productos WHERE id = ?', [id]);
+    const Productos = await sql.query('SELECT * FROM productos WHERE id = ?', [id]);
     res.render('productos/editar', { Productos });
 };
 
 ProductosCtrl.editLink = async (req, res) => {
     const id = req.params.id;
+    const IDS = req.user.id
     const { precioVenta } = req.body;
     const newProducto = {
         precioVenta
@@ -26,7 +27,7 @@ ProductosCtrl.editLink = async (req, res) => {
         .then(provedor => {
             provedor.update(newProducto)
             req.flash('success', 'Se Actualizo Correctamente');
-            res.redirect('/productos/lista/' + id);
+            res.redirect('/productos/lista/' + IDS);
         })
 }
 

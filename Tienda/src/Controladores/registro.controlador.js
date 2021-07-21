@@ -7,7 +7,7 @@ registro.mostrarRegistro = (req, res) => {
 };
 
 registro.Registro = passport.authenticate('local.signup', {
-    successRedirect: '/tienda',
+    successRedirect: '/CerrarSecion',
     failureRedirect: '/Registro',
     failureFlash: true
 });
@@ -24,7 +24,7 @@ registro.Login = passport.authenticate('local.signin', {
 
 registro.cierreSesion = (req, res, next) => {
     req.logOut();
-    res.redirect('/');
+    res.redirect('/Login');
 };
 
 module.exports = registro;

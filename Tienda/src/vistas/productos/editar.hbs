@@ -1,29 +1,29 @@
 <link rel="stylesheet" href="/css/productos/editarProducto.css">
 {{#each Productos}}
 <form action="/productos/editar/{{id}}" method="POST" id="f1">
-    <div>
-        <div>
-            <label>Codigo</label>
-            <input type="text" name="codigo" id="codigo" value="{{codigo}}" disabled>
+   <p id="p">Edita Producto </p>
+    <div id="contenedor_1">
+        <div id="CODIGO">
+            <label id="codigos">Codigo:</label>
+            <input type="text" name="codigo" id="codigo" value="{{codigo}}" readonly>
         </div>
-        <div id="">
-            <label>Nombre del Producto</label>
-            <input type="text" name="NombreProducto" id="NombreProducto" value="{{NombreProducto}}" disabled>
+        <div id="PRODUCTO">
+            <label id="producto">Producto :</label>
+            <input type="text" name="NombreProducto" id="NombreProducto" value="{{NombreProducto}}" readonly>
         </div>
-        <div id="">
-            <label>Cantidad</label>
-            <input type="number" name="Cantidad" id="Cantidad" value="{{Cantidad}}" disabled>
+        <div id="CANTIDAD">
+            <label id="cantidad">Cantidad:</label>
+            <input type="number" name="Cantidad" id="Cantidad" value="{{Cantidad}}" readonly>
         </div>
-        <div id="">
-            <label>Precio</label>
-
-            <input type="number" name="precioVenta" id="precio" value="{{precioVenta}}">
+        <div id="PRECIO">
+            <label id="precios">Precio:</label>
+            <input type="text" name="precioVenta" id="precio" value="{{precioVenta}}">
         </div>
-        <div id="">
-            <label>Fecha Caducidad</label>
-            <input type="date" name="FechaCadusidad" id="FechaCadusidad" value="{{FechaCadusidad}}" disabled>
+        <div id="CADUCIDAD">
+            <label id="caducidad">Fecha Caducidad:</label>
+            <input type="datetime" name="FechaCadusidad" id="FechaCadusidad" value="{{FechaCadusidad}}" readonly>
         </div>
-        <button type="submit" id="guardar">Guardar</button>
+        <button type="submit" id="guardar1"> <img id="guardar_2" src="/img/guardar.png"></button>
     </div>
 </form>
 {{/each}}
