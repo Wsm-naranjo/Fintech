@@ -68,6 +68,6 @@ app.use('/clientes', require('./Rutas/Clientes.rutas'));
 app.use('/ProductoEntrada', require('./Rutas/ProductosEntrada.rutas'))
 app.use('/proveedor', require('./Rutas/proveedor.rutas'))
 app.use('/productos', require('./Rutas/Productos.rutas'))
-
+app.use('/entradaSalida', require('./Rutas/entradaSalida.rutas'));
 
 module.exports = app;
