@@ -1,11 +1,13 @@
-const comentarios = (sequelize, type)=>{
-    return sequelize.define('comentarios',{
-        id:{
+const detalleListaProductos = (sequelize, type)=>{
+    return sequelize.define('detalleListaProductos', {
+        id: {
             type: type.INTEGER,
             primaryKey: true,
-            autoIncrement: true
+            autoIncrement: true,
         },
-        comentario: type.STRING(500),
+        NombreProducto: type.STRING,
+        Cantidad: type.INTEGER,
+        Precio: type.FLOAT(6.2),
         createdAt:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
@@ -19,4 +21,5 @@ const comentarios = (sequelize, type)=>{
     })
 }
 
-module.exports = comentarios
+
+module.exports = detalleListaProductos

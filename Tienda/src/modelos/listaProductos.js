@@ -1,13 +1,12 @@
 const listaProductos = (sequelize, type)=>{
-    return sequelize.define('listaProductos', {
-        id: {
+    return sequelize.define('listaProductos',{
+        id:{
             type: type.INTEGER,
             primaryKey: true,
-            autoIncrement: true,
+            autoIncrement: true
         },
-        NombreProducto: type.STRING,
-        Cantidad: type.INTEGER,
-        Precio: type.FLOAT(6.2),
+        nombreLista: type.STRING,
+        comentario: type.STRING(500),
         createdAt:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
@@ -20,6 +19,5 @@ const listaProductos = (sequelize, type)=>{
         }
     })
 }
-
 
 module.exports = listaProductos

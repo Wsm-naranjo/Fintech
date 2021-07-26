@@ -13,3 +13,21 @@
     top: 160px;
     left: 160px;
 }
+
+#CODIGO{
+    position: absolute;
+    top: 220px;
+    left: 75px;
+}
+
+#Dtienda{
+    position: absolute;
+    top: 280px;
+    left: 150px;
+}
+
+#cliente{
+    position: absolute;
+    top: 340px;
+    left: 145px;
+}

@@ -6,7 +6,6 @@ const categorias = (sequelize, type)=>{
             autoIncrement: true,
         },
         categoria: type.STRING,
-        Descripcion: type.STRING,
         createdAt:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),

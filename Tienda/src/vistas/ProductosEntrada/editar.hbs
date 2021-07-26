@@ -1,5 +1,5 @@
 <LINK REL=StyleSheet HREF="/css/productoEntrada/editarproductos.css" TYPE="text/css" MEDIA=screen>
- {{#each Productos}}
+{{#each Productos}}
 <form action="/ProductoEntrada/editar/{{id}}" method="POST">
     <p id="p">Edita Producto </p>
     <div id="contenedor_1">
@@ -18,6 +18,10 @@
         <div id="PRECIO">
             <label id="precios">Precio:</label>
             <input type="text" name="precioActual" id="precio" value="{{precioActual}}">
+        </div>
+        <div id="">
+            <label>Unidad</label>
+            <input type="text" name="UnidadMedida" id="descripcion">
         </div>
         <div id="CADUCIDAD">
             <label id="caducidad">Fecha Caducidad:</label>

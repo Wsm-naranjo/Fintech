@@ -3,12 +3,14 @@ const Sequelize = require('sequelize')
 const UsuarioModelos = require('../modelos/usuario')
 const categoriaModelos = require('../modelos/Categoria')
 const tiendaModelos = require('../modelos/tienda')
-const comentarioModelos = require('../modelos/comentarios') 
+const listaProductosModelos = require('../modelos/listaProductos') 
 const provedorModelos = require('../modelos/provedor')
 const productoEntradaModelos = require('../modelos/productoEntrada')
 const productoModelos = require('../modelos/productos')
 const clienteModelos = require('../modelos/cliente')
-const listaProductosModelos = require('../modelos/listaProductos')
+const detalleListaProductosModelos = require('../modelos/detalleListaProductos')
+const registroEntradasModelos = require('../modelos/registroEntradas')
+const registroSalidasModelos = require('../modelos/registroSalidas')
 
 const sequelize = new Sequelize(
   'fintech', 
@@ -42,12 +44,14 @@ sequelize.authenticate()
 const usuarios = UsuarioModelos(sequelize, Sequelize)
 const categoria = categoriaModelos(sequelize, Sequelize)
 const tienda = tiendaModelos(sequelize, Sequelize)
-const comentario = comentarioModelos(sequelize, Sequelize)
+const listaProductos = listaProductosModelos(sequelize, Sequelize)
 const provedor = provedorModelos(sequelize, Sequelize)
 const entredaProductos = productoEntradaModelos(sequelize, Sequelize)
 const productos = productoModelos(sequelize, Sequelize)
 const cliente = clienteModelos(sequelize, Sequelize)
-const listaProductos = listaProductosModelos(sequelize, Sequelize) 
+const detalleListaProductos = detalleListaProductosModelos(sequelize, Sequelize) 
+const registroEntradas = registroEntradasModelos(sequelize, Sequelize)
+const registroSalidas = registroSalidasModelos(sequelize, Sequelize)
 
 usuarios.hasMany(categoria)
 categoria.belongsTo(usuarios)
@@ -55,11 +59,11 @@ categoria.belongsTo(usuarios)
 usuarios.hasMany(tienda)
 tienda.belongsTo(usuarios)
 
-tienda.hasMany(comentario)
-comentario.belongsTo(tienda)
+tienda.hasMany(listaProductos)
+listaProductos.belongsTo(tienda)
 
-cliente.hasMany(comentario)
-comentario.belongsTo(cliente)
+cliente.hasMany(listaProductos)
+listaProductos.belongsTo(cliente)
 
 usuarios.hasMany(provedor)
 provedor.belongsTo(usuarios)
@@ -70,20 +74,30 @@ entredaProductos.belongsTo(provedor)
 tienda.hasMany(productos)
 productos.belongsTo(tienda)
 
-cliente.hasMany(listaProductos)
-listaProductos.belongsTo(cliente)
+listaProductos.hasMany(detalleListaProductos)
+detalleListaProductos.belongsTo(listaProductos)
 
 tienda.hasMany(entredaProductos)
 entredaProductos.belongsTo(tienda)
+
+entredaProductos.hasMany(categoria)
+categoria.belongsTo(entredaProductos)
+
+tienda.hasMany(registroEntradas)
+registroEntradas.belongsTo(tienda)
+
+tienda.hasMany(registroSalidas)
+registroSalidas.belongsTo(tienda)
 
 module.exports = {
   usuarios,
   categoria,
   tienda,
-  comentario,
+  detalleListaProductos,
   provedor,
   entredaProductos,
   productos,
   cliente,
-  listaProductos
+  listaProductos,
+  registroEntradas
 }
